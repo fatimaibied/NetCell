@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Selector>
+    <WelcomeMsg>//div[contains(text(),'Welcome To Netcell')]</WelcomeMsg>
+    <SON>//div[contains(text(),'SON')]</SON>
+    <CM>//div[contains(text(),'CM')]</CM>
+    <PM>//div[contains(text(),'PM')]</PM>
+    </Selector>

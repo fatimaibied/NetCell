@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="SON- Huawei test Cases">
+    <test name="Huawei 3G test Cases">
+        <packages>
+            <package name="TestCases.Son.Huawei.G3"/>
+        </packages>
+    </test>
+
+</suite>

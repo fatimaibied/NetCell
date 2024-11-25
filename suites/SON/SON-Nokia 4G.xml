@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="SON- Nokia test Cases">
+    <test name="Nokia 4G test Cases">
+       <classes>
+
+           <class name="TestCases.Son.Nokia4G.PLMN"></class>
+
+           <class name="TestCases.Son.Nokia4G.Cell"></class>
+
+       </classes>
+    </test>
+
+</suite>

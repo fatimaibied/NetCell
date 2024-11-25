@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Selector>
+
+
+    <HomeLogo>//div[@class='home-logo']</HomeLogo>
+//-------Vendor-----------
+    <Huawei>//span[contains(text(),'Huawei')]</Huawei>
+    <Nokia>//span[contains(text(),'Nokia')]</Nokia>
+
+//--------- Technology------------------
+    <TechnologyArrow>//span[@aria-label='4G']</TechnologyArrow>
+//---- SonType--------------
+    <SonType>//app-son-report-type[1]/div[2]/app-select[1]/p-dropdown[1]/div[1]/div[1]/chevrondownicon[1]/*[1]</SonType>
+
+//--------------------------
+    <ExcludeOptions>//label[contains(text(),'Include / Exclude Options')]</ExcludeOptions>
+
+//---------CM-----------
+    <CM>//div[@class='cm-data-select']/input</CM>
+
+//-------CarrierType-----
+    <Carrier>//div[contains(text(),'Carrier Type')]</Carrier>
+    <CarrierTypeFDD>//button[contains(text(),'FDD')]</CarrierTypeFDD>
+    <CarrierTypeTDD>//button[contains(text(),'TDD')]</CarrierTypeTDD>
+
+//-----Resolution-------
+    <Hourly>//span[contains(text(),'Hourly')]</Hourly>
+    <Daily>//span[contains(text(),'Daily')]</Daily>
+    <Weekly>//span[contains(text(),'Weekly')]</Weekly>
+    <Monthly>//span[contains(text(),'Monthly')]</Monthly>
+    <DailyBH>//span[contains(text(),'DailyBH')]</DailyBH>
+    <WeeklyBH>//span[contains(text(),'WeeklyBH')]</WeeklyBH>
+    <MonthlyBH>//span[contains(text(),'MonthlyBH')]</MonthlyBH>
+    <Raw>//span[contains(text(),'Raw')]</Raw>
+
+//----- calendar------------
+    <Month>//button[@aria-label='Choose Month']</Month>
+    <MonthFeb>//span[normalize-space()='Feb']</MonthFeb>
+    <Feb-1>/html[1]/body[1]/ngb-popover-window[1]/div[2]/p-calendar[1]/span[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[6]/span[1]</Feb-1>
+//------Object Type------
+    <ObjectSelection>//span[@aria-label='Select']</ObjectSelection>
+
+//--------------------------
+    <PLMN>/html/body/div/div/div/div/ul/p-dropdownitem[1]/li/span</PLMN>
+    <PLMNCheckbox>//div[@class='p-checkbox-box']</PLMNCheckbox>>
+
+//--------------------------
+    <PLMNXDD>//span[normalize-space()='PLMN XDD']</PLMNXDD>
+
+//---------------------------
+    <Governorate>//span[normalize-space()='Governorate']</Governorate>
+    <GovernoratesAmman>//span[contains(text(),'Amman')]</GovernoratesAmman>
+    <GovernoratesIrbid>//span[contains(text(),'Irbid')]</GovernoratesIrbid>
+    <GovernoratesAqaba>//span[contains(text(),'Aqaba')]</GovernoratesAqaba>
+    <GovernoratesJerash>//span[contains(text(),'Jarash')]</GovernoratesJerash>
+    <GovernoratesMafraq>//span[contains(text(),'Mafraq')]</GovernoratesMafraq>
+    <GovernoratesZarqa>//span[contains(text(),'Zarqa')]</GovernoratesZarqa>
+
+//------------- Governorate XDD----------------------
+    <GovernorateXDD>//span[normalize-space()='Governorate XDD']</GovernorateXDD>
+    <GovernorateFDDArrow>//li[@aria-label='FDD']//chevronrighticon[@class='p-element p-icon-wrapper ng-star-inserted']//*[name()='svg']</GovernorateFDDArrow>
+    <GovernorateFDDClose>//li[@aria-label='FDD']//chevrondownicon[@class='p-element p-icon-wrapper ng-star-inserted']//*[name()='svg']</GovernorateFDDClose>
+
+    <GovernorateTDDArrow>//li[@aria-label='TDD']//chevronrighticon[@class='p-element p-icon-wrapper ng-star-inserted']//*[name()='svg']</GovernorateTDDArrow>
+    <GovernorateTDDClose>//li[@aria-label='TDD']//chevrondownicon[@class='p-element p-icon-wrapper ng-star-inserted']//*[name()='svg']</GovernorateTDDClose>
+
+ //----------Governorate Band---------------
+    <GovernorateBand>//span[normalize-space()='Governorate Band']</GovernorateBand>
+
+//---------Region Carrier-------------
+    <RegionCarrier>//span[normalize-space()='Region Carrier']</RegionCarrier>
+
+//-------Region-------------
+    <Region>//span[normalize-space()='Region']</Region>
+    <RegionsEastAmman>//span[contains(text(),'East Amman')]</RegionsEastAmman>
+    <RegionsWestAmman>//span[contains(text(),'West Amman')]</RegionsWestAmman>
+    <RegionsSouthAmman>//span[contains(text(),'South Amman')]</RegionsSouthAmman>
+    <RegionsSouthJordan>//span[contains(text(),'South Jordan')]</RegionsSouthJordan>
+    <RegionsNorthJordan>//span[contains(text(),'North Jordan')]</RegionsNorthJordan>
+    <RegionsEastJordan>//span[contains(text(),'East Jordan')]</RegionsEastJordan>
+    <RegionsOthers>//span[contains(text(),'Others')]</RegionsOthers>
+
+//--------Site--------------
+    <Site>//span[normalize-space()='Site']</Site>
+
+    <SitesEastAmman>//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span</SitesEastAmman>
+    <SitesWestAmman>//p-treenode[2]/li/ul/p-treenode[1]/li/div/span/span/div/span</SitesWestAmman>
+    <SitesArrowSouthAmman>//p-treenode[3]/li/ul/p-treenode[1]/li/div/span/span/div/span</SitesArrowSouthAmman>
+    <SitesArrowSouthJordan>//p-treenode[4]/li/ul/p-treenode[1]/li/div/span/span/div/span</SitesArrowSouthJordan>
+    <SitesArrowNorthJordan>//p-treenode[5]/li/ul/p-treenode[1]/li/div/span/span/div/span</SitesArrowNorthJordan>
+    <SitesArrowEastJordan>//p-treenode[6]/li/ul/p-treenode[1]/li/div/span/span/div/span</SitesArrowEastJordan>
+    <SitesArrowOthers>//p-treenode[7]/li/ul/p-treenode[1]/li/div/span/span/div/span</SitesArrowOthers>
+
+//------Cell-----------------------
+    <Cell>//span[normalize-space()='Cell']</Cell>>
+    <CellsArrowEastAmman>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]</CellsArrowEastAmman>
+    <CellsArrowWestAmman>//p-treenode[2]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]</CellsArrowWestAmman>
+    <CellsArrowSouthAmman>//p-treenode[3]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]</CellsArrowSouthAmman>
+    <CellsArrowSouthJordan>//p-treenode[4]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]</CellsArrowSouthJordan>
+    <CellsArrowNorthJordan>//p-treenode[5]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]</CellsArrowNorthJordan>
+    <CellsArrowEastJordan>//p-treenode[6]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]</CellsArrowEastJordan>
+    <CellsArrowOthers>//p-treenode[7]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]</CellsArrowOthers>
+
+    <CellOneEastAmman>//li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span</CellOneEastAmman>
+    <CellOneWestAmman>//li/ul/p-treenode[2]/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span</CellOneWestAmman>
+    <CellOneSouthAmman>//li/ul/p-treenode[3]/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span</CellOneSouthAmman>
+    <CellOneSouthJordan>//li/ul/p-treenode[4]/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span</CellOneSouthJordan>
+    <CellOneNorthJordan>//li/ul/p-treenode[5]/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span</CellOneNorthJordan>
+    <CellOneEastJordan>//li/ul/p-treenode[6]/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span</CellOneEastJordan>
+    <CellOneOthers>//li/ul/p-treenode[7]/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span</CellOneOthers>
+
+ //----------BSC------------------------------
+    <BSC>//span[normalize-space()='BSC']</BSC>
+    <BSCSMaan>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]</BSCSMaan>
+    <BSCSAA1>//p-treenode[1]/li[1]/ul[1]/p-treenode[4]/li[1]/div[1]</BSCSAA1>
+    <BSCSAA2>//p-treenode[1]/li[1]/ul[1]/p-treenode[5]/li[1]/div[1]</BSCSAA2>
+    <BSCSAA3>//p-treenode[1]/li[1]/ul[1]/p-treenode[6]/li[1]/div[1]</BSCSAA3>
+
+    //----------RNC------------------------------
+    <RNC>//span[normalize-space()='RNC']</RNC>
+
+
+    //--------------PLMN Carrier---------------
+    <PLMNCarrier>//span[normalize-space()='PLMN Carrier']</PLMNCarrier>
+
+    //--------------Sector---------------
+    <Sector>//span[normalize-space()='Sector']</Sector>
+
+    <SectorsEastAmman>//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div</SectorsEastAmman>
+    <SectorsWestAmman>//p-treenode/li/ul/p-treenode[2]/li/ul/p-treenode[1]/li/div</SectorsWestAmman>
+    <SectorsSouthAmman>//p-treenode/li/ul/p-treenode[3]/li/ul/p-treenode[1]/li/div</SectorsSouthAmman>
+    <SectorsSouthJordan>//p-treenode/li/ul/p-treenode[4]/li/ul/p-treenode[1]/li/div</SectorsSouthJordan>
+    <SectorsNorthJordan>//p-treenode/li/ul/p-treenode[5]/li/ul/p-treenode[1]/li/div</SectorsNorthJordan>
+    <SectorsEastJordan>//p-treenode/li/ul/p-treenode[6]/li/ul/p-treenode[1]/li/div</SectorsEastJordan>
+    <SectorsOthers>//p-treenode/li/ul/p-treenode[7]/li/ul/p-treenode[1]/li/div</SectorsOthers>
+
+    //-----------------------------------------------
+    <ClusterBand>//span[normalize-space()='Cluster Band']</ClusterBand>
+    //-------------Cluster------------------------
+    <Cluster>//span[normalize-space()='Cluster']</Cluster>
+
+    <ClustersEastAmman>//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span</ClustersEastAmman>
+    <ClustersWestAmman>//p-treenode/li/ul/p-treenode[2]/li/ul/p-treenode[1]/li/div/span/span/div/span</ClustersWestAmman>
+    <ClustersSouthAmman>//p-treenode/li/ul/p-treenode[3]/li/ul/p-treenode[1]/li/div/span/span/div/span</ClustersSouthAmman>
+    <ClustersSouthJordan>//p-treenode/li/ul/p-treenode[4]/li/ul/p-treenode[1]/li/div/span/span/div/span</ClustersSouthJordan>
+    <ClustersNorthJordan>//p-treenode/li/ul/p-treenode[5]/li/ul/p-treenode[1]/li/div/span/span/div/span</ClustersNorthJordan>
+    <ClustersEastJordan>//p-treenode/li/ul/p-treenode[6]/li/ul/p-treenode[1]/li/div/span/span/div/span</ClustersEastJordan>
+    <ClustersOthers>//p-treenode/li/ul/p-treenode[7]/li/ul/p-treenode[1]/li/div/span/span/div/span</ClustersOthers>
+
+
+//-------Region Band-----------------------
+    <RegionBand>//span[normalize-space()='Region Band']</RegionBand>
+    <FDDArrow>//li[@aria-label='FDD']//chevronrighticon[@class='p-element p-icon-wrapper ng-star-inserted']//*[name()='svg']</FDDArrow>
+    <FDDCloseArrow>//li[@aria-label='FDD']//chevrondownicon[@class='p-element p-icon-wrapper ng-star-inserted']//*[name()='svg']</FDDCloseArrow>
+    <TDDArrow>//li[@aria-label='TDD']//chevronrighticon[@class='p-element p-icon-wrapper ng-star-inserted']//*[name()='svg']</TDDArrow>
+    <TDDCloseArrow>//li[@aria-label='TDD']//chevrondownicon[@class='p-element p-icon-wrapper ng-star-inserted']//*[name()='svg']</TDDCloseArrow>
+
+//------Region XDD---------
+    <RegionXDD>//span[normalize-space()='Region XDD']</RegionXDD>
+    <XDDFDD>//span[contains(text(),'FDD')]</XDDFDD>
+    <XDDTDD>//span[contains(text(),'TDD')]</XDDTDD>
+
+    <RegionArrowEastAmman>//p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]</RegionArrowEastAmman>
+    <RegionArrowWestAmman>//p-treenode[2]/li[1]/div[1]/button[1]/chevronrighticon[1]</RegionArrowWestAmman>
+    <RegionArrowSouthAmman>//p-treenode[3]/li[1]/div[1]/button[1]/chevronrighticon[1]</RegionArrowSouthAmman>
+    <RegionArrowSouthJordan>//p-treenode[4]/li[1]/div[1]/button[1]/chevronrighticon[1]</RegionArrowSouthJordan>
+    <RegionArrowNorthJordan>//p-treenode[5]/li[1]/div[1]/button[1]/chevronrighticon[1]</RegionArrowNorthJordan>
+    <RegionArrowEastJordan>//p-treenode[6]/li[1]/div[1]/button[1]/chevronrighticon[1]</RegionArrowEastJordan>
+    <RegionArrowOthers>//p-treenode[7]/li[1]/div[1]/button[1]/chevronrighticon[1]</RegionArrowOthers>
+
+   <RegionCloseEastAmman>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCloseEastAmman>
+    <RegionCloseWestAmman>//p-treenode[2]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCloseWestAmman>
+    <RegionCloseSouthAmman>//p-treenode[3]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCloseSouthAmman>
+    <RegionCloseSouthJordan>//p-treenode[4]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCloseSouthJordan>
+    <RegionCloseNorthJordan>//p-treenode[5]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCloseNorthJordan>
+    <RegionCloseEastJordan>//p-treenode[6]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCloseEastJordan>
+    <RegionCloseOthers>//p-treenode[7]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCloseOthers>
+//------KPIs---------------
+    <CS>//app-carriar_balance_3g[1]/div[1]/div[4]/div[1]/input[1]</CS>
+    <HSDBA>//div[2]/div[1]/input[1]</HSDBA>
+    <RRC>//app-carriar_balance_3g[1]/div[1]/div[3]/div[1]/input[1]</RRC>
+    <TotalAmr>//div[1]/div[1]/input[1]</TotalAmr>
+
+//--------------------------------------------------------
+    <ObjectBorder>/html/body/app-root/div/app-app-container/div/div/app-main/p-splitter/div/div[1]/app-left-side-menu/div/div[2]/app-target-tree/app-target-type/div[1]/div[3]/app-common-tree/p-tree/div</ObjectBorder>
+
+//-----Apply-Button-------
+    <ApplyButton>//button[@class='btn btn-primary']</ApplyButton>
+
+
+
+</Selector>
+

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Selector>
+  <AggregationBtn>//div[@class="aggregation-select"]/input</AggregationBtn>
+  <OkBtn>//button[contains(text(),'Ok')]</OkBtn>
+
+  <TopX>//button[contains(text(),'TopX')]</TopX>
+  <Cell>//p-dropdownitem[4]/li[1]/span[normalize-space()='Cell']</Cell>
+
+  //------------------------Cluster Band----------------------------------
+  <ClusterFDDArrow>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]</ClusterFDDArrow>
+  <ClusterFDDClose>//app-common-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</ClusterFDDClose>
+
+  <ClusterTDDArrow>//p-treenode[2]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]</ClusterTDDArrow>
+  <ClusterTDDClose>//p-treenode[1]/li[1]/ul[1]/p-treenode[2]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</ClusterTDDClose>
+
+  <Regionlose>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</Regionlose>
+
+
+  <ClustersEastAmman>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/div[1]/div[1]</ClustersEastAmman>
+  <ClustersWestAmman>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[2]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/div[1]/div[1]</ClustersWestAmman>
+  <ClustersSouthAmman>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[3]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/div[1]/div[1]</ClustersSouthAmman>
+  <ClustersSouthJordan>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[4]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/div[1]/div[1]</ClustersSouthJordan>
+  <ClustersNorthJordan>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[5]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/div[1]/div[1]</ClustersNorthJordan>
+  <ClustersEastJordan>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[6]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/div[1]/div[1]</ClustersEastJordan>
+  <ClustersOthers>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[7]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/div[1]/div[1]</ClustersOthers>
+
+  <RegionCloseEastAmman>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCloseEastAmman>
+  <RegionCloseWestAmman>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[2]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCloseWestAmman>
+  <RegionCloseSouthAmman>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[3]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCloseSouthAmman>
+  <RegionCloseSouthJordan>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[4]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCloseSouthJordan>
+  <RegionCloseNorthJordan>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[5]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCloseNorthJordan>
+  <RegionCloseEastJordan>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[6]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCloseEastJordan>
+  <RegionCloseOthers>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[7]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCloseOthers>
+  //-----------------------TopXDate------------------------------
+  <BeforDate>//div[@class='start-time-div']//button[@class='body-medium-s'][normalize-space()='Select Date']</BeforDate>
+  <ChooseMonth>//button[@aria-label='Choose Month']</ChooseMonth>
+<Feb>//span[normalize-space()='Feb']</Feb>
+  <DayOne>//span[@data-date="2024-1-1"]</DayOne>
+  <OK>//button[normalize-space()='Ok']</OK>
+  <AfterDate>//div[@class='end-time-div']//button[@class='body-medium-s'][normalize-space()='Select Date']</AfterDate>
+  <DaySeven>//span[@data-date="2024-1-7"]</DaySeven>
+
+  //----------------LowX--------------
+  <LowX>//label[contains(text(),'LowX')]</LowX>
+  <lowXCheckbox>//input[@id='lowXCheckbox']</lowXCheckbox>
+  //-------------------------------
+  <Daily>//span[contains(text(),'Daily')]</Daily>
+  <DailyBH>//span[contains(text(),'DailyBH')]</DailyBH>
+
+</Selector>

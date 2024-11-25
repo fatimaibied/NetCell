@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Selector>
+    <UserName>//input[@id='email']</UserName>
+    <Password>//input[@id='password']</Password>
+    <LoginBtn>//button[contains(text(),'Login')]</LoginBtn>
+
+    <UserSection>//button[@class='user-section']</UserSection>
+    <Logout>//label[contains(text(),'Logout')]</Logout>
+</Selector>
