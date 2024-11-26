@@ -5,6 +5,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 
+import com.aventstack.extentreports.model.Media;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -39,16 +40,16 @@ public class MainClass implements ITestListener {
     public void getResult(ITestResult Result) {
         testResult = extent.createTest(Result.getName());
         if (Result.getStatus()==ITestResult.SUCCESS){
+            testResult.log(Status.PASS,"Package Name"+Result.getTestClass());
             testResult.log(Status.PASS,Result.getName());
 
         }
         if (Result.getStatus()==ITestResult.FAILURE){
+            testResult.log(Status.FAIL,"Package Name"+Result.getTestClass());
             testResult.log(Status.FAIL,Result.getName());
             testResult.log(Status.FAIL, "Element Name" +" "+elementName);
-
             testResult.fail(Result.getThrowable().getMessage(),MediaEntityBuilder.createScreenCaptureFromPath(screenShotOnFailure(Result)).build());
-
-            }
+        }
 
         driver.close();
         wid = new ArrayList<>(driver.getWindowHandles());
