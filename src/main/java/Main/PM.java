@@ -29,11 +29,17 @@ public class PM {
     List<String> relatedElementsBSC;
     List<String> relatedElementsCluster;
     List<String> relatedElementsSector;
-
-    public void Stats (String Technology , String ObjectType ,boolean Aggregation ,String Resolution) throws Exception {
+    Functions support = new Functions();
+    public void Stats (String Vendor, String Technology , String ObjectType , boolean Aggregation , String Resolution) throws Exception {
         Functions support = new Functions();
         //Click on the PM
         support.login("PM");
+
+        Thread.sleep(1000);
+        if (Vendor=="Nokia") {
+            driver.findElement(By.xpath(readLocator(SONSelectors, "Huawei"))).click();
+            driver.findElement(By.xpath(readLocator(SONSelectors, "Nokia"))).click();
+        }
 
         Thread.sleep(500);
         driver.findElement(By.xpath(readLocator(SONSelectors, "TechnologyArrow"))).click();
@@ -460,17 +466,14 @@ public class PM {
             scroll = readLocator(SONSelectors, "ExcludeOptions");
             WebElement element = driver.findElement(By.xpath(scroll));
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-
+        startDate=date("Last week");
+        WebElement element1 = driver.findElement(By.xpath("//div[contains(text(),'Data and time')]"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element1);
         switch (ResolutionTemp)
         {
 
-
             case "Hourly" :
-                startDate=date("Last week");
-                   /* WebElement element = driver.findElement(By.xpath(scroll));
-                    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-*/
-                //WebUI.scrollToElement(findTestObject(scroll), 0);
+
                 driver.findElement(By.xpath("//button[contains(text(),'" + startDate + "')]")).click();
 
                 break;

@@ -51,9 +51,7 @@ public class CM {
         }
 
     }
-
-
-
+    //------------------------------------------------------------------------------------------------------
     public void view(String Technology, String ObjectType, String TargetType,String ResolutionTemp) throws Exception {
 
         support.login("CM");
@@ -82,7 +80,30 @@ public class CM {
         }
 
     }
+    //-------------------------------------------------------------------------------------------------------------------
+     public void compare(String Technology, String ObjectType, String MonitoringTargetType) throws Exception {
 
+    support.login("CM");
+    driver.findElement(By.xpath(readLocator(CMSelectors,"Compare"))).click();
+    Thread.sleep(1000);
+    selectObjectType( ObjectType ,Technology );
+
+    //Apply and Verify
+    driver.findElement(By.xpath(readLocator(SONSelectors, "ApplyButton"))).click();
+    Thread.sleep(20000);
+    try {
+
+        bt = driver.findElement(By.xpath(readLocator(SONSelectors, "HomeLogo"))).isDisplayed();
+
+        Assert.assertEquals(bt, false);
+    }
+    catch (Exception e) {
+        Assert.assertEquals(bt, false);
+    }
+
+}
+
+    //--------------------------------------------------------------------------------------------------------
     void selectObjectType(String ObjectType , String Technology) throws Exception {
 
         driver.findElement(By.xpath(readLocator(SONSelectors, "ObjectSelection"))).click();

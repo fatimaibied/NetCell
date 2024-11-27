@@ -1,4 +1,4 @@
-package TestCases.PM.Huawei.Stats.G2;
+package TestCases.PM.Nokia.Stats.G2;
 
 import Main.MainClass;
 import Main.PM;
@@ -11,77 +11,82 @@ public class Site extends MainClass {
     @Test
     public void SiteStats2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Site", false,"Hourly");
+        State.Stats("Nokia", "2G", "Site", false,"Hourly");
     }
 
     @Test
     public void SiteStatsAggregation2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Site", true,"Hourly");
+        State.Stats("Nokia", "2G", "Site", true,"Hourly");
     }
 
     @Test
     public void SiteStatsDaily2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Site", false,"Daily");
+        State.Stats("Nokia", "2G", "Site", false,"Daily");
     }
     @Test
     public void SiteStatsDailyAggregation2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Site", true,"Daily");
+        State.Stats("Nokia", "2G", "Site", true,"Daily");
     }
     @Test
     public void SiteStatsWeekly2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Site", false,"Weekly");
+        State.Stats("Nokia", "2G", "Site", false,"Weekly");
     }
     @Test
     public void SiteStatsWeeklyAggregation2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Site", true,"Weekly");
+        State.Stats("Nokia", "2G", "Site", true,"Weekly");
     }
 
     @Test
     public void SiteStatsMonthly2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Site", false,"Monthly");
+        State.Stats("Nokia", "2G", "Site", false,"Monthly");
     }
     @Test
     public void SiteStatsMonthlyAggregation2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Site", true,"Monthly");
+        State.Stats("Nokia", "2G", "Site", true,"Monthly");
     }
     @Test
     public void SiteStatsDailyBH2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Site", false,"DailyBH");
+        State.Stats("Nokia", "2G", "Site", false,"DailyBH");
     }
     @Test
     public void SiteStatsDailyBHAggregation2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Site", true,"DailyBH");
+        State.Stats("Nokia", "2G", "Site", true,"DailyBH");
     }
 
     @Test
     public void SiteStatsWeeklyBH2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Site", false,"WeeklyBH");
+        State.Stats("Nokia", "2G", "Site", false,"WeeklyBH");
     }
     @Test
     public void SiteStatsWeeklyBHAggregation2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Site", true,"WeeklyBH");
+        State.Stats("Nokia", "2G", "Site", true,"WeeklyBH");
     }
 
     @Test
     public void SiteStatsMonthlyBH2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Site", false,"MonthlyBH");
+        State.Stats("Nokia", "2G", "Site", false,"MonthlyBH");
     }
 
     @Test
     public void SiteStatsMonthlyBHAggregation2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Site", true,"MonthlyBH");
+        State.Stats("Nokia", "2G", "Site", true,"MonthlyBH");
+    }
+    @Test
+    public void SiteStatsRowAggregation2G() throws Exception {
+
+        State.Stats("Nokia", "2G", "Site", true,"Row");
     }
 }

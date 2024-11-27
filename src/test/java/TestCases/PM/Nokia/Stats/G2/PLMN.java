@@ -1,4 +1,4 @@
-package TestCases.PM.Huawei.Stats.G2;
+package TestCases.PM.Nokia.Stats.G2;
 
 import Main.MainClass;
 import Main.PM;
@@ -11,40 +11,45 @@ public class PLMN extends MainClass {
     @Test
     public void PLMNStats2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "PLMN", false,"Hourly");
+        State.Stats("Nokia", "2G", "PLMN", false,"Hourly");
     }
     @Test
     public void PLMNStatsDaily2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "PLMN", false,"Daily");
+        State.Stats("Nokia", "2G", "PLMN", false,"Daily");
     }
 
     @Test
     public void PLMNStatsWeekly2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "PLMN", false,"Weekly");
+        State.Stats("Nokia", "2G", "PLMN", false,"Weekly");
     }
 
     @Test
     public void PLMNStatsMonthly2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "PLMN", false,"Monthly");
+        State.Stats("Nokia", "2G", "PLMN", false,"Monthly");
     }
     @Test
     public void PLMNStatsDailyBH2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "PLMN", false,"DailyBH");
+        State.Stats("Nokia", "2G", "PLMN", false,"DailyBH");
     }
 
     @Test
     public void PLMNStatsWeeklyBH2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "PLMN", false,"WeeklyBH");
+        State.Stats("Nokia", "2G", "PLMN", false,"WeeklyBH");
     }
 
     @Test
     public void PLMNStatsMonthlyBH2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "PLMN", false,"MonthlyBH");
+        State.Stats("Nokia", "2G", "PLMN", false,"MonthlyBH");
+    }
+    @Test
+    public void PLMNStatsRaw2G() throws Exception {
+
+        State.Stats("Nokia", "2G", "PLMN", false,"Raw");
     }
 }

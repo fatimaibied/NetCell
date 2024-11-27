@@ -11,24 +11,77 @@ public class BSC extends MainClass {
     @Test
     public void BSCStats2G() throws Exception {
 
-        State.Stats("2G", "BSC", false,"Hourly");
+        State.Stats("Huawei", "2G", "BSC", false,"Hourly");
     }
 
     @Test
     public void BSCStatsAggregation2G() throws Exception {
 
-        State.Stats("2G", "BSC", true,"Hourly");
+        State.Stats("Huawei", "2G", "BSC", true,"Hourly");
     }
 
     @Test
-    public void BSCDailyStats2G() throws Exception {
+    public void BSCStatsDaily2G() throws Exception {
 
-        State.Stats("2G", "BSC", true,"Daily");
+        State.Stats("Huawei", "2G", "BSC", false,"Daily");
+    }
+    @Test
+    public void BSCStatsDailyAggregation2G() throws Exception {
+
+        State.Stats("Huawei", "2G", "BSC", true,"Daily");
+    }
+    @Test
+    public void BSCStatsWeekly2G() throws Exception {
+
+        State.Stats("Huawei", "2G", "BSC", false,"Weekly");
+    }
+    @Test
+    public void BSCStatsWeeklyAggregation2G() throws Exception {
+
+        State.Stats("Huawei", "2G", "BSC", true,"Weekly");
     }
 
     @Test
-    public void BSCDailyBHStats2G() throws Exception {
+    public void BSCStatsMonthly2G() throws Exception {
 
-        State.Stats("2G", "BSC", true,"DailyBH");
+        State.Stats("Huawei", "2G", "BSC", false,"Monthly");
+    }
+    @Test
+    public void BSCStatsMonthlyAggregation2G() throws Exception {
+
+        State.Stats("Huawei", "2G", "BSC", true,"Monthly");
+    }
+    @Test
+    public void BSCStatsDailyBH2G() throws Exception {
+
+        State.Stats("Huawei", "2G", "BSC", false,"DailyBH");
+    }
+    @Test
+    public void BSCStatsDailyBHAggregation2G() throws Exception {
+
+        State.Stats("Huawei", "2G", "BSC", true,"DailyBH");
+    }
+
+    @Test
+    public void BSCStatsWeeklyBH2G() throws Exception {
+
+        State.Stats("Huawei", "2G", "BSC", false,"WeeklyBH");
+    }
+    @Test
+    public void BSCStatsWeeklyBHAggregation2G() throws Exception {
+
+        State.Stats("Huawei", "2G", "BSC", true,"WeeklyBH");
+    }
+
+    @Test
+    public void BSCStatsMonthlyBH2G() throws Exception {
+
+        State.Stats("Huawei", "2G", "BSC", false,"MonthlyBH");
+    }
+
+    @Test
+    public void BSCStatsMonthlyBHAggregation2G() throws Exception {
+
+        State.Stats("Huawei", "2G", "BSC", true,"MonthlyBH");
     }
 }

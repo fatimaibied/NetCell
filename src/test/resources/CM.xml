@@ -3,7 +3,7 @@
 <Selector>
     <Parameter>//button[contains(text(),'Parameter')]</Parameter>
     <View>//button[contains(text(),'View')]</View>
-
+<Compare>//button[contains(text(),'Compare')]</Compare>
 
 //------------Monitoring Target Type-------------------
     <TargetTypeCell>//p-dropdownitem[1]/li[@aria-label="Cell"]</TargetTypeCell>

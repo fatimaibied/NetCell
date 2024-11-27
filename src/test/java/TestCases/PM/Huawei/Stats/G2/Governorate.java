@@ -11,24 +11,77 @@ public class Governorate extends MainClass {
     @Test
     public void GovernorateStats2G() throws Exception {
 
-        State.Stats("2G", "Governorate", false,"Hourly");
+        State.Stats("Huawei", "2G", "Governorate", false,"Hourly");
     }
 
     @Test
     public void GovernorateStatsAggregation2G() throws Exception {
 
-        State.Stats("2G", "Governorate", true,"Hourly");
+        State.Stats("Huawei", "2G", "Governorate", true,"Hourly");
     }
 
     @Test
-    public void GovernorateDailyStats2G() throws Exception {
+    public void GovernorateStatsDaily2G() throws Exception {
 
-        State.Stats("2G", "Governorate", true,"Daily");
+        State.Stats("Huawei", "2G", "Governorate", false,"Daily");
+    }
+    @Test
+    public void GovernorateStatsDailyAggregation2G() throws Exception {
+
+        State.Stats("Huawei", "2G", "Governorate", true,"Daily");
+    }
+    @Test
+    public void GovernorateStatsWeekly2G() throws Exception {
+
+        State.Stats("Huawei", "2G", "Governorate", false,"Weekly");
+    }
+    @Test
+    public void GovernorateStatsWeeklyAggregation2G() throws Exception {
+
+        State.Stats("Huawei", "2G", "Governorate", true,"Weekly");
     }
 
     @Test
-    public void GovernorateDailyBHStats2G() throws Exception {
+    public void GovernorateStatsMonthly2G() throws Exception {
 
-        State.Stats("2G", "Governorate", true,"DailyBH");
+        State.Stats("Huawei", "2G", "Governorate", false,"Monthly");
+    }
+    @Test
+    public void GovernorateStatsMonthlyAggregation2G() throws Exception {
+
+        State.Stats("Huawei", "2G", "Governorate", true,"Monthly");
+    }
+    @Test
+    public void GovernorateStatsDailyBH2G() throws Exception {
+
+        State.Stats("Huawei", "2G", "Governorate", false,"DailyBH");
+    }
+    @Test
+    public void GovernorateStatsDailyBHAggregation2G() throws Exception {
+
+        State.Stats("Huawei", "2G", "Governorate", true,"DailyBH");
+    }
+
+    @Test
+    public void GovernorateStatsWeeklyBH2G() throws Exception {
+
+        State.Stats("Huawei", "2G", "Governorate", false,"WeeklyBH");
+    }
+    @Test
+    public void GovernorateStatsWeeklyBHAggregation2G() throws Exception {
+
+        State.Stats("Huawei", "2G", "Governorate", true,"WeeklyBH");
+    }
+
+    @Test
+    public void GovernorateStatsMonthlyBH2G() throws Exception {
+
+        State.Stats("Huawei", "2G", "Governorate", false,"MonthlyBH");
+    }
+
+    @Test
+    public void GovernorateStatsMonthlyBHAggregation2G() throws Exception {
+
+        State.Stats("Huawei", "2G", "Governorate", true,"MonthlyBH");
     }
 }
