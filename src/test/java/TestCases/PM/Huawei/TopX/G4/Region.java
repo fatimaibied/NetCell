@@ -10,19 +10,83 @@ public class Region extends MainClass {
     @Test
     public void RegionDailyTopX4G() throws Exception {
 
-        TopX.TopX("4G", "Region", false,"Daily",false);
+        TopX.TopX("Huawei", "4G", "Region", "Daily", "Cell", false);
     }
 
     @Test
     public void RegionDailyBHTopX4G() throws Exception {
 
-        TopX.TopX("4G", "Region", false,"DailyBH",false);
+        TopX.TopX("Huawei", "4G", "Region", "DailyBH", "Cell", false);
+    }
+
+    @Test
+    public void RegionWeeklyTopX4G() throws Exception {
+
+        TopX.TopX("Huawei", "4G", "Region", "Weekly", "Cell", false);
+    }
+
+    @Test
+    public void RegionWeeklyBHTopX4G() throws Exception {
+
+        TopX.TopX("Huawei", "4G", "Region", "WeeklyBH", "Cell", false);
+    }
+
+    @Test
+    public void RegionMonthlyTopX4G() throws Exception {
+
+        TopX.TopX("Huawei", "4G", "Region", "Monthly", "Cell", false);
+    }
+    @Test
+    public void RegionMonthlyBHTopX4G() throws Exception {
+
+        TopX.TopX("Huawei", "4G", "Region", "MonthlyBH", "Cell", false);
+    }
+
+    @Test
+    public void RegionHourlyTopX4G() throws Exception {
+
+        TopX.TopX("Huawei", "4G", "Region", "Hourly", "Cell", false);
     }
 
     //------------------------LowX------------------------------------------------------
     @Test
     public void RegionDailyLowXTopX4G() throws Exception {
 
-        TopX.TopX("4G", "Region", false,"DailyBH",true);
+        TopX.TopX("Huawei", "4G", "Region", "Daily", "Cell", true);
     }
+    @Test
+    public void RegionDailyBHLowXTopX4G() throws Exception {
+
+        TopX.TopX("Huawei", "4G", "Region", "DailyBH", "Cell", true);
+    }
+
+    @Test
+    public void RegionWeeklyLowXTopX4G() throws Exception {
+
+        TopX.TopX("Huawei", "4G", "Region", "Weekly", "Cell", true);
+    }
+
+    @Test
+    public void RegionWeeklyBHLowXTopX4G() throws Exception {
+
+        TopX.TopX("Huawei", "4G", "Region", "WeeklyBH", "Cell", true);
+    }
+
+    @Test
+    public void RegionMonthlyLowXTopX4G() throws Exception {
+
+        TopX.TopX("Huawei", "4G", "Region", "Monthly", "Cell", true);
+    }
+    @Test
+    public void RegionMonthlyBHLowXTopX4G() throws Exception {
+
+        TopX.TopX("Huawei", "4G", "Region", "MonthlyBH", "Cell", true);
+    }
+
+    @Test
+    public void RegionHourlyLowXTopX4G() throws Exception {
+
+        TopX.TopX("Huawei", "4G", "Region", "Hourly", "Cell", true);
+    }
+
 }

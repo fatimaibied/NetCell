@@ -9,8 +9,14 @@ public class Region extends MainClass {
     CM parameters= new CM();
 
     @Test
-    public void RegionView4G() throws Exception {
+    public void RegionViewCell4G() throws Exception {
 
         parameters.view("4G", "Region", "Cell","Hourly");
+    }
+
+    @Test
+    public void RegionViewSite4G() throws Exception {
+
+        parameters.view("4G", "Region", "Site","Hourly");
     }
 }

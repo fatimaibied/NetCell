@@ -29,24 +29,28 @@ public class PM {
     List<String> relatedElementsBSC;
     List<String> relatedElementsCluster;
     List<String> relatedElementsSector;
-    Functions support = new Functions();
+
+    //-------------------------Stats-----------------------------------
     public void Stats (String Vendor, String Technology , String ObjectType , boolean Aggregation , String Resolution) throws Exception {
         Functions support = new Functions();
         //Click on the PM
         support.login("PM");
-
         Thread.sleep(1000);
+
+        //Vendor Selection
         if (Vendor=="Nokia") {
             driver.findElement(By.xpath(readLocator(SONSelectors, "Huawei"))).click();
             driver.findElement(By.xpath(readLocator(SONSelectors, "Nokia"))).click();
         }
-
         Thread.sleep(500);
+
+        //Technology Selection
         driver.findElement(By.xpath(readLocator(SONSelectors, "TechnologyArrow"))).click();
         driver.findElement(By.xpath("//span[normalize-space(text())='" + Technology + "']")).click();
-
         Thread.sleep(1000);
-        selectObjectType( ObjectType ,Technology ,Aggregation);
+
+        //Object type Selection
+        selectObjectType( ObjectType ,Technology);
 
         if (Aggregation == true)
         {
@@ -54,6 +58,9 @@ public class PM {
         }
         //Set Resolution
         selectResolution(driver,Resolution);
+
+        //KPI Selection
+        driver.findElement(By.xpath(readLocator(PMSelectors, "KPI"))).click();
 
         //Apply and Verify
         driver.findElement(By.xpath(readLocator(SONSelectors, "ApplyButton"))).click();
@@ -77,23 +84,28 @@ public class PM {
         }
 
     }
-    public void TopX (String Technology , String ObjectType ,boolean Aggregation ,String Resolution, Boolean lowX) throws Exception {
+
+    //-------------------------TopX-----------------------------------
+    public void TopX (String Vendor, String Technology , String ObjectType , String Resolution, String AggregationLevel, Boolean lowX) throws Exception {
         Functions support = new Functions();
         //Click on the PM
         support.login("PM");
-
         Thread.sleep(500);
+
+        //Vendor Selection
+        if (Vendor=="Nokia") {
+            driver.findElement(By.xpath(readLocator(SONSelectors, "Huawei"))).click();
+            driver.findElement(By.xpath(readLocator(SONSelectors, "Nokia"))).click();
+        }
+
+
         driver.findElement(By.xpath(readLocator(SONSelectors, "TechnologyArrow"))).click();
         driver.findElement(By.xpath("//span[normalize-space(text())='" + Technology + "']")).click();
 
         driver.findElement(By.xpath(readLocator(PMSelectors, "TopX"))).click();
         Thread.sleep(1000);
-        selectObjectType( ObjectType ,Technology ,Aggregation);
+        selectObjectType( ObjectType ,Technology );
 
-        if (Aggregation == true)
-        {
-            driver.findElement(By.xpath(readLocator(PMSelectors, "AggregationBtn"))).click();
-        }
         //Set Resolution
         selectResolutionTopX(driver,Resolution);
 
@@ -105,6 +117,10 @@ public class PM {
             driver.findElement(By.xpath(readLocator(PMSelectors, "lowXCheckbox"))).click();
 
         }
+
+        //KPI Selection
+        driver.findElement(By.xpath(readLocator(PMSelectors, "KPI"))).click();
+
         //Apply and Verify
         driver.findElement(By.xpath(readLocator(SONSelectors, "ApplyButton"))).click();
 /*
@@ -119,6 +135,7 @@ public class PM {
         Thread.sleep(20000);
         try {
 
+
             bt = driver.findElement(By.xpath(readLocator(SONSelectors, "HomeLogo"))).isDisplayed();
 
             Assert.assertEquals(bt, false);
@@ -130,7 +147,7 @@ public class PM {
 
     }
 
-    void selectObjectType(String ObjectType , String Technology ,boolean Aggregation) throws Exception {
+    void selectObjectType(String ObjectType , String Technology ) throws Exception {
 
         driver.findElement(By.xpath(readLocator(SONSelectors, "ObjectSelection"))).click();
         relatedElements = readTags("Regions", SONSelectors);
@@ -170,10 +187,7 @@ public class PM {
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElements.get(i)))).click();
 
                 }
-                if (Aggregation == true)
-                {
-                    driver.findElement(By.xpath(readLocator(PMSelectors, "AggregationBtn"))).click();
-                }
+
 
                 break;
             //-------------------------------------------------------------
@@ -193,10 +207,7 @@ public class PM {
                     Thread.sleep(1000);
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionClose.get(i)))).click();
                 }
-                if (Aggregation == true)
-                {
-                    driver.findElement(By.xpath(readLocator(PMSelectors, "AggregationBtn"))).click();
-                }
+
 
                 break;
             //-------------------------------------------------------------
@@ -219,10 +230,7 @@ public class PM {
                     Thread.sleep(1000);
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionClose.get(i)))).click();
                 }
-                if (Aggregation == true)
-                {
-                    driver.findElement(By.xpath(readLocator(PMSelectors, "AggregationBtn"))).click();
-                }
+
                 break;
 
             //-------------------------------------------------------------
@@ -245,10 +253,7 @@ public class PM {
                 }
 
 
-                if (Aggregation == true)
-                {
-                    driver.findElement(By.xpath(readLocator(PMSelectors, "AggregationBtn"))).click();
-                }
+
                 break;
             //-------------------------------------------------------------
             case "Region XDD" :
@@ -267,10 +272,7 @@ public class PM {
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionClose.get(i)))).click();
 
                 }
-                if (Aggregation == true)
-                {
-                    driver.findElement(By.xpath(readLocator(PMSelectors, "AggregationBtn"))).click();
-                }
+
 
                 break;
             //-------------------------------------------------------------
@@ -385,10 +387,7 @@ public class PM {
                 }
                 driver.findElement(By.xpath(readLocator(SONSelectors, "GovernorateTDDClose"))).click();
 
-                if (Aggregation == true)
-                {
-                    driver.findElement(By.xpath(readLocator(PMSelectors, "AggregationBtn"))).click();
-                }
+
                 break;
 
             //-------------------------------------------------

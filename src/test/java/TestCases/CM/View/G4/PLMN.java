@@ -9,8 +9,14 @@ public class PLMN extends MainClass {
     CM parameters= new CM();
 
     @Test
-    public void PLMNView4G() throws Exception {
+    public void PLMNViewCell4G() throws Exception {
 
         parameters.view("4G", "PLMN", "Cell","Hourly");
+    }
+
+    @Test
+    public void PLMNViewSite4G() throws Exception {
+
+        parameters.view("4G", "PLMN", "Site","Hourly");
     }
 }

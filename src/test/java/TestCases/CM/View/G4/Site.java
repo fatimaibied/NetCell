@@ -9,8 +9,16 @@ public class Site extends MainClass {
     CM parameters= new CM();
 
     @Test
-    public void SiteView4G() throws Exception {
+    public void SiteViewCell4G() throws Exception {
 
         parameters.view("4G", "Site", "Cell","Hourly");
     }
+
+    @Test
+    public void SiteViewSite4G() throws Exception {
+
+        parameters.view("4G", "Site", "Site","Hourly");
+    }
+
+
 }

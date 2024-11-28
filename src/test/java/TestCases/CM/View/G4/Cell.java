@@ -9,8 +9,14 @@ public class Cell extends MainClass {
     CM parameters= new CM();
 
     @Test
-    public void CellView4G() throws Exception {
+    public void CellViewCell4G() throws Exception {
 
         parameters.view("4G", "Cell", "Cell","Hourly");
+    }
+
+    @Test
+    public void CellViewSite4G() throws Exception {
+
+        parameters.view("4G", "Cell", "Site","Hourly");
     }
 }

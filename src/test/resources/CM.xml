@@ -3,10 +3,11 @@
 <Selector>
     <Parameter>//button[contains(text(),'Parameter')]</Parameter>
     <View>//button[contains(text(),'View')]</View>
-<Compare>//button[contains(text(),'Compare')]</Compare>
+    <Compare>//button[contains(text(),'Compare')]</Compare>
 
 //------------Monitoring Target Type-------------------
     <TargetTypeCell>//p-dropdownitem[1]/li[@aria-label="Cell"]</TargetTypeCell>
+    <TargetTypeSite>//p-dropdownitem[2]/li[@aria-label="Site"]</TargetTypeSite>
     <TargetType>//app-mo-tree[1]/div[1]/p-dropdown[1]/div[1]/div[1]/chevrondownicon[1]/*[1]</TargetType>>
     <TargetCell>//div[2]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/div[1]/div[1]</TargetCell>
 

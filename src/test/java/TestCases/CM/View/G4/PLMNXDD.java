@@ -9,8 +9,13 @@ public class PLMNXDD extends MainClass {
     CM parameters= new CM();
 
     @Test
-    public void PLMNXDDView4G() throws Exception {
+    public void PLMNXDDViewCell4G() throws Exception {
 
         parameters.view("4G", "PLMNXDD", "Cell","Hourly");
+    }
+    @Test
+    public void PLMNXDDViewSite4G() throws Exception {
+
+        parameters.view("4G", "PLMNXDD", "Site","Hourly");
     }
 }
