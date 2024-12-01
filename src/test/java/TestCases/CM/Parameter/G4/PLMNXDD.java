@@ -13,4 +13,22 @@ public class PLMNXDD extends MainClass {
 
         parameters.Parameter("4G", "PLMN XDD", "Last Week");
     }
+
+    @Test
+    public void PLMNXDDParameterWeekends4G() throws Exception {
+
+        parameters.Parameter("4G", "PLMN XDD", "Weekends");
+    }
+
+    @Test
+    public void PLMNXDDParameterYesterday4G() throws Exception {
+
+        parameters.Parameter("4G", "PLMN XDD", "Yesterday");
+    }
+
+    @Test
+    public void PLMNXDDParameterCustom4G() throws Exception {
+
+        parameters.Parameter("4G", "PLMN XDD", "Custom");
+    }
 }

@@ -11,12 +11,12 @@ public class PLMN extends MainClass {
     @Test
     public void PLMNViewCell2G() throws Exception {
 
-        parameters.view("2G", "PLMN", "Cell","Hourly");
+        parameters.view("2G", "PLMN", "Cell");
     }
     @Test
     public void PLMNViewSite2G() throws Exception {
 
-        parameters.view("2G", "PLMN", "Site","Hourly");
+        parameters.view("2G", "PLMN", "Site");
     }
 
 }

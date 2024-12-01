@@ -1,4 +1,4 @@
-package TestCases.CM.Parameter.G4;
+package TestCases.CM.Parameter.G2;
 
 import Main.CM;
 import Main.MainClass;

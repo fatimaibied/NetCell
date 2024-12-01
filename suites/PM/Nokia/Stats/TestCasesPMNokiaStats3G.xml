@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="PM- Nokia test Cases">
+    <test name="Nokia  Stats 3G test Cases">
+       <packages>
+           <package name="TestCases.PM.Nokia.Stats.G3"></package>
+       </packages>
+       </test>
+
+</suite>

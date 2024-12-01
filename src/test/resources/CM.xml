@@ -11,4 +11,72 @@
     <TargetType>//app-mo-tree[1]/div[1]/p-dropdown[1]/div[1]/div[1]/chevrondownicon[1]/*[1]</TargetType>>
     <TargetCell>//div[2]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/div[1]/div[1]</TargetCell>
 
+
+    //-------------------------------------------------------------------------------
+
+    <LastWeek>//span[contains(text(),'Last Week')]</LastWeek>
+    <Weekends>//span[contains(text(),'Weekends')]</Weekends>
+    <Yesterday>//span[contains(text(),'Yesterday')]</Yesterday>
+    <Custom>//span[contains(text(),'Custom')]</Custom>
+
+
+    //-----------------------Compare Object Type------------------------------------------------------
+    <CompareNEs>//button[contains(text(),'Compare NEs')]</CompareNEs>
+
+    //------------Source Site -----------------
+    <SitesEastAmman>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</SitesEastAmman>
+    <SitesWestAmman>//p-treenode[2]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</SitesWestAmman>
+    <SitesSouthAmman>//p-treenode[3]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</SitesSouthAmman>
+    <SitesSouthJordan>//p-treenode[4]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</SitesSouthJordan>
+    <SitesNorthJordan>//p-treenode[5]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</SitesNorthJordan>
+    <SitesEastJordan>//p-treenode[6]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</SitesEastJordan>
+    <SitesOthers>//p-treenode[7]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</SitesOthers>
+
+    //------------Destination Region  -----------------
+
+    <RegionArrowEastAmman>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]</RegionArrowEastAmman>
+    <RegionArrowWestAmman>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[2]/li[1]/div[1]/button[1]/chevronrighticon[1]</RegionArrowWestAmman>
+    <RegionArrowSouthAmman>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[3]/li[1]/div[1]/button[1]/chevronrighticon[1]</RegionArrowSouthAmman>
+    <RegionArrowSouthJordan>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[4]/li[1]/div[1]/button[1]/chevronrighticon[1]</RegionArrowSouthJordan>
+    <RegionArrowNorthJordan>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[5]/li[1]/div[1]/button[1]/chevronrighticon[1]</RegionArrowNorthJordan>
+    <RegionArrowEastJordan>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[6]/li[1]/div[1]/button[1]/chevronrighticon[1]</RegionArrowEastJordan>
+    <RegionArrowOthers>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[7]/li[1]/div[1]/button[1]/chevronrighticon[1]]</RegionArrowOthers>
+    //------------Destination Site -----------------
+    <SitesDestinationEastAmman>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</SitesDestinationEastAmman>
+    <SitesDestinationWestAmman>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[2]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</SitesDestinationWestAmman>
+    <SitesDestinationSouthAmman>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[3]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</SitesDestinationSouthAmman>
+    <SitesDestinationSouthJordan>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[4]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</SitesDestinationSouthJordan>
+    <SitesDestinationNorthJordan>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[5]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</SitesDestinationNorthJordan>
+    <SitesDestinationEastJordan>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[6]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</SitesDestinationEastJordan>
+    <SitesDestinationOthers>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[7]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</SitesDestinationOthers>
+
+    //------------------------Cell Select-------------------------------------
+    <CellOneEastAmman>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</CellOneEastAmman>
+    <CellOneWestAmman>//p-treenode[2]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</CellOneWestAmman>
+    <CellOneSouthAmman>//p-treenode[3]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</CellOneSouthAmman>
+    <CellOneSouthJordan>//p-treenode[4]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</CellOneSouthJordan>
+    <CellOneNorthJordan>//p-treenode[5]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</CellOneNorthJordan>
+    <CellOneEastJordan>//p-treenode[6]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</CellOneEastJordan>
+    <CellOneOthers>//p-treenode[7]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</CellOneOthers>
+
+    //------------Destination Cell Site -----------------
+    <SiteDestinationsEastAmman>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]</SiteDestinationsEastAmman>
+    <SiteDestinationWestAmman>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[2]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]</SiteDestinationWestAmman>
+    <SiteDestinationSouthAmman>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[3]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]</SiteDestinationSouthAmman>
+    <SiteDestinationSouthJordan>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[4]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]</SiteDestinationSouthJordan>
+    <SiteDestinationNorthJordan>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[5]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]</SiteDestinationNorthJordan>
+    <SiteDestinationEastJordan>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[6]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]</SiteDestinationEastJordan>
+    <SiteDestinationOthers>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[7]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]</SiteDestinationOthers>
+
+    //------------Destination Cell  -----------------
+    <CellDestinationEastAmman>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</CellDestinationEastAmman>
+    <CellDestinationWestAmman>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[2]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</CellDestinationWestAmman>
+    <CellDestinationSouthAmman>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[3]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</CellDestinationSouthAmman>
+    <CellDestinationouthJordan>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[4]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</CellDestinationouthJordan>
+    <CellDestinationorthJordan>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[5]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</CellDestinationorthJordan>
+    <CellDestinationastJordan>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[6]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</CellDestinationastJordan>
+    <CellDestinationOthers>//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[7]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]</CellDestinationOthers>
+    //----------------------------
+    <Save>//button[contains(text(),'Save')]</Save>
+    <All>//div[contains(text(),'All')]</All>
 </Selector>

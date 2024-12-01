@@ -1,7 +1,7 @@
-package TestCases.CM.Parameter.G4;
+package TestCases.CM.Parameter.G2;
 
-import Main.MainClass;
 import Main.CM;
+import Main.MainClass;
 import org.testng.annotations.Test;
 
 public class PLMN extends MainClass {

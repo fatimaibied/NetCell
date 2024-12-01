@@ -13,4 +13,22 @@ public class Cell extends MainClass {
 
         parameters.Parameter("4G", "Cell", "Last Week");
     }
+
+    @Test
+    public void CellParameterWeekends4G() throws Exception {
+
+        parameters.Parameter("4G", "Cell", "Weekends");
+    }
+
+    @Test
+    public void CellParameterYesterday4G() throws Exception {
+
+        parameters.Parameter("4G", "Cell", "Yesterday");
+    }
+
+    @Test
+    public void CellParameterCustom4G() throws Exception {
+
+        parameters.Parameter("4G", "Cell", "Custom");
+    }
 }

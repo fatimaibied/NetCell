@@ -4,6 +4,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.By;
@@ -27,15 +29,24 @@ public class CM {
     List<String> relatedElementsCellOne;
     List<String> relatedElementsBSC;
     List<String> relatedElementsCluster;
+    List<String> relatedElementsRegions;
     List<String> relatedElementsSector;
+    List<String> relatedElementsDestinationSite;
+    List<String> relatedElementsDestinationCellSite;
+    List <String>relatedElementsDestinationCell;
     Functions support = new Functions();
     boolean bt;
-    public void Parameter(String Technology, String ObjectType, String ResolutionTemp) throws Exception {
+    public void Parameter(String Technology, String ObjectType, String PredefinedTime) throws Exception {
 
         support.login("CM");
+
+        Thread.sleep(500);
+        driver.findElement(By.xpath(readLocator(SONSelectors, "TechnologyArrow"))).click();
+        driver.findElement(By.xpath("//span[normalize-space(text())='" + Technology + "']")).click();
         driver.findElement(By.xpath(readLocator(CMSelectors,"Parameter"))).click();
         Thread.sleep(1000);
         selectObjectType( ObjectType ,Technology );
+        PredefinedTime(PredefinedTime);
 
         //Apply and Verify
         driver.findElement(By.xpath(readLocator(SONSelectors, "ApplyButton"))).click();
@@ -52,9 +63,12 @@ public class CM {
 
     }
     //------------------------------------------------------------------------------------------------------
-    public void view(String Technology, String ObjectType, String TargetType,String ResolutionTemp) throws Exception {
+    public void view(String Technology, String ObjectType, String TargetType) throws Exception {
 
         support.login("CM");
+        Thread.sleep(500);
+        driver.findElement(By.xpath(readLocator(SONSelectors, "TechnologyArrow"))).click();
+        driver.findElement(By.xpath("//span[normalize-space(text())='" + Technology + "']")).click();
         driver.findElement(By.xpath(readLocator(CMSelectors,"View"))).click();
         Thread.sleep(1000);
         selectObjectType( ObjectType ,Technology );
@@ -84,10 +98,22 @@ public class CM {
      public void compare(String Technology, String ObjectType, String MonitoringTargetType) throws Exception {
 
     support.login("CM");
+         Thread.sleep(500);
+         driver.findElement(By.xpath(readLocator(SONSelectors, "TechnologyArrow"))).click();
+         driver.findElement(By.xpath("//span[normalize-space(text())='" + Technology + "']")).click();
     driver.findElement(By.xpath(readLocator(CMSelectors,"Compare"))).click();
     Thread.sleep(1000);
-    selectObjectType( ObjectType ,Technology );
+    selectCompareObject( ObjectType );
 
+         Thread.sleep(2000);
+    if (MonitoringTargetType!=""){
+        driver.findElement(By.xpath(readLocator(CMSelectors, "TargetType"))).click();
+        driver.findElement(By.xpath(readLocator(CMSelectors, "TargetType"+MonitoringTargetType))).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath(readLocator(CMSelectors, "TargetCell"))).click();
+    }
+        else {
+        driver.findElement(By.xpath(readLocator(CMSelectors,"All"))).click();}
     //Apply and Verify
     driver.findElement(By.xpath(readLocator(SONSelectors, "ApplyButton"))).click();
     Thread.sleep(20000);
@@ -408,131 +434,117 @@ public class CM {
 
         }
     }
-    void selectResolution(WebDriver driver, String ResolutionTemp, String SonType) throws InterruptedException {
-        String scroll;
 
-        if(SonType!="4g congested cells" &SonType!="4G Balance" ){
-            scroll=readLocator(SONSelectors, "ExcludeOptions");
+    //-----------------------------------------------------------------------------------------------------------
+    void selectCompareObject(String ObjectType ) throws Exception {
+
+        driver.findElement(By.xpath(readLocator(SONSelectors, "ObjectSelection"))).click();
+        relatedElements = readTags("Regions", SONSelectors);
+        relatedElementsRegionArrow = readTags("RegionArrow", SONSelectors);
+        relatedElementsRegions = readTags("RegionArrow", CMSelectors);
+        relatedElementsRegionClose = readTags("RegionClose", SONSelectors);
+
+        relatedElementsSites=readTags("Sites", CMSelectors);
+        relatedElementsCells=readTags("Cells", SONSelectors);
+        relatedElementsCellOne= readTags("CellOne", CMSelectors);
+
+        relatedElementsDestinationSite=readTags("SitesDestination", CMSelectors);
+        relatedElementsDestinationCellSite=readTags("SiteDestination", CMSelectors);
+        relatedElementsDestinationCell=readTags("CellDestination", CMSelectors);
+        Random random = new Random();
+        int randomNumber = random.nextInt(6) + 1;
+
+        int secondNumber;
+        do {
+            secondNumber = random.nextInt(6) + 1; // Random number between 1 and 7
+        } while (secondNumber == randomNumber);
+
+        switch (ObjectType) {
+
+            //-------------------------------------------------------------
+            case "Site" :
+                //Object Selection (Site)
+
+                driver.findElement(By.xpath(readLocator(SONSelectors,"Site"))).click();
+                Thread.sleep(1000);
+                driver.findElement(By.xpath(readLocator(CMSelectors,"CompareNEs"))).click();
+
+                Thread.sleep(1000);
+                    driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(randomNumber)))).click();
+                    Thread.sleep(1000);
+                    driver.findElement(By.xpath(readLocator(CMSelectors, relatedElementsSites.get(randomNumber)))).click();
+                    Thread.sleep(1000);
+
+                driver.findElement(By.xpath(readLocator(CMSelectors, relatedElementsRegions.get(secondNumber)))).click();
+                Thread.sleep(1000);
+                driver.findElement(By.xpath(readLocator(CMSelectors, relatedElementsDestinationSite.get(secondNumber)))).click();
+
+
+                break;
+            //-------------------------------------------------------------
+            case "Cell":
+
+                //Object Selection (Cell)
+
+                driver.findElement(By.xpath(readLocator(SONSelectors,"Cell"))).click();
+
+                Thread.sleep(1000);
+                driver.findElement(By.xpath(readLocator(CMSelectors,"CompareNEs"))).click();
+
+
+
+                    driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(randomNumber)))).click();
+                    Thread.sleep(2000);
+                    driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsCells.get(randomNumber)))).click();
+                    Thread.sleep(2000);
+                    driver.findElement(By.xpath(readLocator(CMSelectors, relatedElementsCellOne.get(randomNumber)))).click();
+                    Thread.sleep(1000);
+                    driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionClose.get(randomNumber)))).click();
+                    driver.findElement(By.xpath(readLocator(CMSelectors, relatedElementsRegions.get(secondNumber)))).click();
+                    Thread.sleep(1000);
+                    driver.findElement(By.xpath(readLocator(CMSelectors, relatedElementsDestinationCellSite.get(secondNumber)))).click();
+                Thread.sleep(1000);
+                driver.findElement(By.xpath(readLocator(CMSelectors, relatedElementsDestinationCell.get(secondNumber)))).click();
+                break;
+
+
+            case "RNC" :
+                driver.findElement(By.xpath(readLocator(SONSelectors,"RNC"))).click();
+
+                Thread.sleep(1000);
+                driver.findElement(By.xpath(readLocator(CMSelectors,"CompareNEs"))).click();
+
+                Thread.sleep(1000);
+                driver.findElement(By.xpath("//div[2]/div[1]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode["+randomNumber+"]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]")).click();
+                driver.findElement(By.xpath("//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode["+secondNumber+"]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]")).click();
+
+
+                break;
+
+            case "BSC" :
+                driver.findElement(By.xpath(readLocator(SONSelectors,"BSC"))).click();
+                Thread.sleep(1000);
+                driver.findElement(By.xpath(readLocator(CMSelectors,"CompareNEs"))).click();
+
+                Thread.sleep(1000);
+                driver.findElement(By.xpath("//div[2]/div[1]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode["+randomNumber+"]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]")).click();
+                driver.findElement(By.xpath("//div[2]/div[2]/app-general-tree[1]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode["+secondNumber+"]/li[1]/div[1]/span[1]/span[1]/div[1]/input[1]")).click();
+
+
+                break;
         }
-        else if (SonType=="4G Balance" ){
-            scroll=readLocator(SONSelectors, "Carrier");
-        }
-        else {
-            scroll=readLocator(SONSelectors, "DailyBH");
-        }
 
-        Thread.sleep(1000);
-        if (ResolutionTemp!="") {
-            String startDate;
-            WebElement element = driver.findElement(By.xpath(scroll));
-            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-
-            switch (ResolutionTemp)
-            {
-
-                case "Hourly" :
-                    startDate=date("Last week");
-                   /* WebElement element = driver.findElement(By.xpath(scroll));
-                    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-*/
-                    //WebUI.scrollToElement(findTestObject(scroll), 0);
-                    driver.findElement(By.xpath("//button[contains(text(),'" + startDate + "')]")).click();
-
-                    break;
-                //----------------------------------------------
-
-                case "Daily" :
-                    //WebUI.scrollToElement(findTestObject('Object Repository/SON/Exclude Options'), 0)
-                    if (SonType!="Azimuth Discrepancy" ) {
-                        driver.findElement(By.xpath(readLocator(SONSelectors, "Hourly"))).click();
-                    }
-                    driver.findElement(By.xpath(readLocator(SONSelectors, "Daily"))).click();
-
-
-                    startDate=date("Last week");
-                    System.out.println(startDate);
-                    driver.findElement(By.xpath("//button[contains(text(),'" + startDate + "')]")).click();
-                    break;
-                //---------------------------------------------
-
-                case "Weekly" :
-                    // WebUI.scrollToElement(findTestObject('Object Repository/SON/Exclude Options'), 0)
-                    driver.findElement(By.xpath(readLocator(SONSelectors, "Hourly"))).click();
-                    driver.findElement(By.xpath(readLocator(SONSelectors, "Weekly"))).click();
-
-
-                    startDate=date("Last week");
-                    driver.findElement(By.xpath("//button[contains(text(),'" + startDate + "')]")).click();
-
-                    break;
-                //------------------------------------------
-
-                case "Monthly" :
-                    //WebUI.scrollToElement(findTestObject('Object Repository/SON/Exclude Options'), 0)
-                    driver.findElement(By.xpath(readLocator(SONSelectors, "Hourly"))).click();
-                    driver.findElement(By.xpath(readLocator(SONSelectors, "Monthly"))).click();
-
-
-                    startDate=date("Last Month");
-                    driver.findElement(By.xpath("//button[contains(text(),'" + startDate + "')]")).click();
-
-                    break;
-                //---------------------------------------
-
-                case "DailyBH" :
-
-                    //WebUI.scrollToElement(findTestObject('Object Repository/SON/Exclude Options'), 0)
-                    if (SonType!="4g congested cells" ) {
-
-                        driver.findElement(By.xpath(readLocator(SONSelectors, "Hourly"))).click();
-                        driver.findElement(By.xpath(readLocator(SONSelectors, "DailyBH"))).click();
-                    }
-
-                    startDate=date("Last week");
-                    driver.findElement(By.xpath("//button[contains(text(),'" + startDate + "')]")).click();
-
-                    break;
-                //------------------------------------------
-
-                case "WeeklyBH" :
-
-                    //WebUI.scrollToElement(findTestObject('Object Repository/SON/Exclude Options'), 0)
-                    driver.findElement(By.xpath(readLocator(SONSelectors, "Hourly"))).click();
-                    driver.findElement(By.xpath(readLocator(SONSelectors, "WeeklyBH"))).click();
-
-                    startDate=date("Last week");
-                    driver.findElement(By.xpath("//button[contains(text(),'" + startDate + "')]")).click();
-                    break;
-                //------------------------------------------
-                case "MonthlyBH" :
-                    // WebUI.scrollToElement(findTestObject('Object Repository/SON/Exclude Options'), 0)
-                    driver.findElement(By.xpath(readLocator(SONSelectors, "Hourly"))).click();
-                    driver.findElement(By.xpath(readLocator(SONSelectors, "MonthlyBH"))).click();
-
-
-                    startDate=date("Last Month");
-                    driver.findElement(By.xpath("//button[contains(text(),'" + startDate + "')]")).click();
-                    break;
-                case "Raw" :
-                    //WebUI.scrollToElement(findTestObject('Object Repository/SON/Exclude Options'), 0)
-                    driver.findElement(By.xpath(readLocator(SONSelectors, "Hourly"))).click();
-                    driver.findElement(By.xpath(readLocator(SONSelectors, "Raw"))).click();
-
-
-                    startDate=date("Yesterday");
-                    driver.findElement(By.xpath("//button[contains(text(),'" + startDate + "')]")).click();
-                    break;
-
-            }
-
-            driver.findElement(By.xpath(readLocator(SONSelectors, "Month"))).click();
-            driver.findElement(By.xpath(readLocator(SONSelectors, "MonthFeb"))).click();
-            driver.findElement(By.xpath(readLocator(SONSelectors, "Feb-1"))).click();
-
-        }
+        driver.findElement(By.xpath(readLocator(CMSelectors,"Save"))).click();
     }
 
-    //------------------------------------------------------------------------------------------
+//----------------------------------------------------------------
+
+
+    void PredefinedTime (String PredefinedTime)  {
+        driver.findElement(By.xpath(readLocator(CMSelectors, "LastWeek"))).click();
+        driver.findElement(By.xpath(readLocator(CMSelectors, PredefinedTime))).click();
+    }
+    //-----------------------------------------------------------------------------------------
     String date(String day ) {
 
         String date="";

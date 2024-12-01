@@ -13,4 +13,22 @@ public class RegionXDD extends MainClass {
 
         parameters.Parameter("4G", "Region XDD", "Last Week");
     }
+
+    @Test
+    public void RegionXDDParameterWeekends4G() throws Exception {
+
+        parameters.Parameter("4G", "Region XDD", "Weekends");
+    }
+
+    @Test
+    public void RegionXDDParameterYesterday4G() throws Exception {
+
+        parameters.Parameter("4G", "Region XDD", "Yesterday");
+    }
+
+    @Test
+    public void RegionXDDParameterCustom4G() throws Exception {
+
+        parameters.Parameter("4G", "Region XDD", "Custom");
+    }
 }
