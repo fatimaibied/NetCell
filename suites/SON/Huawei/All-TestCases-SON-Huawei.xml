@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="SON- Huawei All test Cases">
+    <test name=" 2G test Cases">
+       <packages>
+           <package name="TestCases.Son.Huawei.G2"></package>
+       </packages>
+       </test>
+
+    <test name=" 3G test Cases">
+        <packages>
+            <package name="TestCases.Son.Huawei.G3"></package>
+        </packages>
+    </test>
+
+    <test name=" 4G test Cases">
+        <packages>
+            <package name="TestCases.Son.Huawei.G4"></package>
+        </packages>
+    </test>
+</suite>

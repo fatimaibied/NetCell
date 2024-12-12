@@ -9,26 +9,26 @@ public class PLMN extends MainClass {
     CM parameters= new CM();
 
     @Test
-    public void PLMNParameterLastWeek4G() throws Exception {
+    public void PLMNParameterLastWeek2G() throws Exception {
 
-        parameters.Parameter("4G", "PLMN", "LastWeek");
+        parameters.Parameter("2G", "PLMN", "LastWeek");
     }
 
     @Test
-    public void PLMNParameterWeekends4G() throws Exception {
+    public void PLMNParameterWeekends2G() throws Exception {
 
-        parameters.Parameter("4G", "PLMN", "Weekends");
+        parameters.Parameter("2G", "PLMN", "Weekends");
     }
 
     @Test
-    public void PLMNParameterYesterday4G() throws Exception {
+    public void PLMNParameterYesterday2G() throws Exception {
 
-        parameters.Parameter("4G", "PLMN", "Yesterday");
+        parameters.Parameter("2G", "PLMN", "Yesterday");
     }
 
     @Test
-    public void PLMNParameterCustom4G() throws Exception {
+    public void PLMNParameterCustom2G() throws Exception {
 
-        parameters.Parameter("4G", "PLMN", "Custom");
+        parameters.Parameter("2G", "PLMN", "Custom");
     }
 }

@@ -87,7 +87,11 @@ public class RNC extends MainClass {
     @Test
     public void RNCStatsRowAggregation3G() throws Exception {
 
-        State.Stats("Huawei", "3G", "RNC", true,"Row");
+        State.Stats("Huawei", "3G", "RNC", true,"Raw");
     }
+    @Test
+    public void RNCStatsRow3G() throws Exception {
 
+        State.Stats("Huawei", "3G", "RNC", false,"Raw");
+    }
 }

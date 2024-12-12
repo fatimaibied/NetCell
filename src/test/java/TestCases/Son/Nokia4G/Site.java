@@ -19,6 +19,6 @@ public class Site extends MainClass {
     @Test
     public void Site4Gcongestedcells() throws Exception {
 
-        SON.son("Huawei","4G", "Site", "4g congested cells","DailyBH","");
+        SON.son("Nokia","4G", "Site", "4g congested cells","DailyBH","");
     }
 }

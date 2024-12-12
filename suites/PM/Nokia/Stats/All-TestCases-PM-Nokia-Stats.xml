@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="PM- Nokia All Test Cases">
+    <test name="Nokia Stats 2G test Cases">
+       <packages>
+           <package name="TestCases.PM.Nokia.Stats.G2"></package>
+       </packages>
+       </test>
+
+    <test name="Nokia Stats 2G test Cases">
+        <packages>
+            <package name="TestCases.PM.Nokia.Stats.G3"></package>
+        </packages>
+    </test>
+    <test name="Nokia Stats 2G test Cases">
+        <packages>
+            <package name="TestCases.PM.Nokia.Stats.G4"></package>
+        </packages>
+    </test>
+
+    <test name="Nokia Stats 5G test Cases">
+        <packages>
+            <package name="TestCases.PM.Nokia.Stats.G5"></package>
+        </packages>
+    </test>
+</suite>

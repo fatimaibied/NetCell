@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="TestCases CM Huawei Parameter">
+    <test name=" 4G test Cases">
+       <packages>
+           <package name="TestCases.CM.Parameter.G4"></package>
+       </packages>
+       </test>
+
+</suite>

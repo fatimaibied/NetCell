@@ -14,11 +14,11 @@ public class Functions {
 
     public void login(String type) throws Exception {
         if (loginVar == 0) {
-            Thread.sleep(500);
+            Thread.sleep(1000);
             driver.findElement(By.xpath(readLocator(login, "UserName"))).sendKeys(userName);
             driver.findElement(By.xpath(readLocator(login, "Password"))).sendKeys(password);
             driver.findElement(By.xpath(readLocator(login, "LoginBtn"))).click();
-            Thread.sleep(500);
+            Thread.sleep(2000);
             WebElement welcome = driver.findElement(By.xpath(readLocator(home, "WelcomeMsg")));
             Assert.assertEquals(welcome.isDisplayed(), true);
 

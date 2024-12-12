@@ -11,7 +11,7 @@ public class Site extends MainClass {
     @Test
     public void SiteParameter4G() throws Exception {
 
-        parameters.Parameter("4G", "Site", "Last Week");
+        parameters.Parameter("4G", "Site", "LastWeek");
     }
     @Test
     public void SiteParameterWeekends4G() throws Exception {

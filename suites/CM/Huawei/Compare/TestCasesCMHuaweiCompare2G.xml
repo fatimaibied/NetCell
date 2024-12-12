@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="TestCases CM Huawei Compare">
+    <test name=" 2G test Cases">
+       <packages>
+           <package name="TestCases.CM.Compare.G2"></package>
+       </packages>
+       </test>
+
+</suite>

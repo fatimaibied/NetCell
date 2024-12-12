@@ -19,6 +19,6 @@ public class Cell extends MainClass {
     @Test
     public void Cell4Gcongestedcells() throws Exception {
 
-        SON.son("Huawei","4G", "Cell", "4g congested cells","DailyBH","");
+        SON.son("Nokia","4G", "Cell", "4g congested cells","DailyBH","");
     }
 }

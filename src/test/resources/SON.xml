@@ -6,7 +6,7 @@
 //-------Vendor-----------
     <Huawei>//span[contains(text(),'Huawei')]</Huawei>
     <Nokia>//span[contains(text(),'Nokia')]</Nokia>
-
+    <Mix>//span[contains(text(),'Mix')]</Mix>
 //--------- Technology------------------
     <TechnologyArrow>//span[@aria-label='4G']</TechnologyArrow>
 //---- SonType--------------

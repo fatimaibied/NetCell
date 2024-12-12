@@ -11,7 +11,7 @@ public class PLMNXDD extends MainClass {
     @Test
     public void PLMNXDDParameter4G() throws Exception {
 
-        parameters.Parameter("4G", "PLMN XDD", "Last Week");
+        parameters.Parameter("4G", "PLMN XDD", "LastWeek");
     }
 
     @Test

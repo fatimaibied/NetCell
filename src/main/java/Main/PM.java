@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
+import javax.swing.plaf.synth.Region;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -22,14 +23,16 @@ public class PM {
     List<String> relatedElementsXDD;
     List<String> relatedElementsRegionArrow;
     List<String> relatedElementsRegionClose;
+    List<String> relatedElementsRegionCClose;
     List<String> relatedElementsGovernorate;
     List<String> relatedElementsSites;
     List<String> relatedElementsCells;
     List<String> relatedElementsCellOne;
     List<String> relatedElementsBSC;
     List<String> relatedElementsCluster;
+    List<String> relatedElementsClusterOne;
     List<String> relatedElementsSector;
-
+   int objectNumber;
     //-------------------------Stats-----------------------------------
     public void Stats (String Vendor, String Technology , String ObjectType , boolean Aggregation , String Resolution) throws Exception {
         Functions support = new Functions();
@@ -41,6 +44,10 @@ public class PM {
         if (Vendor=="Nokia") {
             driver.findElement(By.xpath(readLocator(SONSelectors, "Huawei"))).click();
             driver.findElement(By.xpath(readLocator(SONSelectors, "Nokia"))).click();
+        }
+        else if (Vendor=="Mix"){
+            driver.findElement(By.xpath(readLocator(SONSelectors, "Huawei"))).click();
+            driver.findElement(By.xpath(readLocator(SONSelectors, "Mix"))).click();
         }
         Thread.sleep(500);
 
@@ -65,14 +72,14 @@ public class PM {
         //Apply and Verify
         driver.findElement(By.xpath(readLocator(SONSelectors, "ApplyButton"))).click();
 
-        Thread.sleep(1000);
-        if ((ObjectType!="PLMN" )&& (ObjectType!="PLMN XDD" )&& (ObjectType!="Governorate")) {
+        Thread.sleep(2000);
+        if (objectNumber>6 & Aggregation != true) {
 
                 driver.findElement(By.xpath(readLocator(PMSelectors, "OkBtn"))).click();
 
         }
-
         Thread.sleep(20000);
+
         try {
 
             bt = driver.findElement(By.xpath(readLocator(SONSelectors, "HomeLogo"))).isDisplayed();
@@ -135,7 +142,6 @@ public class PM {
         Thread.sleep(20000);
         try {
 
-
             bt = driver.findElement(By.xpath(readLocator(SONSelectors, "HomeLogo"))).isDisplayed();
 
             Assert.assertEquals(bt, false);
@@ -154,12 +160,16 @@ public class PM {
         relatedElementsXDD = readTags("XDD", SONSelectors);
         relatedElementsRegionArrow = readTags("RegionArrow", SONSelectors);
         relatedElementsRegionClose = readTags("RegionClose", PMSelectors);
+        //For 4G clusters
+        relatedElementsRegionCClose = readTags("RegionCClose", PMSelectors);
         relatedElementsGovernorate=readTags("Governorates", SONSelectors);
         relatedElementsSites=readTags("Sites", SONSelectors);
         relatedElementsCells=readTags("Cells", SONSelectors);
         relatedElementsCellOne= readTags("CellOne", SONSelectors);
         relatedElementsBSC= readTags("BSCS", SONSelectors);
         relatedElementsCluster= readTags("Clusters", PMSelectors);
+        relatedElementsClusterOne= readTags("ClusterO", PMSelectors);
+
         relatedElementsSector= readTags("Sectors", SONSelectors);
 
 
@@ -187,28 +197,36 @@ public class PM {
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElements.get(i)))).click();
 
                 }
-
+                objectNumber=relatedElements.size();
 
                 break;
             //-------------------------------------------------------------
             case "Site" :
                 //Object Selection (Site)
+                int  Regions = relatedElementsRegionArrow.size();
 
                 driver.findElement(By.xpath(readLocator(SONSelectors,"Site"))).click();
                 Thread.sleep(1000);
-                //element = driver.findElement(By.xpath(readLocator(SONSelectors,"ObjectBorder")));
-                // ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+                if (Technology!="4G"){
+                   Regions=relatedElementsRegionArrow.size()-1;
+                }
 
-                for (int i = 0; i < relatedElementsRegionArrow.size(); i++) {
-                    Thread.sleep(1000);
+                for (int i = 0; i < Regions; i++) {
+                    Thread.sleep(2000);
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(i)))).click();
-                    Thread.sleep(1000);
-                    driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsSites.get(i)))).click();
-                    Thread.sleep(1000);
+                    Thread.sleep(2000);
+
+
+                    element =  driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsSites.get(i))));
+                    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+                    element.click();
+                    Thread.sleep(2000);
+
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionClose.get(i)))).click();
                 }
 
-
+                objectNumber=Regions;
+                System.out.println(objectNumber);
                 break;
             //-------------------------------------------------------------
             case "Cell":
@@ -217,20 +235,25 @@ public class PM {
 
                 Thread.sleep(1000);
                 driver.findElement(By.xpath(readLocator(PMSelectors,"Cell"))).click();
-
-                Thread.sleep(1000);
+                if (Technology !="4G") {
+                    element = driver.findElement(By.xpath(readLocator(SONSelectors, "ObjectBorder")));
+                    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+                }
+                Thread.sleep(3000);
 
                 for (int i = 0; i < relatedElementsRegionArrow.size(); i++) {
-                    Thread.sleep(1000);
-                    driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(i)))).click();
                     Thread.sleep(2000);
+                    driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(i)))).click();
+                    Thread.sleep(4000);
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsCells.get(i)))).click();
                     Thread.sleep(2000);
-                    driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsCellOne.get(i)))).click();
-                    Thread.sleep(1000);
+                    element = driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsCellOne.get(i))));
+                    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+                    element.click();
+                    Thread.sleep(2000);
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionClose.get(i)))).click();
                 }
-
+                objectNumber= relatedElementsRegionArrow.size();
                 break;
 
             //-------------------------------------------------------------
@@ -251,7 +274,7 @@ public class PM {
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionClose.get(i)))).click();
 
                 }
-
+                objectNumber= relatedElementsRegionArrow.size();
 
 
                 break;
@@ -273,7 +296,7 @@ public class PM {
 
                 }
 
-
+                objectNumber= relatedElementsRegionArrow.size();
                 break;
             //-------------------------------------------------------------
          case "Cluster Band" :
@@ -282,16 +305,32 @@ public class PM {
              element = driver.findElement(By.xpath(readLocator(SONSelectors,"ObjectBorder")));
              ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
              Thread.sleep(2000);
+
+             if (Technology!="4G") {
+                 driver.findElement(By.xpath(readLocator(PMSelectors, "ClusterFDDArrow"))).click();
+                 Thread.sleep(2000);
+                 for (int i = 0; i < relatedElementsRegionArrow.size(); i++) {
+                     Thread.sleep(1000);
+                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(i)))).click();
+                     driver.findElement(By.xpath(readLocator(PMSelectors, relatedElementsCluster.get(i)))).click();
+                     driver.findElement(By.xpath(readLocator(PMSelectors, relatedElementsRegionClose.get(i)))).click();
+                 }
+             }
+               else {
              driver.findElement(By.xpath(readLocator(PMSelectors, "ClusterFDDArrow"))).click();
              Thread.sleep(2000);
+
              for (int i = 0; i < relatedElementsRegionArrow.size(); i++) {
                  Thread.sleep(1000);
                  driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(i)))).click();
-                 driver.findElement(By.xpath(readLocator(PMSelectors, relatedElementsCluster.get(i)))).click();
-                 driver.findElement(By.xpath(readLocator(PMSelectors, relatedElementsRegionClose.get(i)))).click();
+                 driver.findElement(By.xpath(readLocator(PMSelectors, relatedElementsClusterOne.get(i)))).click();
+
+                 driver.findElement(By.xpath(readLocator(PMSelectors, relatedElementsRegionCClose.get(i)))).click();
              }
 
-                break;
+         }
+             objectNumber=relatedElementsRegionArrow.size();
+             break;
             //-------------------------------------------------------------
             case "Cluster" :
                 //Object Selection (Cluster)
@@ -300,24 +339,44 @@ public class PM {
                 element = driver.findElement(By.xpath(readLocator(SONSelectors,"ObjectBorder")));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 
-                driver.findElement(By.xpath(readLocator(PMSelectors, "ClusterFDDArrow"))).click();
+                //driver.findElement(By.xpath(readLocator(PMSelectors, "ClusterFDDArrow"))).click();
                 Thread.sleep(2000);
-                for (int i = 0; i < relatedElementsRegionArrow.size(); i++) {
-                    Thread.sleep(1000);
-                    driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(i)))).click();
-                    driver.findElement(By.xpath(readLocator(PMSelectors, relatedElementsCluster.get(i)))).click();
-                    driver.findElement(By.xpath(readLocator(PMSelectors, relatedElementsRegionClose.get(i)))).click();
+                if (Technology!="4G") {
+                    for (int i = 0; i < relatedElementsRegionArrow.size(); i++) {
+                        Thread.sleep(1000);
+                        driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(i)))).click();
+                        driver.findElement(By.xpath(readLocator(PMSelectors, relatedElementsCluster.get(i)))).click();
+
+                        driver.findElement(By.xpath(readLocator(PMSelectors, relatedElementsRegionClose.get(i)))).click();
+                    }
                 }
+                // for 4G
+                else {
+                    driver.findElement(By.xpath(readLocator(PMSelectors, "ClusterFDDArrow"))).click();
+                    Thread.sleep(2000);
 
+                        for (int i = 0; i < relatedElementsRegionArrow.size(); i++) {
+                            Thread.sleep(1000);
+                            driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(i)))).click();
+                            driver.findElement(By.xpath(readLocator(PMSelectors, relatedElementsClusterOne.get(i)))).click();
 
+                            driver.findElement(By.xpath(readLocator(PMSelectors, relatedElementsRegionCClose.get(i)))).click();
+                        }
+
+                }
+                objectNumber=relatedElementsRegionArrow.size();
                 break;
             //-------------------------------------------------
             case "PLMN XDD" :
                 //Object Selection (PLMN XDD)
 
                 driver.findElement(By.xpath(readLocator(SONSelectors, "PLMNXDD"))).click();
-                element = driver.findElement(By.xpath(readLocator(SONSelectors,"ObjectBorder")));
-                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+                 if (Technology != "4G") {
+                     element = driver.findElement(By.xpath(readLocator(SONSelectors, "ObjectBorder")));
+                     ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+                 }
+
+                Thread.sleep(2000);
 
                 driver.findElement(By.xpath(readLocator(SONSelectors, "PLMNCheckbox"))).click();
 
@@ -331,8 +390,11 @@ public class PM {
                 driver.findElement(By.xpath(readLocator(SONSelectors, "Sector"))).click();
                 element = driver.findElement(By.xpath(readLocator(SONSelectors,"ObjectBorder")));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-
-                for (int i = 0; i < relatedElementsRegionArrow.size(); i++) {
+                Regions = relatedElementsRegionArrow.size();
+                if (Technology=="3G"){
+                    Regions=relatedElementsRegionArrow.size()-1;
+                }
+                for (int i = 0; i < Regions; i++) {
                     Thread.sleep(1000);
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(i)))).click();
                     Thread.sleep(1000);
@@ -341,7 +403,7 @@ public class PM {
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionClose.get(i)))).click();
                 }
 
-
+                objectNumber=Regions;
                 break;
 
             //-------------------------------------------------
@@ -370,6 +432,7 @@ public class PM {
                 driver.findElement(By.xpath(readLocator(SONSelectors,"GovernorateXDD"))).click();
                 element = driver.findElement(By.xpath(readLocator(SONSelectors,"ObjectBorder")));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+                Thread.sleep(2000);
 
                 driver.findElement(By.xpath(readLocator(SONSelectors, "GovernorateFDDArrow"))).click();
                 for (int i = 0; i < relatedElementsGovernorate.size(); i++) {
@@ -387,7 +450,7 @@ public class PM {
                 }
                 driver.findElement(By.xpath(readLocator(SONSelectors, "GovernorateTDDClose"))).click();
 
-
+                objectNumber=7;
                 break;
 
             //-------------------------------------------------
@@ -400,27 +463,34 @@ public class PM {
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 
                 driver.findElement(By.xpath(readLocator(SONSelectors, "PLMNCheckbox"))).click();
+                objectNumber=7;
 
                 break;
             //----------------------------------------------------
             case "BSC" :
                 driver.findElement(By.xpath(readLocator(SONSelectors,"BSC"))).click();
+
+                Thread.sleep(1000);
+
                 element = driver.findElement(By.xpath(readLocator(SONSelectors,"ObjectBorder")));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-
+                Thread.sleep(1000);
 
                 for (int i = 0; i < relatedElementsBSC.size(); i++) {
 
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsBSC.get(i)))).click();
+                    Thread.sleep(1000);
+
 
                 }
+              objectNumber= relatedElementsBSC.size();
                 break;
 
             case "RNC" :
                 driver.findElement(By.xpath(readLocator(SONSelectors,"RNC"))).click();
                 element = driver.findElement(By.xpath(readLocator(SONSelectors,"ObjectBorder")));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-
+                Thread.sleep(2000);
 
                 for (int i = 1; i < 5; i++) {
 
@@ -437,14 +507,15 @@ public class PM {
                 driver.findElement(By.xpath(readLocator(SONSelectors,"RegionsWestAmman"))).click();
                 driver.findElement(By.xpath(readLocator(SONSelectors,"RegionsSouthJordan"))).click();
                 driver.findElement(By.xpath(readLocator(SONSelectors,"RegionsNorthJordan"))).click();
-
+                objectNumber=7;
                 break;
 
             case "PLMN Carrier" :
                 driver.findElement(By.xpath(readLocator(SONSelectors,"PLMNCarrier"))).click();
+                Thread.sleep(2000);
                 element = driver.findElement(By.xpath(readLocator(SONSelectors,"ObjectBorder")));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-
+                Thread.sleep(2000);
                 for (int i = 1; i < 3; i++) {
 
                     driver.findElement(By.xpath("//span[contains(text(),'F"+i+"')]")).click();
@@ -577,107 +648,69 @@ public class PM {
             switch (ResolutionTemp)
             {
 
-
                 case "Hourly" :
-                    startDate=date("Last week");
-                   /* WebElement element = driver.findElement(By.xpath(scroll));
-                    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-*/
-                    //WebUI.scrollToElement(findTestObject(scroll), 0);
-                    driver.findElement(By.xpath("//button[contains(text(),'" + startDate + "')]")).click();
+
+                    driver.findElement(By.xpath(readLocator(SONSelectors, "Daily"))).click();
+                    driver.findElement(By.xpath(readLocator(SONSelectors, "Hourly"))).click();
 
                     break;
                 //----------------------------------------------
-
                 case "Daily" :
-                    driver.findElement(By.xpath(readLocator(PMSelectors,"BeforDate"))).click();
-                    driver.findElement(By.xpath(readLocator(PMSelectors,"ChooseMonth"))).click();
-                    driver.findElement(By.xpath(readLocator(PMSelectors,"Feb"))).click();
-                    driver.findElement(By.xpath(readLocator(PMSelectors,"DayOne"))).click();
-                    driver.findElement(By.xpath(readLocator(PMSelectors,"OK"))).click();
-                    driver.findElement(By.xpath(readLocator(PMSelectors,"AfterDate"))).click();
-                    driver.findElement(By.xpath(readLocator(PMSelectors,"ChooseMonth"))).click();
-                    driver.findElement(By.xpath(readLocator(PMSelectors,"Feb"))).click();
-                    driver.findElement(By.xpath(readLocator(PMSelectors,"DaySeven"))).click();
-                    driver.findElement(By.xpath(readLocator(PMSelectors,"OK"))).click();
+
                     break;
                 //---------------------------------------------
 
                 case "Weekly" :
-                    // WebUI.scrollToElement(findTestObject('Object Repository/SON/Exclude Options'), 0)
-                    driver.findElement(By.xpath(readLocator(SONSelectors, "Hourly"))).click();
+                    driver.findElement(By.xpath(readLocator(SONSelectors, "Daily"))).click();
                     driver.findElement(By.xpath(readLocator(SONSelectors, "Weekly"))).click();
-
-
-                    startDate=date("Last week");
-                    driver.findElement(By.xpath("//button[contains(text(),'" + startDate + "')]")).click();
 
                     break;
                 //------------------------------------------
 
                 case "Monthly" :
-                    //WebUI.scrollToElement(findTestObject('Object Repository/SON/Exclude Options'), 0)
-                    driver.findElement(By.xpath(readLocator(SONSelectors, "Hourly"))).click();
+                    driver.findElement(By.xpath(readLocator(SONSelectors, "Daily"))).click();
                     driver.findElement(By.xpath(readLocator(SONSelectors, "Monthly"))).click();
-
-
-                    startDate=date("Last Month");
-                    driver.findElement(By.xpath("//button[contains(text(),'" + startDate + "')]")).click();
-
                     break;
+
                 //---------------------------------------
 
                 case "DailyBH" :
-                    driver.findElement(By.xpath(readLocator(PMSelectors,"Daily"))).click();
-                    driver.findElement(By.xpath(readLocator(PMSelectors,"DailyBH"))).click();
-                    driver.findElement(By.xpath(readLocator(PMSelectors,"BeforDate"))).click();
-                    driver.findElement(By.xpath(readLocator(PMSelectors,"ChooseMonth"))).click();
-                    driver.findElement(By.xpath(readLocator(PMSelectors,"Feb"))).click();
-                    driver.findElement(By.xpath(readLocator(PMSelectors,"DayOne"))).click();
-                    driver.findElement(By.xpath(readLocator(PMSelectors,"OK"))).click();
-                    driver.findElement(By.xpath(readLocator(PMSelectors,"AfterDate"))).click();
-                    driver.findElement(By.xpath(readLocator(PMSelectors,"ChooseMonth"))).click();
-                    driver.findElement(By.xpath(readLocator(PMSelectors,"Feb"))).click();
-                    driver.findElement(By.xpath(readLocator(PMSelectors,"DaySeven"))).click();
-                    driver.findElement(By.xpath(readLocator(PMSelectors,"OK"))).click();
+                    driver.findElement(By.xpath(readLocator(SONSelectors,"Daily"))).click();
+                    driver.findElement(By.xpath(readLocator(SONSelectors,"DailyBH"))).click();
+
 
                     break;
                 //------------------------------------------
 
                 case "WeeklyBH" :
-
-                    //WebUI.scrollToElement(findTestObject('Object Repository/SON/Exclude Options'), 0)
-                    driver.findElement(By.xpath(readLocator(SONSelectors, "Hourly"))).click();
-                    driver.findElement(By.xpath(readLocator(SONSelectors, "WeeklyBH"))).click();
-
-                    startDate=date("Last week");
-                    driver.findElement(By.xpath("//button[contains(text(),'" + startDate + "')]")).click();
+                    driver.findElement(By.xpath(readLocator(SONSelectors,"Daily"))).click();
+                    driver.findElement(By.xpath(readLocator(SONSelectors,"WeeklyBH"))).click();
                     break;
                 //------------------------------------------
                 case "MonthlyBH" :
-                    // WebUI.scrollToElement(findTestObject('Object Repository/SON/Exclude Options'), 0)
-                    driver.findElement(By.xpath(readLocator(SONSelectors, "Hourly"))).click();
-                    driver.findElement(By.xpath(readLocator(SONSelectors, "MonthlyBH"))).click();
+                    driver.findElement(By.xpath(readLocator(SONSelectors,"Daily"))).click();
+                    driver.findElement(By.xpath(readLocator(SONSelectors,"MonthlyBH"))).click();
 
-
-                    startDate=date("Last Month");
-                    driver.findElement(By.xpath("//button[contains(text(),'" + startDate + "')]")).click();
                     break;
                 case "Raw" :
-                    //WebUI.scrollToElement(findTestObject('Object Repository/SON/Exclude Options'), 0)
-                    driver.findElement(By.xpath(readLocator(SONSelectors, "Hourly"))).click();
-                    driver.findElement(By.xpath(readLocator(SONSelectors, "Raw"))).click();
 
+                    driver.findElement(By.xpath(readLocator(SONSelectors,"Daily"))).click();
+                    driver.findElement(By.xpath(readLocator(SONSelectors,"Raw"))).click();
 
-                    startDate=date("Yesterday");
-                    driver.findElement(By.xpath("//button[contains(text(),'" + startDate + "')]")).click();
                     break;
-
             }
-
+                driver.findElement(By.xpath(readLocator(PMSelectors,"BeforDate"))).click();
+                driver.findElement(By.xpath(readLocator(PMSelectors,"ChooseMonth"))).click();
+                driver.findElement(By.xpath(readLocator(PMSelectors,"Feb"))).click();
+                driver.findElement(By.xpath(readLocator(PMSelectors,"DayOne"))).click();
+                driver.findElement(By.xpath(readLocator(PMSelectors,"OK"))).click();
+                driver.findElement(By.xpath(readLocator(PMSelectors,"AfterDate"))).click();
+                driver.findElement(By.xpath(readLocator(PMSelectors,"ChooseMonth"))).click();
+                driver.findElement(By.xpath(readLocator(PMSelectors,"Feb"))).click();
+                driver.findElement(By.xpath(readLocator(PMSelectors,"DaySeven"))).click();
+                driver.findElement(By.xpath(readLocator(PMSelectors,"OK"))).click();
 
         }
-
 
     //------------------------------------------------------------------------------------------
     String date(String day ) {

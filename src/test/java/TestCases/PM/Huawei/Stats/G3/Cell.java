@@ -9,13 +9,13 @@ public class Cell extends MainClass {
     PM State= new PM();
 
     @Test
-    public void CellStats3G() throws Exception {
+    public void CellStatsHourly3G() throws Exception {
 
         State.Stats("Huawei", "3G", "Cell", false,"Hourly");
     }
 
     @Test
-    public void CellStatsAggregation3G() throws Exception {
+    public void CellStatsHourlyAggregation3G() throws Exception {
 
         State.Stats("Huawei", "3G", "Cell", true,"Hourly");
     }
@@ -83,11 +83,15 @@ public class Cell extends MainClass {
 
         State.Stats("Huawei", "3G", "Cell", true,"MonthlyBH");
     }
+    @Test
+    public void CellStatsRow3G() throws Exception {
 
+        State.Stats("Huawei", "3G", "Cell", false,"Raw");
+    }
     @Test
     public void CellStatsRowAggregation3G() throws Exception {
 
-        State.Stats("Huawei", "3G", "Cell", true,"Row");
+        State.Stats("Huawei", "3G", "Cell", true,"Raw");
     }
 
 }

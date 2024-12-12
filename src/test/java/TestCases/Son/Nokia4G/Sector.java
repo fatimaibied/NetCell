@@ -19,6 +19,6 @@ public class Sector extends MainClass {
     @Test
     public void Sector4Gcongestedcells() throws Exception {
 
-        SON.son("Huawei","4G", "Sector", "4g congested cells","DailyBH","");
+        SON.son("Nokia","4G", "Sector", "4g congested cells","DailyBH","");
     }
 }

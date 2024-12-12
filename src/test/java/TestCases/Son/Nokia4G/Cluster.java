@@ -19,6 +19,6 @@ public class Cluster extends MainClass {
     @Test
     public void Cluster4Gcongestedcells() throws Exception {
 
-        SON.son("Huawei","4G", "Cluster", "4g congested cells","DailyBH","");
+        SON.son("Nokia","4G", "Cluster", "4g congested cells","DailyBH","");
     }
 }

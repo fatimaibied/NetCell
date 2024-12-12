@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="PM- Huawei All Test Cases">
+    <test name="Huawei TopX 2G test Cases">
+       <packages>
+           <package name="TestCases.PM.Huawei.TopX.G2"></package>
+       </packages>
+       </test>
+    <test name="Huawei TopX 3G test Cases">
+        <packages>
+            <package name="TestCases.PM.Huawei.TopX.G3"></package>
+        </packages>
+    </test>
+    <test name="Huawei TopX 4G test Cases">
+        <packages>
+            <package name="TestCases.PM.Huawei.TopX.G4"></package>
+        </packages>
+    </test>
+</suite>

@@ -19,6 +19,6 @@ public class PLMNXDD extends MainClass {
     @Test
     public void PLMNXDD4Gcongestedcells() throws Exception {
 
-        SON.son("Huawei","4G", "PLMN XDD", "4g congested cells","DailyBH","");
+        SON.son("Nokia","4G", "PLMN XDD", "4g congested cells","DailyBH","");
     }
 }

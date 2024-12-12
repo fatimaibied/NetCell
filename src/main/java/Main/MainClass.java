@@ -28,8 +28,10 @@ public class MainClass implements ITestListener {
     public static ArrayList<String> wid;
     Functions support = new Functions();
 
+
+
     @BeforeSuite
-    public void setupReport() {
+    public void setupReport() throws IOException {
         initializeReport();
         driverSettings(URL);
 

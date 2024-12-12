@@ -19,6 +19,6 @@ public class RegionXDD extends MainClass {
     @Test
     public void RegionXDD4Gcongestedcells() throws Exception {
 
-        SON.son("Huawei","4G", "Region XDD", "4g congested cells","DailyBH","");
+        SON.son("Nokia","4G", "Region XDD", "4g congested cells","DailyBH","");
     }
 }

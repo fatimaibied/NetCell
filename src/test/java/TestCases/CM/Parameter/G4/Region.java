@@ -11,7 +11,7 @@ public class Region extends MainClass {
     @Test
     public void RegionParameter4G() throws Exception {
 
-        parameters.Parameter("4G", "Region", "Last Week");
+        parameters.Parameter("4G", "Region", "LastWeek");
     }
 
     @Test

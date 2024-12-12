@@ -87,7 +87,11 @@ public class Sector extends MainClass {
     @Test
     public void SectorStatsRowAggregation3G() throws Exception {
 
-        State.Stats("Huawei", "3G", "Sector", true,"Row");
+        State.Stats("Huawei", "3G", "Sector", true,"Raw");
     }
+    @Test
+    public void SectorStatsRown3G() throws Exception {
 
+        State.Stats("Huawei", "3G", "Sector", false,"Raw");
+    }
 }

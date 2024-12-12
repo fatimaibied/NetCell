@@ -11,7 +11,7 @@ public class Cell extends MainClass {
     @Test
     public void CellParameter3G() throws Exception {
 
-        parameters.Parameter("3G", "Cell", "Last Week");
+        parameters.Parameter("3G", "Cell", "LastWeek");
     }
 
     @Test

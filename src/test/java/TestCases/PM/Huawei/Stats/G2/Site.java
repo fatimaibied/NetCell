@@ -9,7 +9,7 @@ public class Site extends MainClass {
     PM State= new PM();
 
     @Test
-    public void SiteStats2G() throws Exception {
+    public void SiteStatsHourly2G() throws Exception {
 
         State.Stats("Huawei", "2G", "Site", false,"Hourly");
     }

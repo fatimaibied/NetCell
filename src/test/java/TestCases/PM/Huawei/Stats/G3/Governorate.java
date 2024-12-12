@@ -87,7 +87,11 @@ public class Governorate extends MainClass {
     @Test
     public void GovernorateStatsRowAggregation3G() throws Exception {
 
-        State.Stats("Huawei", "3G", "Governorate", true,"Row");
+        State.Stats("Huawei", "3G", "Governorate", true,"Raw");
     }
+    @Test
+    public void GovernorateStatsRow3G() throws Exception {
 
+        State.Stats("Huawei", "3G", "Governorate", false,"Raw");
+    }
 }

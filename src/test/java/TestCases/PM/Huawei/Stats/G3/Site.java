@@ -85,9 +85,13 @@ public class Site extends MainClass {
     }
 
     @Test
-    public void SiteStatsRowAggregation3G() throws Exception {
+    public void SiteStatsRawAggregation3G() throws Exception {
 
-        State.Stats("Huawei", "3G", "Site", true,"Row");
+        State.Stats("Huawei", "3G", "Site", true,"Raw");
     }
+    @Test
+    public void SiteStatsRaw3G() throws Exception {
 
+        State.Stats("Huawei", "3G", "Site", true,"Raw");
+    }
 }

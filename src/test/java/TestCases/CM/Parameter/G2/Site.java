@@ -9,25 +9,25 @@ public class Site extends MainClass {
     CM parameters= new CM();
 
     @Test
-    public void SiteParameter4G() throws Exception {
+    public void SiteParameterLastWeek2G() throws Exception {
 
-        parameters.Parameter("4G", "Site", "Last Week");
+        parameters.Parameter("2G", "Site", "LastWeek");
     }
     @Test
-    public void SiteParameterWeekends4G() throws Exception {
+    public void SiteParameterWeekends2G() throws Exception {
 
-        parameters.Parameter("4G", "Site", "Weekends");
-    }
-
-    @Test
-    public void SiteParameterYesterday4G() throws Exception {
-
-        parameters.Parameter("4G", "Site", "Yesterday");
+        parameters.Parameter("2G", "Site", "Weekends");
     }
 
     @Test
-    public void SiteParameterCustom4G() throws Exception {
+    public void SiteParameterYesterday2G() throws Exception {
 
-        parameters.Parameter("4G", "Site", "Custom");
+        parameters.Parameter("2G", "Site", "Yesterday");
+    }
+
+    @Test
+    public void SiteParameterCustom2G() throws Exception {
+
+        parameters.Parameter("2G", "Site", "Custom");
     }
 }

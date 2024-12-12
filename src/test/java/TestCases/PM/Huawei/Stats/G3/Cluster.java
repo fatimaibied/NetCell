@@ -87,7 +87,11 @@ public class Cluster extends MainClass {
     @Test
     public void ClusterStatsRowAggregation3G() throws Exception {
 
-        State.Stats("Huawei", "3G", "Cluster", true,"Row");
+        State.Stats("Huawei", "3G", "Cluster", true,"Raw");
     }
+    @Test
+    public void ClusterStatsRow3G() throws Exception {
 
+        State.Stats("Huawei", "3G", "Cluster", false,"Raw");
+    }
 }

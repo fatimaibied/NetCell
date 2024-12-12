@@ -17,6 +17,7 @@
   <Regionlose>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</Regionlose>
 
 
+<!--
   <ClustersEastAmman>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/div[1]/div[1]</ClustersEastAmman>
   <ClustersWestAmman>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[2]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/div[1]/div[1]</ClustersWestAmman>
   <ClustersSouthAmman>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[3]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/div[1]/div[1]</ClustersSouthAmman>
@@ -24,14 +25,37 @@
   <ClustersNorthJordan>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[5]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/div[1]/div[1]</ClustersNorthJordan>
   <ClustersEastJordan>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[6]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/div[1]/div[1]</ClustersEastJordan>
   <ClustersOthers>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[7]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/div[1]/div[1]</ClustersOthers>
+-->
 
-  <RegionCloseEastAmman>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCloseEastAmman>
-  <RegionCloseWestAmman>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[2]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCloseWestAmman>
-  <RegionCloseSouthAmman>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[3]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCloseSouthAmman>
-  <RegionCloseSouthJordan>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[4]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCloseSouthJordan>
-  <RegionCloseNorthJordan>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[5]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCloseNorthJordan>
-  <RegionCloseEastJordan>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[6]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCloseEastJordan>
-  <RegionCloseOthers>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[7]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCloseOthers>
+
+
+
+
+  <ClustersEastAmman>//div/div/ul/p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/div/div</ClustersEastAmman>
+  <ClustersWestAmman>//div/div/ul/p-treenode/li/ul/p-treenode[2]/li/ul/p-treenode[1]/li/div/div/div</ClustersWestAmman>
+  <ClustersSouthAmman>//div/div/ul/p-treenode/li/ul/p-treenode[3]/li/ul/p-treenode[1]/li/div/div/div</ClustersSouthAmman>
+  <ClustersSouthJordan>//div/div/ul/p-treenode/li/ul/p-treenode[4]/li/ul/p-treenode[1]/li/div/div/div</ClustersSouthJordan>
+  <ClustersNorthJordan>//div/div/ul/p-treenode/li/ul/p-treenode[5]/li/ul/p-treenode[1]/li/div/div/div</ClustersNorthJordan>
+  <ClustersEastJordan>//div/div/ul/p-treenode/li/ul/p-treenode[6]/li/ul/p-treenode[1]/li/div/div/div</ClustersEastJordan>
+  <ClustersOthers>//div/div/ul/p-treenode/li/ul/p-treenode[7]/li/ul/p-treenode[1]/li/div/div/div</ClustersOthers>
+
+
+  <RegionCloseEastAmman>//p-tree/div/div/ul/p-treenode/li/ul/p-treenode[1]/li/div/button/chevrondownicon</RegionCloseEastAmman>
+  <RegionCloseWestAmman>//p-tree/div/div/ul/p-treenode/li/ul/p-treenode[2]/li/div/button/chevrondownicon</RegionCloseWestAmman>
+  <RegionCloseSouthAmman>//p-tree/div/div/ul/p-treenode/li/ul/p-treenode[3]/li/div/button/chevrondownicon</RegionCloseSouthAmman>
+  <RegionCloseSouthJordan>//p-tree/div/div/ul/p-treenode/li/ul/p-treenode[4]/li/div/button/chevrondownicon</RegionCloseSouthJordan>
+  <RegionCloseNorthJordan>//p-tree/div/div/ul/p-treenode/li/ul/p-treenode[5]/li/div/button/chevrondownicon</RegionCloseNorthJordan>
+  <RegionCloseEastJordan>//p-tree/div/div/ul/p-treenode/li/ul/p-treenode[6]/li/div/button/chevrondownicon</RegionCloseEastJordan>
+  <RegionCloseOthers>//p-tree/div/div/ul/p-treenode/li/ul/p-treenode[7]/li/div/button/chevrondownicon</RegionCloseOthers>
+
+
+ <RegionCCloseEastAmman>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCCloseEastAmman>
+  <RegionCCloseWestAmman>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[2]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCCloseWestAmman>
+  <RegionCCloseSouthAmman>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[3]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCCloseSouthAmman>
+  <RegionCCloseSouthJordan>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[4]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCCloseSouthJordan>
+  <RegionCCloseNorthJordan>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[5]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCCloseNorthJordan>
+  <RegionCCloseEastJordan>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[6]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCCloseEastJordan>
+  <RegionCCloseOthers>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[7]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCCloseOthers>
   //-----------------------TopXDate------------------------------
   <BeforDate>//div[@class='start-time-div']//button[@class='body-medium-s'][normalize-space()='Select Date']</BeforDate>
   <ChooseMonth>//button[@aria-label='Choose Month']</ChooseMonth>
@@ -51,4 +75,12 @@
   //-----------KPI'S------------------------
   <KPI>//app-kpi-tree[1]/div[2]/div[2]/p-tree[1]/div[1]/div[1]/ul[1]/p-treenode[1]/li[1]/div[1]/span[1]/span[1]/div[1]/div[1]/div[1]</KPI>
 
+  //------------4G Cluster --------------------------------
+  <ClusterOEastAmman>//li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span</ClusterOEastAmman>
+  <ClusterOWestAmman>//li/ul/p-treenode[1]/li/ul/p-treenode[2]/li/ul/p-treenode[1]/li/div/span/span/div/span</ClusterOWestAmman>
+  <ClusterOSouthAmman>//li/ul/p-treenode[1]/li/ul/p-treenode[3]/li/ul/p-treenode[1]/li/div/span/span/div/span</ClusterOSouthAmman>
+  <ClusterOSouthJordan>//li/ul/p-treenode[1]/li/ul/p-treenode[4]/li/ul/p-treenode[1]/li/div/span/span/div/span</ClusterOSouthJordan>
+  <ClusterONorthJordan>//li/ul/p-treenode[1]/li/ul/p-treenode[5]/li/ul/p-treenode[1]/li/div/span/span/div/span</ClusterONorthJordan>
+  <ClusterOEastJordan>//li/ul/p-treenode[1]/li/ul/p-treenode[6]/li/ul/p-treenode[1]/li/div/span/span/div/span</ClusterOEastJordan>
+  <ClusterOOthers>//li/ul/p-treenode[1]/li/ul/p-treenode[7]/li/ul/p-treenode[1]/li/div/span/span/div/span</ClusterOOthers>
 </Selector>

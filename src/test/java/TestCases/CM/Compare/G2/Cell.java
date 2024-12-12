@@ -8,9 +8,9 @@ public class Cell extends MainClass {
 
     CM compare= new CM();
     @Test
-    public void CellCompare3G() throws Exception {
+    public void CellCompare2G() throws Exception {
 
-        compare.compare("3G", "Cell", "");
+        compare.compare("2G", "Cell", "");
     }
 
 }

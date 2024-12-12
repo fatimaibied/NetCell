@@ -37,6 +37,7 @@ public class CM {
     Functions support = new Functions();
     boolean bt;
     public void Parameter(String Technology, String ObjectType, String PredefinedTime) throws Exception {
+        Thread.sleep(1000);
 
         support.login("CM");
 
@@ -50,7 +51,7 @@ public class CM {
 
         //Apply and Verify
         driver.findElement(By.xpath(readLocator(SONSelectors, "ApplyButton"))).click();
-        Thread.sleep(20000);
+        Thread.sleep(40000);
         try {
 
             bt = driver.findElement(By.xpath(readLocator(SONSelectors, "HomeLogo"))).isDisplayed();
@@ -79,6 +80,8 @@ public class CM {
 
         driver.findElement(By.xpath(readLocator(CMSelectors, "TargetType"+TargetType))).click();
         Thread.sleep(1000);
+        element = driver.findElement(By.xpath(readLocator(CMSelectors, "TargetCell")));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         driver.findElement(By.xpath(readLocator(CMSelectors, "TargetCell"))).click();
         //Apply and Verify
         driver.findElement(By.xpath(readLocator(SONSelectors, "ApplyButton"))).click();
@@ -106,11 +109,19 @@ public class CM {
     selectCompareObject( ObjectType );
 
          Thread.sleep(2000);
-    if (MonitoringTargetType!=""){
+
+
+
+
+         if (MonitoringTargetType!=""){
+
         driver.findElement(By.xpath(readLocator(CMSelectors, "TargetType"))).click();
         driver.findElement(By.xpath(readLocator(CMSelectors, "TargetType"+MonitoringTargetType))).click();
         Thread.sleep(2000);
-        driver.findElement(By.xpath(readLocator(CMSelectors, "TargetCell"))).click();
+        WebElement element = driver.findElement(By.xpath("//label[contains(text(),'Monitoring Target Type')]"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+
+             driver.findElement(By.xpath(readLocator(CMSelectors, "TargetCell"))).click();
     }
         else {
         driver.findElement(By.xpath(readLocator(CMSelectors,"All"))).click();}
@@ -180,13 +191,22 @@ public class CM {
                 Thread.sleep(1000);
                 //element = driver.findElement(By.xpath(readLocator(SONSelectors,"ObjectBorder")));
                // ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+                WebElement element = driver.findElement(By.xpath("//div[contains(text(),'Object type')]"));
+                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 
-                for (int i = 0; i < relatedElementsRegionArrow.size(); i++) {
-                    Thread.sleep(1000);
+                //--------Remove others from the list for 2G
+                int Regions =relatedElementsRegionArrow.size();;
+                if (Technology!="4G"){
+                    Regions=relatedElementsRegionArrow.size()-1;
+                }
+
+                //-----------------
+                for (int i = 0; i < Regions; i++) {
+                    Thread.sleep(2000);
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(i)))).click();
-                    Thread.sleep(1000);
+                    Thread.sleep(2000);
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsSites.get(i)))).click();
-                    Thread.sleep(1000);
+                    Thread.sleep(2000);
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionClose.get(i)))).click();
                 }
 
@@ -200,15 +220,17 @@ public class CM {
                 driver.findElement(By.xpath(readLocator(SONSelectors,"Cell"))).click();
 
                 Thread.sleep(1000);
+                element = driver.findElement(By.xpath("//div[contains(text(),'Object type')]"));
+                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 
                 for (int i = 0; i < relatedElementsRegionArrow.size(); i++) {
-                    Thread.sleep(1000);
+                    Thread.sleep(2000);
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(i)))).click();
-                    Thread.sleep(2000);
+                    Thread.sleep(3000);
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsCells.get(i)))).click();
-                    Thread.sleep(2000);
+                    Thread.sleep(3000);
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsCellOne.get(i)))).click();
-                    Thread.sleep(1000);
+                    Thread.sleep(2000);
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionClose.get(i)))).click();
                 }
 
@@ -247,39 +269,24 @@ public class CM {
                 element = driver.findElement(By.xpath(readLocator(SONSelectors,"ObjectBorder")));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 
+
+
                 for (int i = 0; i < relatedElementsRegionArrow.size(); i++) {
                     Thread.sleep(1000);
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(i)))).click();
                     for (int j = 0; j < relatedElementsXDD.size(); j++) {
-                        driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsXDD.get(j)))).click();
+
+                        element =driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsXDD.get(j))));
+                        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+                        Thread.sleep(1000);
+                        element.click();
+                        Thread.sleep(1000);
                     }
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionClose.get(i)))).click();
-
                 }
 
                 break;
-            //-------------------------------------------------------------
-       /*  case "Cluster Band" :
-                //Object Selection (Cluster Band)
 
-                WebUI.click(findTestObject('Object Repository/PM/Huawei-vendor/Object-Type/TopX Object Types/TopX Cluster Bands/TopX Cluster Band'))
-                WebUI.delay(1)
-                WebUI.scrollToElement(findTestObject("Object Repository/PM/Huawei-vendor/Object Border"), 0)
-
-                WebUI.click(findTestObject('Object Repository/PM/Huawei-vendor/Object-Type/TopX Object Types/TopX Region Bands/TopX FDD Arrow'))
-                WebUI.click(findTestObject('Object Repository/PM/Huawei-vendor/Object-Type/TopX Object Types/TopX Regions/TopX Region East Amman'))
-                WebUI.click(findTestObject('Object Repository/PM/Huawei-vendor/Object-Type/TopX Object Types/TopX Regions/TopX Region West Amman'))
-                WebUI.click(findTestObject('Object Repository/PM/Huawei-vendor/Object-Type/TopX Object Types/TopX Regions/TopX Region South Jordan'))
-                WebUI.click(findTestObject('Object Repository/PM/Huawei-vendor/Object-Type/TopX Object Types/TopX Regions/TopX Region North Jordan'))
-                WebUI.click(findTestObject('Object Repository/PM/Huawei-vendor/Object-Type/TopX Object Types/TopX Region Bands/TopX FDD Close Arrow'))
-
-                WebUI.click(findTestObject('Object Repository/PM/Huawei-vendor/Object-Type/TopX Object Types/TopX Region Bands/TopX TDD Arrow'))
-                WebUI.click(findTestObject('Object Repository/PM/Huawei-vendor/Object-Type/TopX Object Types/TopX Regions/TopX Region East Jordan'))
-                WebUI.click(findTestObject('Object Repository/PM/Huawei-vendor/Object-Type/TopX Object Types/TopX Regions/TopX Region Others'))
-                WebUI.click(findTestObject('Object Repository/PM/Huawei-vendor/Object-Type/TopX Object Types/TopX Regions/TopX Region South Amman'))
-                WebUI.click(findTestObject('Object Repository/PM/Huawei-vendor/Object-Type/TopX Object Types/TopX Region Bands/TopX TDD Close Arrow'))
-
-                break;*/
             //-------------------------------------------------------------
             case "Cluster" :
                 //Object Selection (Cluster)
@@ -452,11 +459,11 @@ public class CM {
         relatedElementsDestinationCellSite=readTags("SiteDestination", CMSelectors);
         relatedElementsDestinationCell=readTags("CellDestination", CMSelectors);
         Random random = new Random();
-        int randomNumber = random.nextInt(6) + 1;
+        int randomNumber = random.nextInt(5) + 1;
 
         int secondNumber;
         do {
-            secondNumber = random.nextInt(6) + 1; // Random number between 1 and 7
+            secondNumber = random.nextInt(5) + 1; // Random number between 1 and 7
         } while (secondNumber == randomNumber);
 
         switch (ObjectType) {
@@ -466,17 +473,17 @@ public class CM {
                 //Object Selection (Site)
 
                 driver.findElement(By.xpath(readLocator(SONSelectors,"Site"))).click();
-                Thread.sleep(1000);
+                Thread.sleep(3000);
                 driver.findElement(By.xpath(readLocator(CMSelectors,"CompareNEs"))).click();
 
-                Thread.sleep(1000);
+                Thread.sleep(3000);
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(randomNumber)))).click();
-                    Thread.sleep(1000);
+                    Thread.sleep(3000);
                     driver.findElement(By.xpath(readLocator(CMSelectors, relatedElementsSites.get(randomNumber)))).click();
-                    Thread.sleep(1000);
+                    Thread.sleep(3000);
 
                 driver.findElement(By.xpath(readLocator(CMSelectors, relatedElementsRegions.get(secondNumber)))).click();
-                Thread.sleep(1000);
+                Thread.sleep(3000);
                 driver.findElement(By.xpath(readLocator(CMSelectors, relatedElementsDestinationSite.get(secondNumber)))).click();
 
 
@@ -494,16 +501,16 @@ public class CM {
 
 
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(randomNumber)))).click();
-                    Thread.sleep(2000);
+                    Thread.sleep(3000);
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsCells.get(randomNumber)))).click();
-                    Thread.sleep(2000);
+                    Thread.sleep(3000);
                     driver.findElement(By.xpath(readLocator(CMSelectors, relatedElementsCellOne.get(randomNumber)))).click();
-                    Thread.sleep(1000);
+                    Thread.sleep(2000);
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionClose.get(randomNumber)))).click();
                     driver.findElement(By.xpath(readLocator(CMSelectors, relatedElementsRegions.get(secondNumber)))).click();
-                    Thread.sleep(1000);
+                    Thread.sleep(2000);
                     driver.findElement(By.xpath(readLocator(CMSelectors, relatedElementsDestinationCellSite.get(secondNumber)))).click();
-                Thread.sleep(1000);
+                Thread.sleep(2000);
                 driver.findElement(By.xpath(readLocator(CMSelectors, relatedElementsDestinationCell.get(secondNumber)))).click();
                 break;
 
@@ -541,6 +548,8 @@ public class CM {
 
 
     void PredefinedTime (String PredefinedTime)  {
+        WebElement element = driver.findElement(By.xpath("//div[contains(text(),'Data and time')]"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         driver.findElement(By.xpath(readLocator(CMSelectors, "LastWeek"))).click();
         driver.findElement(By.xpath(readLocator(CMSelectors, PredefinedTime))).click();
     }

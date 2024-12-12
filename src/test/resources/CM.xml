@@ -79,4 +79,6 @@
     //----------------------------
     <Save>//button[contains(text(),'Save')]</Save>
     <All>//div[contains(text(),'All')]</All>
+
+    <MonitoringTargetType>//label[contains(text(),'Monitoring Target Type')]</MonitoringTargetType>>
 </Selector>

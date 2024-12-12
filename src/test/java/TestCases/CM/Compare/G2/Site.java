@@ -8,9 +8,9 @@ public class Site extends MainClass {
 
     CM compare= new CM();
     @Test
-    public void SiteCompare3G() throws Exception {
+    public void SiteCompare2G() throws Exception {
 
-        compare.compare("3G", "Site", "");
+        compare.compare("2G", "Site", "");
     }
 
 }

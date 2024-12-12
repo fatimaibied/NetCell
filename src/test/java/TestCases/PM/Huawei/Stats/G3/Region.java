@@ -87,7 +87,11 @@ public class Region extends MainClass {
     @Test
     public void RegionStatsRowAggregation3G() throws Exception {
 
-        State.Stats("Huawei", "3G", "Region", true,"Row");
+        State.Stats("Huawei", "3G", "Region", true,"Raw");
     }
+    @Test
+    public void RegionStatsRow3G() throws Exception {
 
+        State.Stats("Huawei", "3G", "Region", false,"Raw");
+    }
 }

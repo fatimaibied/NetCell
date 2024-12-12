@@ -1,5 +1,6 @@
 package Main;
 
+import com.aventstack.extentreports.reporter.configuration.ViewName;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -39,6 +40,8 @@ public class SetupFunctions extends MainClass {
     public static String SONSelectors = System.getProperty("user.dir") + "\\src\\test\\resources\\SON.xml";
     public static String CMSelectors = System.getProperty("user.dir") + "\\src\\test\\resources\\CM.xml";
     public static String PMSelectors = System.getProperty("user.dir") + "\\src\\test\\resources\\PM.xml";
+    public static String customStyle= System.getProperty("user.dir") + "\\src\\test\\resources\\custom-style.css";
+
     public static String reportPath = System.getProperty("user.dir") + "\\Reports\\";
     public static String extentReportPath;
     public static ExtentReports extent;
@@ -190,7 +193,7 @@ public class SetupFunctions extends MainClass {
         return null;
 
     }
-    public static void initializeReport() {
+    public static void initializeReport() throws IOException {
 
         DateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy HH-mm-ss");
 
@@ -200,12 +203,31 @@ public class SetupFunctions extends MainClass {
         report = new ExtentSparkReporter(extentReportPath);
         extent = new ExtentReports();
         report.config().setDocumentTitle("Automation Report");
+        //report.config().setReportName("<img src='http://netcellcert.com/assets/Logo.svg' style='height:30px;background-color: white;'>");
+        report.config().setCss(
+                ".badge-primary {" +
+                        "background-color:transparent;" +
+                        "color: white; /* Adjust text color if necessary */" +
+                        "font-size: 90%; /* Optional: Adjust font size */" +
+                        "padding: 5px 10px; /* Optional: Adjust padding */" +
+                        "border-radius: 5px; /* Optional: Add rounded corners */" +
+                        "}"
+        );
+        report.config().setReportName(
+                "<div style='display: flex;;justify-content: space-between; align-items: center;'>" +
+                        "<img src='http://netcellcert.com/assets/Logo.svg' style='height:30px;background-color:white'>" +
+                        "<span style='font-size: 20px; font-weight: bold; margin-left: 200px;margin-right: 340px;'>Automation Test Report</span>" +
+                        "</div>"
+        );
+
         extent.attachReporter(report);
         extent.setSystemInfo("OS", System.getProperty("os.name"));
         extent.setSystemInfo("Browser ", browserType);
         extent.setSystemInfo("User Name", System.getProperty("user.name"));
         report.config().setTheme(Theme.STANDARD);
         report.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm ");
+
+       // report.loadXMLConfig(extentConfig);
 
     }
 

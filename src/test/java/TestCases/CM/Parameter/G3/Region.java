@@ -9,26 +9,26 @@ public class Region extends MainClass {
     CM parameters= new CM();
 
     @Test
-    public void RegionParameter4G() throws Exception {
+    public void RegionParameter3G() throws Exception {
 
-        parameters.Parameter("4G", "Region", "Last Week");
+        parameters.Parameter("3G", "Region", "LastWeek");
     }
 
     @Test
-    public void RegionParameterWeekends4G() throws Exception {
+    public void RegionParameterWeekends3G() throws Exception {
 
-        parameters.Parameter("4G", "Region", "Weekends");
+        parameters.Parameter("3G", "Region", "Weekends");
     }
 
     @Test
-    public void RegionParameterYesterday4G() throws Exception {
+    public void RegionParameterYesterday3G() throws Exception {
 
-        parameters.Parameter("4G", "Region", "Yesterday");
+        parameters.Parameter("3G", "Region", "Yesterday");
     }
 
     @Test
-    public void RegionParameterCustom4G() throws Exception {
+    public void RegionParameterCustom3G() throws Exception {
 
-        parameters.Parameter("4G", "Region", "Custom");
+        parameters.Parameter("3G", "Region", "Custom");
     }
 }

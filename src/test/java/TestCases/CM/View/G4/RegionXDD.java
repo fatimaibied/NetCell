@@ -11,11 +11,11 @@ public class RegionXDD extends MainClass {
     @Test
     public void RegionXDDViewCell4G() throws Exception {
 
-        parameters.view("4G", "RegionXDD", "Cell");
+        parameters.view("4G", "Region XDD", "Cell");
     }
     @Test
     public void RegionXDDViewSite4G() throws Exception {
 
-        parameters.view("4G", "RegionXDD", "Site");
+        parameters.view("4G", "Region XDD", "Site");
     }
 }
