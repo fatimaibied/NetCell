@@ -85,8 +85,8 @@ public class PLMNCarrier extends MainClass {
         State.Stats("Nokia", "3G", "PLMN Carrier", true,"MonthlyBH");
     }
     @Test
-    public void PLMNCarrierStatsRowAggregation3G() throws Exception {
+    public void PLMNCarrierStatsRawAggregation3G() throws Exception {
 
-        State.Stats("Nokia", "3G", "PLMN Carrier", true,"Row");
+        State.Stats("Nokia", "3G", "PLMN Carrier", true,"Raw");
     }
 }

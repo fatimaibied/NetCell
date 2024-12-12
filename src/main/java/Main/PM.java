@@ -499,10 +499,11 @@ public class PM {
                 break;
 
             case "Region Carrier" :
+                Thread.sleep(1000);
                 driver.findElement(By.xpath(readLocator(SONSelectors,"RegionCarrier"))).click();
                 element = driver.findElement(By.xpath(readLocator(SONSelectors,"ObjectBorder")));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-
+                Thread.sleep(1000);
                 driver.findElement(By.xpath(readLocator(SONSelectors,"RegionsEastAmman"))).click();
                 driver.findElement(By.xpath(readLocator(SONSelectors,"RegionsWestAmman"))).click();
                 driver.findElement(By.xpath(readLocator(SONSelectors,"RegionsSouthJordan"))).click();

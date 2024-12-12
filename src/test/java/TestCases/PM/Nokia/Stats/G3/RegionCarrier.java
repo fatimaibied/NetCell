@@ -87,6 +87,6 @@ public class RegionCarrier extends MainClass {
     @Test
     public void RegionCarrierStatsRowAggregation3G() throws Exception {
 
-        State.Stats("Nokia", "3G", "Region Carrier", true,"Row");
+        State.Stats("Nokia", "3G", "Region Carrier", true,"Raw");
     }
 }
