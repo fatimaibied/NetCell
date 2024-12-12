@@ -1,0 +1,3585 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Automation Report</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css">.badge-primary {background-color:transparent;color: white; /* Adjust text color if necessary */font-size: 90%; /* Optional: Adjust font size */padding: 5px 10px; /* Optional: Adjust padding */border-radius: 5px; /* Optional: Add rounded corners */}</style></head><body class="spa -report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"><div style='display: flex;;justify-content: space-between; align-items: center;'><img src='http://netcellcert.com/assets/Logo.svg' style='height:30px;background-color:white'><span style='font-size: 20px; font-weight: bold; margin-left: 200px;margin-right: 340px;'>Automation Test Report</span></div></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Thursday, December 12, 2024, 12:47 </span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">CellStats2G</p>
+            <p class="text-sm">
+              <span>12:48:20 PM</span> / <span>00:00:00:148</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">CellStats2G</h5>
+<span class='badge badge-success'>12.12.2024 12:48:20 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:48:20 PM</span>
+<span class='badge badge-default'>00:00:00:148</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:48:20 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cell]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:48:20 PM</td>
+        <td>
+          CellStats2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:48:20 PM</td>
+        <td>
+          Element Name CellsArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:48:20 PM</td>
+        <td>
+          element click intercepted: Element <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="p-icon p-tree-toggler-icon" aria-hidden="true">...</svg> is not clickable at point (54, 667). Other element would receive the click: <div _ngcontent-ng-c772245435="" class="apply-button-div">...</div>
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.C53EABA2DAC4BA6820CEE4C0AA1E90AA.d.B9C4EFD037F231DD767AB7B4E3C939D7.e.99}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStats2G 12-Dec-2024 12-48-20.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStats2G 12-Dec-2024 12-48-20.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">CellStatsAggregation2G</p>
+            <p class="text-sm">
+              <span>12:48:36 PM</span> / <span>00:00:00:129</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">CellStatsAggregation2G</h5>
+<span class='badge badge-success'>12.12.2024 12:48:36 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:48:36 PM</span>
+<span class='badge badge-default'>00:00:00:129</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:48:36 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cell]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:48:36 PM</td>
+        <td>
+          CellStatsAggregation2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:48:36 PM</td>
+        <td>
+          Element Name CellsArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:48:36 PM</td>
+        <td>
+          element click intercepted: Element <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="p-icon p-tree-toggler-icon" aria-hidden="true">...</svg> is not clickable at point (54, 667). Other element would receive the click: <div _ngcontent-ng-c772245435="" class="apply-button-div">...</div>
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.FEAEB41DBC248EAADEC86BF1FA8F6B21.d.C8DFE2A6B65D00D29AB1DC421FA3AAB5.e.160}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsAggregation2G 12-Dec-2024 12-48-36.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsAggregation2G 12-Dec-2024 12-48-36.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">CellStatsDaily2G</p>
+            <p class="text-sm">
+              <span>12:48:53 PM</span> / <span>00:00:00:129</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">CellStatsDaily2G</h5>
+<span class='badge badge-success'>12.12.2024 12:48:53 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:48:53 PM</span>
+<span class='badge badge-default'>00:00:00:129</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:48:53 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cell]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:48:53 PM</td>
+        <td>
+          CellStatsDaily2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:48:53 PM</td>
+        <td>
+          Element Name CellsArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:48:53 PM</td>
+        <td>
+          element click intercepted: Element <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="p-icon p-tree-toggler-icon" aria-hidden="true">...</svg> is not clickable at point (54, 667). Other element would receive the click: <div _ngcontent-ng-c772245435="" class="apply-button-div">...</div>
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.621D5E9CE4FBDD742F0D89E4DD123C22.d.D88772668C313EA71C03F1BD5541CD5F.e.221}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsDaily2G 12-Dec-2024 12-48-53.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsDaily2G 12-Dec-2024 12-48-53.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">CellStatsDailyAggregation2G</p>
+            <p class="text-sm">
+              <span>12:49:09 PM</span> / <span>00:00:00:128</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">CellStatsDailyAggregation2G</h5>
+<span class='badge badge-success'>12.12.2024 12:49:09 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:49:09 PM</span>
+<span class='badge badge-default'>00:00:00:128</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:49:09 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cell]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:49:09 PM</td>
+        <td>
+          CellStatsDailyAggregation2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:49:09 PM</td>
+        <td>
+          Element Name CellsArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:49:09 PM</td>
+        <td>
+          element click intercepted: Element <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="p-icon p-tree-toggler-icon" aria-hidden="true">...</svg> is not clickable at point (54, 667). Other element would receive the click: <div _ngcontent-ng-c772245435="" class="apply-button-div">...</div>
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.B60FBF69A2D745776B7412A1B8F92473.d.9D1D4E6BBD739C9849C67BA9F5C97883.e.282}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsDailyAggregation2G 12-Dec-2024 12-49-09.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsDailyAggregation2G 12-Dec-2024 12-49-09.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">CellStatsDailyBH2G</p>
+            <p class="text-sm">
+              <span>12:49:25 PM</span> / <span>00:00:00:128</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">CellStatsDailyBH2G</h5>
+<span class='badge badge-success'>12.12.2024 12:49:25 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:49:26 PM</span>
+<span class='badge badge-default'>00:00:00:128</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:49:25 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cell]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:49:25 PM</td>
+        <td>
+          CellStatsDailyBH2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:49:25 PM</td>
+        <td>
+          Element Name CellsArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:49:26 PM</td>
+        <td>
+          element click intercepted: Element <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="p-icon p-tree-toggler-icon" aria-hidden="true">...</svg> is not clickable at point (54, 667). Other element would receive the click: <div _ngcontent-ng-c772245435="" class="apply-button-div">...</div>
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.A31F6BFFFB202414023895A2CFDD1229.d.8E7E6C81887217935AF994DF2B8F5287.e.343}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsDailyBH2G 12-Dec-2024 12-49-25.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsDailyBH2G 12-Dec-2024 12-49-25.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">CellStatsDailyBHAggregation2G</p>
+            <p class="text-sm">
+              <span>12:49:42 PM</span> / <span>00:00:00:121</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">CellStatsDailyBHAggregation2G</h5>
+<span class='badge badge-success'>12.12.2024 12:49:42 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:49:42 PM</span>
+<span class='badge badge-default'>00:00:00:121</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:49:42 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cell]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:49:42 PM</td>
+        <td>
+          CellStatsDailyBHAggregation2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:49:42 PM</td>
+        <td>
+          Element Name CellsArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:49:42 PM</td>
+        <td>
+          element click intercepted: Element <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="p-icon p-tree-toggler-icon" aria-hidden="true">...</svg> is not clickable at point (54, 667). Other element would receive the click: <div _ngcontent-ng-c772245435="" class="apply-button-div">...</div>
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.0B1779D81C9C8AB886085C4B9754C3DD.d.92D31F1A32D5A41E9F984ECD5ACD1252.e.402}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsDailyBHAggregation2G 12-Dec-2024 12-49-42.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsDailyBHAggregation2G 12-Dec-2024 12-49-42.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">CellStatsMonthly2G</p>
+            <p class="text-sm">
+              <span>12:49:58 PM</span> / <span>00:00:00:131</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">CellStatsMonthly2G</h5>
+<span class='badge badge-success'>12.12.2024 12:49:58 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:49:58 PM</span>
+<span class='badge badge-default'>00:00:00:131</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:49:58 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cell]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:49:58 PM</td>
+        <td>
+          CellStatsMonthly2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:49:58 PM</td>
+        <td>
+          Element Name CellsArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:49:58 PM</td>
+        <td>
+          element click intercepted: Element <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="p-icon p-tree-toggler-icon" aria-hidden="true">...</svg> is not clickable at point (54, 667). Other element would receive the click: <div _ngcontent-ng-c772245435="" class="apply-button-div">...</div>
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.C3876BFAC17212790F9E05549B0E6107.d.0728ECFC72664DF9C406DA9D183C126F.e.460}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsMonthly2G 12-Dec-2024 12-49-58.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsMonthly2G 12-Dec-2024 12-49-58.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="8"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">CellStatsMonthlyAggregation2G</p>
+            <p class="text-sm">
+              <span>12:50:15 PM</span> / <span>00:00:00:127</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">CellStatsMonthlyAggregation2G</h5>
+<span class='badge badge-success'>12.12.2024 12:50:15 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:50:15 PM</span>
+<span class='badge badge-default'>00:00:00:127</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:50:15 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cell]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:50:15 PM</td>
+        <td>
+          CellStatsMonthlyAggregation2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:50:15 PM</td>
+        <td>
+          Element Name CellsArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:50:15 PM</td>
+        <td>
+          element click intercepted: Element <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="p-icon p-tree-toggler-icon" aria-hidden="true">...</svg> is not clickable at point (54, 667). Other element would receive the click: <div _ngcontent-ng-c772245435="" class="apply-button-div">...</div>
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.C433227DAEE62DDC69ED0DA759EDE088.d.22DD0BF1639F9A16D5D795F663A5E68D.e.520}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsMonthlyAggregation2G 12-Dec-2024 12-50-15.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsMonthlyAggregation2G 12-Dec-2024 12-50-15.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="9"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">CellStatsMonthlyBH2G</p>
+            <p class="text-sm">
+              <span>12:50:31 PM</span> / <span>00:00:00:126</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">CellStatsMonthlyBH2G</h5>
+<span class='badge badge-success'>12.12.2024 12:50:31 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:50:31 PM</span>
+<span class='badge badge-default'>00:00:00:126</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:50:31 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cell]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:50:31 PM</td>
+        <td>
+          CellStatsMonthlyBH2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:50:31 PM</td>
+        <td>
+          Element Name CellsArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:50:31 PM</td>
+        <td>
+          element click intercepted: Element <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="p-icon p-tree-toggler-icon" aria-hidden="true">...</svg> is not clickable at point (54, 667). Other element would receive the click: <div _ngcontent-ng-c772245435="" class="apply-button-div">...</div>
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.24BCE253A4E24CA5CDD074DCD05C43AF.d.1AAC04D750C6597830085C4DC30EFAE5.e.581}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsMonthlyBH2G 12-Dec-2024 12-50-31.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsMonthlyBH2G 12-Dec-2024 12-50-31.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="10"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">CellStatsMonthlyBHAggregation2G</p>
+            <p class="text-sm">
+              <span>12:50:48 PM</span> / <span>00:00:00:126</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">CellStatsMonthlyBHAggregation2G</h5>
+<span class='badge badge-success'>12.12.2024 12:50:48 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:50:48 PM</span>
+<span class='badge badge-default'>00:00:00:126</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:50:48 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cell]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:50:48 PM</td>
+        <td>
+          CellStatsMonthlyBHAggregation2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:50:48 PM</td>
+        <td>
+          Element Name CellsArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:50:48 PM</td>
+        <td>
+          element click intercepted: Element <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="p-icon p-tree-toggler-icon" aria-hidden="true">...</svg> is not clickable at point (54, 667). Other element would receive the click: <div _ngcontent-ng-c772245435="" class="apply-button-div">...</div>
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.76C9F3CB3D181FABEDA47501648E4C8D.d.ABFCEA8AAC49802A6EF894D8ED69EBED.e.639}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsMonthlyBHAggregation2G 12-Dec-2024 12-50-48.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsMonthlyBHAggregation2G 12-Dec-2024 12-50-48.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="11"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">CellStatsRowAggregation2G</p>
+            <p class="text-sm">
+              <span>12:51:04 PM</span> / <span>00:00:00:128</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">CellStatsRowAggregation2G</h5>
+<span class='badge badge-success'>12.12.2024 12:51:04 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:51:04 PM</span>
+<span class='badge badge-default'>00:00:00:128</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:51:04 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cell]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:51:04 PM</td>
+        <td>
+          CellStatsRowAggregation2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:51:04 PM</td>
+        <td>
+          Element Name CellsArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:51:04 PM</td>
+        <td>
+          element click intercepted: Element <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="p-icon p-tree-toggler-icon" aria-hidden="true">...</svg> is not clickable at point (54, 667). Other element would receive the click: <div _ngcontent-ng-c772245435="" class="apply-button-div">...</div>
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.B6B5CE5ECCE665186ECFE1D434EEF0E8.d.867411BF0D9E86B4101838D20BA1C1AB.e.699}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsRowAggregation2G 12-Dec-2024 12-51-04.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsRowAggregation2G 12-Dec-2024 12-51-04.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="12"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">CellStatsWeekly2G</p>
+            <p class="text-sm">
+              <span>12:51:21 PM</span> / <span>00:00:00:129</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">CellStatsWeekly2G</h5>
+<span class='badge badge-success'>12.12.2024 12:51:21 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:51:21 PM</span>
+<span class='badge badge-default'>00:00:00:129</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:51:21 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cell]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:51:21 PM</td>
+        <td>
+          CellStatsWeekly2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:51:21 PM</td>
+        <td>
+          Element Name CellsArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:51:21 PM</td>
+        <td>
+          element click intercepted: Element <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="p-icon p-tree-toggler-icon" aria-hidden="true">...</svg> is not clickable at point (54, 667). Other element would receive the click: <div _ngcontent-ng-c772245435="" class="apply-button-div">...</div>
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.6D915F26FE8CCF2E4D14745A0FE87CE1.d.DA40E2B739CE0AAC9098D52BC7DD2E00.e.759}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsWeekly2G 12-Dec-2024 12-51-21.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsWeekly2G 12-Dec-2024 12-51-21.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="13"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">CellStatsWeeklyAggregation2G</p>
+            <p class="text-sm">
+              <span>12:51:37 PM</span> / <span>00:00:00:127</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">CellStatsWeeklyAggregation2G</h5>
+<span class='badge badge-success'>12.12.2024 12:51:37 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:51:37 PM</span>
+<span class='badge badge-default'>00:00:00:127</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:51:37 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cell]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:51:37 PM</td>
+        <td>
+          CellStatsWeeklyAggregation2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:51:37 PM</td>
+        <td>
+          Element Name CellsArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:51:37 PM</td>
+        <td>
+          element click intercepted: Element <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="p-icon p-tree-toggler-icon" aria-hidden="true">...</svg> is not clickable at point (54, 667). Other element would receive the click: <div _ngcontent-ng-c772245435="" class="apply-button-div">...</div>
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.654F19C6215755558418FD069487DA93.d.13FB135C9AB7A46B168F23EC84C7D4CE.e.817}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsWeeklyAggregation2G 12-Dec-2024 12-51-37.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsWeeklyAggregation2G 12-Dec-2024 12-51-37.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="14"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">CellStatsWeeklyBH2G</p>
+            <p class="text-sm">
+              <span>12:51:53 PM</span> / <span>00:00:00:130</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">CellStatsWeeklyBH2G</h5>
+<span class='badge badge-success'>12.12.2024 12:51:53 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:51:54 PM</span>
+<span class='badge badge-default'>00:00:00:130</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:51:53 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cell]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:51:53 PM</td>
+        <td>
+          CellStatsWeeklyBH2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:51:53 PM</td>
+        <td>
+          Element Name CellsArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:51:54 PM</td>
+        <td>
+          element click intercepted: Element <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="p-icon p-tree-toggler-icon" aria-hidden="true">...</svg> is not clickable at point (54, 667). Other element would receive the click: <div _ngcontent-ng-c772245435="" class="apply-button-div">...</div>
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.F59D882CAA6D100CE4127DEAAAC4ACC6.d.2873552CE74E002E824CAB5E56241457.e.877}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsWeeklyBH2G 12-Dec-2024 12-51-53.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsWeeklyBH2G 12-Dec-2024 12-51-53.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="15"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">CellStatsWeeklyBHAggregation2G</p>
+            <p class="text-sm">
+              <span>12:52:10 PM</span> / <span>00:00:00:142</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">CellStatsWeeklyBHAggregation2G</h5>
+<span class='badge badge-success'>12.12.2024 12:52:10 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:52:10 PM</span>
+<span class='badge badge-default'>00:00:00:142</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:52:10 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cell]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:52:10 PM</td>
+        <td>
+          CellStatsWeeklyBHAggregation2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:52:10 PM</td>
+        <td>
+          Element Name CellsArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:52:10 PM</td>
+        <td>
+          element click intercepted: Element <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="p-icon p-tree-toggler-icon" aria-hidden="true">...</svg> is not clickable at point (54, 667). Other element would receive the click: <div _ngcontent-ng-c772245435="" class="apply-button-div">...</div>
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.9E01D93AB98AD0F48EBBE89D17FAAE62.d.26ACF92D328808CE111FF8A54F062531.e.935}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]/*[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsWeeklyBHAggregation2G 12-Dec-2024 12-52-10.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\CellStatsWeeklyBHAggregation2G 12-Dec-2024 12-52-10.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="16"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ClusterStats2G</p>
+            <p class="text-sm">
+              <span>12:52:18 PM</span> / <span>00:00:00:110</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">ClusterStats2G</h5>
+<span class='badge badge-success'>12.12.2024 12:52:18 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:52:18 PM</span>
+<span class='badge badge-default'>00:00:00:110</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:52:18 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cluster]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:52:18 PM</td>
+        <td>
+          ClusterStats2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:52:18 PM</td>
+        <td>
+          Element Name RegionArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:52:18 PM</td>
+        <td>
+          element not interactable
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.55C0969D21B51F667A2949D29DD176FE.d.4F578B585BA4C6FB93C3A43ED099A898.e.983}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStats2G 12-Dec-2024 12-52-18.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStats2G 12-Dec-2024 12-52-18.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="17"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ClusterStatsAggregation2G</p>
+            <p class="text-sm">
+              <span>12:52:27 PM</span> / <span>00:00:00:116</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">ClusterStatsAggregation2G</h5>
+<span class='badge badge-success'>12.12.2024 12:52:27 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:52:27 PM</span>
+<span class='badge badge-default'>00:00:00:116</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:52:27 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cluster]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:52:27 PM</td>
+        <td>
+          ClusterStatsAggregation2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:52:27 PM</td>
+        <td>
+          Element Name RegionArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:52:27 PM</td>
+        <td>
+          element not interactable
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.321F42ABF52C8DB836ED78428A68A41E.d.E21DD344A55C6F6E6587432E645C1B6E.e.1030}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsAggregation2G 12-Dec-2024 12-52-27.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsAggregation2G 12-Dec-2024 12-52-27.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="18"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ClusterStatsDaily2G</p>
+            <p class="text-sm">
+              <span>12:52:35 PM</span> / <span>00:00:00:113</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">ClusterStatsDaily2G</h5>
+<span class='badge badge-success'>12.12.2024 12:52:35 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:52:35 PM</span>
+<span class='badge badge-default'>00:00:00:113</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:52:35 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cluster]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:52:35 PM</td>
+        <td>
+          ClusterStatsDaily2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:52:35 PM</td>
+        <td>
+          Element Name RegionArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:52:35 PM</td>
+        <td>
+          element not interactable
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.6C47C74CB38C29B527869E7B214B201D.d.D9C7147651F4188BB1C0DCDCA40D317F.e.1080}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsDaily2G 12-Dec-2024 12-52-35.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsDaily2G 12-Dec-2024 12-52-35.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="19"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ClusterStatsDailyAggregation2G</p>
+            <p class="text-sm">
+              <span>12:52:43 PM</span> / <span>00:00:00:109</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">ClusterStatsDailyAggregation2G</h5>
+<span class='badge badge-success'>12.12.2024 12:52:43 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:52:43 PM</span>
+<span class='badge badge-default'>00:00:00:109</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:52:43 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cluster]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:52:43 PM</td>
+        <td>
+          ClusterStatsDailyAggregation2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:52:43 PM</td>
+        <td>
+          Element Name RegionArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:52:43 PM</td>
+        <td>
+          element not interactable
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.BDAF4AEDF542D63F8653A0A2D8E405F9.d.48640EE1DD645C00A1D0A0D071C23C7A.e.1128}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsDailyAggregation2G 12-Dec-2024 12-52-43.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsDailyAggregation2G 12-Dec-2024 12-52-43.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="20"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ClusterStatsDailyBH2G</p>
+            <p class="text-sm">
+              <span>12:52:51 PM</span> / <span>00:00:00:118</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">ClusterStatsDailyBH2G</h5>
+<span class='badge badge-success'>12.12.2024 12:52:51 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:52:51 PM</span>
+<span class='badge badge-default'>00:00:00:118</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:52:51 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cluster]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:52:51 PM</td>
+        <td>
+          ClusterStatsDailyBH2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:52:51 PM</td>
+        <td>
+          Element Name RegionArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:52:51 PM</td>
+        <td>
+          element not interactable
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.205CBAF62B03E4BB9D9480131F9B98DE.d.94BA42524B7832DA8D8E48546738BBD1.e.1172}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsDailyBH2G 12-Dec-2024 12-52-51.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsDailyBH2G 12-Dec-2024 12-52-51.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="21"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ClusterStatsDailyBHAggregation2G</p>
+            <p class="text-sm">
+              <span>12:53:00 PM</span> / <span>00:00:00:128</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">ClusterStatsDailyBHAggregation2G</h5>
+<span class='badge badge-success'>12.12.2024 12:53:00 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:53:00 PM</span>
+<span class='badge badge-default'>00:00:00:128</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:00 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cluster]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:00 PM</td>
+        <td>
+          ClusterStatsDailyBHAggregation2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:00 PM</td>
+        <td>
+          Element Name RegionArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:00 PM</td>
+        <td>
+          element not interactable
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.C4CE43C9A4B38DA8D512820B0BE8B59C.d.A27CC139BF15BA81D79F4601F60550C2.e.1220}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsDailyBHAggregation2G 12-Dec-2024 12-53-00.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsDailyBHAggregation2G 12-Dec-2024 12-53-00.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="22"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ClusterStatsMonthly2G</p>
+            <p class="text-sm">
+              <span>12:53:08 PM</span> / <span>00:00:00:128</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">ClusterStatsMonthly2G</h5>
+<span class='badge badge-success'>12.12.2024 12:53:08 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:53:08 PM</span>
+<span class='badge badge-default'>00:00:00:128</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:08 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cluster]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:08 PM</td>
+        <td>
+          ClusterStatsMonthly2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:08 PM</td>
+        <td>
+          Element Name RegionArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:08 PM</td>
+        <td>
+          element not interactable
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.48A512250473A8248E9E28380EABBF93.d.4F685F0828D81965C321195BB3119E63.e.1271}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsMonthly2G 12-Dec-2024 12-53-08.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsMonthly2G 12-Dec-2024 12-53-08.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="23"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ClusterStatsMonthlyAggregation2G</p>
+            <p class="text-sm">
+              <span>12:53:16 PM</span> / <span>00:00:00:119</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">ClusterStatsMonthlyAggregation2G</h5>
+<span class='badge badge-success'>12.12.2024 12:53:16 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:53:16 PM</span>
+<span class='badge badge-default'>00:00:00:119</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=23</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:16 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cluster]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:16 PM</td>
+        <td>
+          ClusterStatsMonthlyAggregation2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:16 PM</td>
+        <td>
+          Element Name RegionArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:16 PM</td>
+        <td>
+          element not interactable
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.08E75BE6D52CC207B461AB9E9E82DCF8.d.33045766C8859DBCBB8BAD758D8DF556.e.1322}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsMonthlyAggregation2G 12-Dec-2024 12-53-16.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsMonthlyAggregation2G 12-Dec-2024 12-53-16.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="24"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ClusterStatsMonthlyBH2G</p>
+            <p class="text-sm">
+              <span>12:53:24 PM</span> / <span>00:00:00:101</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">ClusterStatsMonthlyBH2G</h5>
+<span class='badge badge-success'>12.12.2024 12:53:24 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:53:24 PM</span>
+<span class='badge badge-default'>00:00:00:101</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=24</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:24 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cluster]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:24 PM</td>
+        <td>
+          ClusterStatsMonthlyBH2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:24 PM</td>
+        <td>
+          Element Name RegionArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:24 PM</td>
+        <td>
+          element not interactable
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.D7707C64812FB93C85E6AC5165E6BE90.d.0EC1849AABE1257F6A982E5E7522FDC9.e.1370}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsMonthlyBH2G 12-Dec-2024 12-53-24.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsMonthlyBH2G 12-Dec-2024 12-53-24.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="25"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ClusterStatsMonthlyBHAggregation2G</p>
+            <p class="text-sm">
+              <span>12:53:33 PM</span> / <span>00:00:00:100</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">ClusterStatsMonthlyBHAggregation2G</h5>
+<span class='badge badge-success'>12.12.2024 12:53:33 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:53:33 PM</span>
+<span class='badge badge-default'>00:00:00:100</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=25</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:33 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cluster]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:33 PM</td>
+        <td>
+          ClusterStatsMonthlyBHAggregation2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:33 PM</td>
+        <td>
+          Element Name RegionArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:33 PM</td>
+        <td>
+          element not interactable
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.B18A4B7657593BB34F2BD49502AFF457.d.7C4EBC8CD53FE91EB58BE1A07CB7EE32.e.1421}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsMonthlyBHAggregation2G 12-Dec-2024 12-53-33.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsMonthlyBHAggregation2G 12-Dec-2024 12-53-33.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="26"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ClusterStatsRowAggregation2G</p>
+            <p class="text-sm">
+              <span>12:53:41 PM</span> / <span>00:00:00:120</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">ClusterStatsRowAggregation2G</h5>
+<span class='badge badge-success'>12.12.2024 12:53:41 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:53:41 PM</span>
+<span class='badge badge-default'>00:00:00:120</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=26</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:41 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cluster]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:41 PM</td>
+        <td>
+          ClusterStatsRowAggregation2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:41 PM</td>
+        <td>
+          Element Name RegionArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:41 PM</td>
+        <td>
+          element not interactable
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.54AF66ADFC2D7BF79B33E40BC0E176EB.d.A0D0E296FF0FF9B806AB5410CA4617B7.e.1472}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsRowAggregation2G 12-Dec-2024 12-53-41.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsRowAggregation2G 12-Dec-2024 12-53-41.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="27"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ClusterStatsWeekly2G</p>
+            <p class="text-sm">
+              <span>12:53:49 PM</span> / <span>00:00:00:114</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">ClusterStatsWeekly2G</h5>
+<span class='badge badge-success'>12.12.2024 12:53:49 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:53:49 PM</span>
+<span class='badge badge-default'>00:00:00:114</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=27</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:49 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cluster]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:49 PM</td>
+        <td>
+          ClusterStatsWeekly2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:49 PM</td>
+        <td>
+          Element Name RegionArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:49 PM</td>
+        <td>
+          element not interactable
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.A0BAAD8DE0EDCCE1CD11FDFD16794770.d.FE4BD12AD378C290B9B2863820D2A1B1.e.1522}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsWeekly2G 12-Dec-2024 12-53-49.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsWeekly2G 12-Dec-2024 12-53-49.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="28"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ClusterStatsWeeklyAggregation2G</p>
+            <p class="text-sm">
+              <span>12:53:57 PM</span> / <span>00:00:00:115</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">ClusterStatsWeeklyAggregation2G</h5>
+<span class='badge badge-success'>12.12.2024 12:53:57 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:53:58 PM</span>
+<span class='badge badge-default'>00:00:00:115</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=28</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:57 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cluster]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:57 PM</td>
+        <td>
+          ClusterStatsWeeklyAggregation2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:57 PM</td>
+        <td>
+          Element Name RegionArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:53:58 PM</td>
+        <td>
+          element not interactable
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.ECA5C11C505EAF80300410DCAA2B3A0D.d.B4E56C8805A3D675F246D8ADBA2B9CBB.e.1570}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsWeeklyAggregation2G 12-Dec-2024 12-53-57.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsWeeklyAggregation2G 12-Dec-2024 12-53-57.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="29"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ClusterStatsWeeklyBH2G</p>
+            <p class="text-sm">
+              <span>12:54:06 PM</span> / <span>00:00:00:119</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">ClusterStatsWeeklyBH2G</h5>
+<span class='badge badge-success'>12.12.2024 12:54:06 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:54:06 PM</span>
+<span class='badge badge-default'>00:00:00:119</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=29</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:54:06 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cluster]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:54:06 PM</td>
+        <td>
+          ClusterStatsWeeklyBH2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:54:06 PM</td>
+        <td>
+          Element Name RegionArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:54:06 PM</td>
+        <td>
+          element not interactable
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.ACDEFFF73409121B443F94D92BEE6567.d.21BB949F3F933853EA70669DE5BDBA9D.e.1618}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsWeeklyBH2G 12-Dec-2024 12-54-06.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsWeeklyBH2G 12-Dec-2024 12-54-06.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="30"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">ClusterStatsWeeklyBHAggregation2G</p>
+            <p class="text-sm">
+              <span>12:54:14 PM</span> / <span>00:00:00:112</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">ClusterStatsWeeklyBHAggregation2G</h5>
+<span class='badge badge-success'>12.12.2024 12:54:14 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:54:14 PM</span>
+<span class='badge badge-default'>00:00:00:112</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=30</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:54:14 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Cluster]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:54:14 PM</td>
+        <td>
+          ClusterStatsWeeklyBHAggregation2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:54:14 PM</td>
+        <td>
+          Element Name RegionArrowEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:54:14 PM</td>
+        <td>
+          element not interactable
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, clickElement {id=f.CD425AA3FDBBE4D494D69BCF28CBDD45.d.B8BBC6DB3565B9EB849AA9BA567A3EC1.e.1667}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4ed79fb3dfa643bebefc43149e2dad18)] -> xpath: //p-treenode[1]/li[1]/div[1]/button[1]/chevronrighticon[1]]
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsWeeklyBHAggregation2G 12-Dec-2024 12-54-14.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\ClusterStatsWeeklyBHAggregation2G 12-Dec-2024 12-54-14.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="31"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">RegionStatsRowAggregation2G</p>
+            <p class="text-sm">
+              <span>12:54:22 PM</span> / <span>00:00:00:096</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">RegionStatsRowAggregation2G</h5>
+<span class='badge badge-success'>12.12.2024 12:54:22 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:54:22 PM</span>
+<span class='badge badge-default'>00:00:00:096</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=31</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:54:22 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Region]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:54:22 PM</td>
+        <td>
+          RegionStatsRowAggregation2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:54:22 PM</td>
+        <td>
+          Element Name Month
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:54:22 PM</td>
+        <td>
+          no such element: Unable to locate element: {"method":"xpath","selector":"//button[@aria-label='Choose Month']"}
+  (Session info: chrome=131.0.6778.109)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, findElement {using=xpath, value=//button[@aria-label='Choose Month']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\RegionStatsRowAggregation2G 12-Dec-2024 12-54-22.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\RegionStatsRowAggregation2G 12-Dec-2024 12-54-22.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="32"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SiteStats2G</p>
+            <p class="text-sm">
+              <span>12:54:32 PM</span> / <span>00:00:00:106</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">SiteStats2G</h5>
+<span class='badge badge-success'>12.12.2024 12:54:32 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:54:32 PM</span>
+<span class='badge badge-default'>00:00:00:106</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=32</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:54:32 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Site]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:54:32 PM</td>
+        <td>
+          SiteStats2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:54:32 PM</td>
+        <td>
+          Element Name SitesEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:54:32 PM</td>
+        <td>
+          no such element: Unable to locate element: {"method":"xpath","selector":"//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span"}
+  (Session info: chrome=131.0.6778.109)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, findElement {using=xpath, value=//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStats2G 12-Dec-2024 12-54-32.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStats2G 12-Dec-2024 12-54-32.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="33"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SiteStatsAggregation2G</p>
+            <p class="text-sm">
+              <span>12:54:42 PM</span> / <span>00:00:00:124</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">SiteStatsAggregation2G</h5>
+<span class='badge badge-success'>12.12.2024 12:54:42 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:54:42 PM</span>
+<span class='badge badge-default'>00:00:00:124</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=33</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:54:42 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Site]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:54:42 PM</td>
+        <td>
+          SiteStatsAggregation2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:54:42 PM</td>
+        <td>
+          Element Name SitesEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:54:42 PM</td>
+        <td>
+          no such element: Unable to locate element: {"method":"xpath","selector":"//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span"}
+  (Session info: chrome=131.0.6778.109)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, findElement {using=xpath, value=//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsAggregation2G 12-Dec-2024 12-54-42.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsAggregation2G 12-Dec-2024 12-54-42.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="34"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SiteStatsDaily2G</p>
+            <p class="text-sm">
+              <span>12:54:52 PM</span> / <span>00:00:00:127</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">SiteStatsDaily2G</h5>
+<span class='badge badge-success'>12.12.2024 12:54:52 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:54:53 PM</span>
+<span class='badge badge-default'>00:00:00:127</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=34</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:54:52 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Site]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:54:52 PM</td>
+        <td>
+          SiteStatsDaily2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:54:52 PM</td>
+        <td>
+          Element Name SitesEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:54:53 PM</td>
+        <td>
+          no such element: Unable to locate element: {"method":"xpath","selector":"//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span"}
+  (Session info: chrome=131.0.6778.109)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, findElement {using=xpath, value=//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsDaily2G 12-Dec-2024 12-54-52.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsDaily2G 12-Dec-2024 12-54-52.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="35"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SiteStatsDailyAggregation2G</p>
+            <p class="text-sm">
+              <span>12:55:03 PM</span> / <span>00:00:00:126</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">SiteStatsDailyAggregation2G</h5>
+<span class='badge badge-success'>12.12.2024 12:55:03 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:55:03 PM</span>
+<span class='badge badge-default'>00:00:00:126</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=35</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:55:03 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Site]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:55:03 PM</td>
+        <td>
+          SiteStatsDailyAggregation2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:55:03 PM</td>
+        <td>
+          Element Name SitesEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:55:03 PM</td>
+        <td>
+          no such element: Unable to locate element: {"method":"xpath","selector":"//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span"}
+  (Session info: chrome=131.0.6778.109)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, findElement {using=xpath, value=//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsDailyAggregation2G 12-Dec-2024 12-55-03.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsDailyAggregation2G 12-Dec-2024 12-55-03.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="36"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SiteStatsDailyBH2G</p>
+            <p class="text-sm">
+              <span>12:55:13 PM</span> / <span>00:00:00:132</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">SiteStatsDailyBH2G</h5>
+<span class='badge badge-success'>12.12.2024 12:55:13 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:55:13 PM</span>
+<span class='badge badge-default'>00:00:00:132</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=36</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:55:13 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Site]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:55:13 PM</td>
+        <td>
+          SiteStatsDailyBH2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:55:13 PM</td>
+        <td>
+          Element Name SitesEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:55:13 PM</td>
+        <td>
+          no such element: Unable to locate element: {"method":"xpath","selector":"//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span"}
+  (Session info: chrome=131.0.6778.109)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, findElement {using=xpath, value=//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsDailyBH2G 12-Dec-2024 12-55-13.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsDailyBH2G 12-Dec-2024 12-55-13.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="37"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SiteStatsDailyBHAggregation2G</p>
+            <p class="text-sm">
+              <span>12:55:23 PM</span> / <span>00:00:00:130</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">SiteStatsDailyBHAggregation2G</h5>
+<span class='badge badge-success'>12.12.2024 12:55:23 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:55:24 PM</span>
+<span class='badge badge-default'>00:00:00:130</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=37</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:55:23 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Site]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:55:23 PM</td>
+        <td>
+          SiteStatsDailyBHAggregation2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:55:23 PM</td>
+        <td>
+          Element Name SitesEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:55:24 PM</td>
+        <td>
+          no such element: Unable to locate element: {"method":"xpath","selector":"//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span"}
+  (Session info: chrome=131.0.6778.109)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, findElement {using=xpath, value=//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsDailyBHAggregation2G 12-Dec-2024 12-55-23.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsDailyBHAggregation2G 12-Dec-2024 12-55-23.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="38"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SiteStatsMonthly2G</p>
+            <p class="text-sm">
+              <span>12:55:34 PM</span> / <span>00:00:00:124</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">SiteStatsMonthly2G</h5>
+<span class='badge badge-success'>12.12.2024 12:55:34 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:55:34 PM</span>
+<span class='badge badge-default'>00:00:00:124</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=38</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:55:34 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Site]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:55:34 PM</td>
+        <td>
+          SiteStatsMonthly2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:55:34 PM</td>
+        <td>
+          Element Name SitesEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:55:34 PM</td>
+        <td>
+          no such element: Unable to locate element: {"method":"xpath","selector":"//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span"}
+  (Session info: chrome=131.0.6778.109)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, findElement {using=xpath, value=//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsMonthly2G 12-Dec-2024 12-55-34.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsMonthly2G 12-Dec-2024 12-55-34.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="39"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SiteStatsMonthlyAggregation2G</p>
+            <p class="text-sm">
+              <span>12:55:44 PM</span> / <span>00:00:00:123</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">SiteStatsMonthlyAggregation2G</h5>
+<span class='badge badge-success'>12.12.2024 12:55:44 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:55:44 PM</span>
+<span class='badge badge-default'>00:00:00:123</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=39</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:55:44 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Site]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:55:44 PM</td>
+        <td>
+          SiteStatsMonthlyAggregation2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:55:44 PM</td>
+        <td>
+          Element Name SitesEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:55:44 PM</td>
+        <td>
+          no such element: Unable to locate element: {"method":"xpath","selector":"//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span"}
+  (Session info: chrome=131.0.6778.109)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, findElement {using=xpath, value=//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsMonthlyAggregation2G 12-Dec-2024 12-55-44.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsMonthlyAggregation2G 12-Dec-2024 12-55-44.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="40"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SiteStatsMonthlyBH2G</p>
+            <p class="text-sm">
+              <span>12:55:54 PM</span> / <span>00:00:00:123</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">SiteStatsMonthlyBH2G</h5>
+<span class='badge badge-success'>12.12.2024 12:55:54 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:55:54 PM</span>
+<span class='badge badge-default'>00:00:00:123</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=40</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:55:54 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Site]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:55:54 PM</td>
+        <td>
+          SiteStatsMonthlyBH2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:55:54 PM</td>
+        <td>
+          Element Name SitesEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:55:54 PM</td>
+        <td>
+          no such element: Unable to locate element: {"method":"xpath","selector":"//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span"}
+  (Session info: chrome=131.0.6778.109)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, findElement {using=xpath, value=//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsMonthlyBH2G 12-Dec-2024 12-55-54.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsMonthlyBH2G 12-Dec-2024 12-55-54.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="41"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SiteStatsMonthlyBHAggregation2G</p>
+            <p class="text-sm">
+              <span>12:56:05 PM</span> / <span>00:00:00:105</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">SiteStatsMonthlyBHAggregation2G</h5>
+<span class='badge badge-success'>12.12.2024 12:56:05 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:56:05 PM</span>
+<span class='badge badge-default'>00:00:00:105</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=41</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:56:05 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Site]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:56:05 PM</td>
+        <td>
+          SiteStatsMonthlyBHAggregation2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:56:05 PM</td>
+        <td>
+          Element Name SitesEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:56:05 PM</td>
+        <td>
+          no such element: Unable to locate element: {"method":"xpath","selector":"//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span"}
+  (Session info: chrome=131.0.6778.109)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, findElement {using=xpath, value=//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsMonthlyBHAggregation2G 12-Dec-2024 12-56-05.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsMonthlyBHAggregation2G 12-Dec-2024 12-56-05.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="42"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SiteStatsRowAggregation2G</p>
+            <p class="text-sm">
+              <span>12:56:15 PM</span> / <span>00:00:00:100</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">SiteStatsRowAggregation2G</h5>
+<span class='badge badge-success'>12.12.2024 12:56:15 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:56:15 PM</span>
+<span class='badge badge-default'>00:00:00:100</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=42</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:56:15 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Site]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:56:15 PM</td>
+        <td>
+          SiteStatsRowAggregation2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:56:15 PM</td>
+        <td>
+          Element Name SitesEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:56:15 PM</td>
+        <td>
+          no such element: Unable to locate element: {"method":"xpath","selector":"//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span"}
+  (Session info: chrome=131.0.6778.109)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, findElement {using=xpath, value=//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsRowAggregation2G 12-Dec-2024 12-56-15.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsRowAggregation2G 12-Dec-2024 12-56-15.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="43"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SiteStatsWeekly2G</p>
+            <p class="text-sm">
+              <span>12:56:25 PM</span> / <span>00:00:00:128</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">SiteStatsWeekly2G</h5>
+<span class='badge badge-success'>12.12.2024 12:56:25 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:56:25 PM</span>
+<span class='badge badge-default'>00:00:00:128</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=43</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:56:25 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Site]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:56:25 PM</td>
+        <td>
+          SiteStatsWeekly2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:56:25 PM</td>
+        <td>
+          Element Name SitesEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:56:25 PM</td>
+        <td>
+          no such element: Unable to locate element: {"method":"xpath","selector":"//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span"}
+  (Session info: chrome=131.0.6778.109)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, findElement {using=xpath, value=//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsWeekly2G 12-Dec-2024 12-56-25.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsWeekly2G 12-Dec-2024 12-56-25.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="44"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SiteStatsWeeklyAggregation2G</p>
+            <p class="text-sm">
+              <span>12:56:36 PM</span> / <span>00:00:00:128</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">SiteStatsWeeklyAggregation2G</h5>
+<span class='badge badge-success'>12.12.2024 12:56:36 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:56:36 PM</span>
+<span class='badge badge-default'>00:00:00:128</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=44</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:56:36 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Site]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:56:36 PM</td>
+        <td>
+          SiteStatsWeeklyAggregation2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:56:36 PM</td>
+        <td>
+          Element Name SitesEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:56:36 PM</td>
+        <td>
+          no such element: Unable to locate element: {"method":"xpath","selector":"//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span"}
+  (Session info: chrome=131.0.6778.109)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, findElement {using=xpath, value=//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsWeeklyAggregation2G 12-Dec-2024 12-56-36.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsWeeklyAggregation2G 12-Dec-2024 12-56-36.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="45"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SiteStatsWeeklyBH2G</p>
+            <p class="text-sm">
+              <span>12:56:46 PM</span> / <span>00:00:00:115</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">SiteStatsWeeklyBH2G</h5>
+<span class='badge badge-success'>12.12.2024 12:56:46 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:56:46 PM</span>
+<span class='badge badge-default'>00:00:00:115</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=45</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:56:46 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Site]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:56:46 PM</td>
+        <td>
+          SiteStatsWeeklyBH2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:56:46 PM</td>
+        <td>
+          Element Name SitesEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:56:46 PM</td>
+        <td>
+          no such element: Unable to locate element: {"method":"xpath","selector":"//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span"}
+  (Session info: chrome=131.0.6778.109)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, findElement {using=xpath, value=//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsWeeklyBH2G 12-Dec-2024 12-56-46.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsWeeklyBH2G 12-Dec-2024 12-56-46.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="46"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SiteStatsWeeklyBHAggregation2G</p>
+            <p class="text-sm">
+              <span>12:56:56 PM</span> / <span>00:00:00:121</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">SiteStatsWeeklyBHAggregation2G</h5>
+<span class='badge badge-success'>12.12.2024 12:56:56 PM</span>
+<span class='badge badge-danger'>12.12.2024 12:56:56 PM</span>
+<span class='badge badge-default'>00:00:00:121</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=46</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:56:56 PM</td>
+        <td>
+          Package Name[TestClass name=class TestCases.PM.Nokia.Stats.G2.Site]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:56:56 PM</td>
+        <td>
+          SiteStatsWeeklyBHAggregation2G
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:56:56 PM</td>
+        <td>
+          Element Name SitesEastAmman
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:56:56 PM</td>
+        <td>
+          no such element: Unable to locate element: {"method":"xpath","selector":"//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span"}
+  (Session info: chrome=131.0.6778.109)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4ed79fb3dfa643bebefc43149e2dad18, findElement {using=xpath, value=//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Test1\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52074/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ed79fb3dfa643bebefc43149e2dad18
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsWeeklyBHAggregation2G 12-Dec-2024 12-56-56.png' src="C:\Users\Test1\IdeaProjects\NetCell\ScreenShots\SiteStatsWeeklyBHAggregation2G 12-Dec-2024 12-56-56.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Thursday, December 12, 2024, 12:47 </h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Thursday, December 12, 2024, 12:56 </h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>0</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>46</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'>
+<b>0</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='100%'><b>46</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'><b>0</b> events passed</small></div>
+<div>
+<small data-tooltip='100%'><b>184</b> events failed,
+<b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"CellStats2G":0.148,"CellStatsAggregation2G":0.129,"CellStatsDaily2G":0.129,"CellStatsDailyAggregation2G":0.128,"CellStatsDailyBH2G":0.128,"CellStatsDailyBHAggregation2G":0.121,"CellStatsMonthly2G":0.131,"CellStatsMonthlyAggregation2G":0.127,"CellStatsMonthlyBH2G":0.126,"CellStatsMonthlyBHAggregation2G":0.126,"CellStatsRowAggregation2G":0.128,"CellStatsWeekly2G":0.129,"CellStatsWeeklyAggregation2G":0.127,"CellStatsWeeklyBH2G":0.13,"CellStatsWeeklyBHAggregation2G":0.142,"ClusterStats2G":0.11,"ClusterStatsAggregation2G":0.116,"ClusterStatsDaily2G":0.113,"ClusterStatsDailyAggregation2G":0.109,"ClusterStatsDailyBH2G":0.118,"ClusterStatsDailyBHAggregation2G":0.128,"ClusterStatsMonthly2G":0.128,"ClusterStatsMonthlyAggregation2G":0.119,"ClusterStatsMonthlyBH2G":0.101,"ClusterStatsMonthlyBHAggregation2G":0.1,"ClusterStatsRowAggregation2G":0.12,"ClusterStatsWeekly2G":0.114,"ClusterStatsWeeklyAggregation2G":0.115,"ClusterStatsWeeklyBH2G":0.119,"ClusterStatsWeeklyBHAggregation2G":0.112,"RegionStatsRowAggregation2G":0.096,"SiteStats2G":0.106,"SiteStatsAggregation2G":0.124,"SiteStatsDaily2G":0.127,"SiteStatsDailyAggregation2G":0.126,"SiteStatsDailyBH2G":0.132,"SiteStatsDailyBHAggregation2G":0.13,"SiteStatsMonthly2G":0.124,"SiteStatsMonthlyAggregation2G":0.123,"SiteStatsMonthlyBH2G":0.123,"SiteStatsMonthlyBHAggregation2G":0.105,"SiteStatsRowAggregation2G":0.1,"SiteStatsWeekly2G":0.128,"SiteStatsWeeklyAggregation2G":0.128,"SiteStatsWeeklyBH2G":0.115,"SiteStatsWeeklyBHAggregation2G":0.121
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>OS</td>
+<td>Windows 11</td>
+</tr>
+<tr>
+<td>Browser </td>
+<td>Chrome</td>
+</tr>
+<tr>
+<td>User Name</td>
+<td>Test1</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 0,
+failParent: 46,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 0,
+failEvents: 184,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 0
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
