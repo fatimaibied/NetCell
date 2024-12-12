@@ -87,6 +87,6 @@ public class Cell extends MainClass {
     @Test
     public void CellStatsRowAggregation2G() throws Exception {
 
-        State.Stats("Nokia", "2G", "Cell", true,"Row");
+        State.Stats("Nokia", "2G", "Cell", true,"Raw");
     }
 }

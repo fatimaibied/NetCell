@@ -85,8 +85,8 @@ public class Site extends MainClass {
         State.Stats("Nokia", "2G", "Site", true,"MonthlyBH");
     }
     @Test
-    public void SiteStatsRowAggregation2G() throws Exception {
+    public void SiteStatsRawAggregation2G() throws Exception {
 
-        State.Stats("Nokia", "2G", "Site", true,"Row");
+        State.Stats("Nokia", "2G", "Site", true,"Raw");
     }
 }
