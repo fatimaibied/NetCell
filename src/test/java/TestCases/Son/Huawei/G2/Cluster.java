@@ -39,49 +39,49 @@ public class Cluster extends MainClass {
     public void ClusterSleepingCellsDaily() throws Exception {
 
 
-        SON.son("Huawei","2G", "Cluster", "SleepingCells","Daily","");
+        SON.son("Huawei","2G", "Cluster", "Sleeping Cells","Daily","");
     }
 //---------------------------------------------------
     @Test
     public void ClusterSleepingCellsDailyBH() throws Exception {
 
 
-        SON.son("Huawei","2G", "Cluster", "SleepingCells","DailyBH","");
+        SON.son("Huawei","2G", "Cluster", "Sleeping Cells","DailyBH","");
     }
     //---------------------------------------------------
     @Test
     public void ClusterSleepingCellsHourly() throws Exception {
 
 
-        SON.son("Huawei","2G", "Cluster", "SleepingCells","Hourly","");
+        SON.son("Huawei","2G", "Cluster", "Sleeping Cells","Hourly","");
     }
     //---------------------------------------------------
     @Test
     public void ClusterSleepingCellsMonthly() throws Exception {
 
 
-        SON.son("Huawei","2G", "Cluster", "SleepingCells","Monthly","");
+        SON.son("Huawei","2G", "Cluster", "Sleeping Cells","Monthly","");
     }
     //---------------------------------------------------
     @Test
     public void ClusterSleepingCellsMonthlyBH() throws Exception {
 
 
-        SON.son("Huawei","2G", "Cluster", "SleepingCells","MonthlyBH","");
+        SON.son("Huawei","2G", "Cluster", "Sleeping Cells","MonthlyBH","");
     }
     //---------------------------------------------------
     @Test
     public void ClusterSleepingCellsWeekly() throws Exception {
 
 
-        SON.son("Huawei","2G", "Cluster", "SleepingCells","Weekly","");
+        SON.son("Huawei","2G", "Cluster", "Sleeping Cells","Weekly","");
     }
     //---------------------------------------------------
     @Test
     public void ClusterSleepingCellsWeeklyBH() throws Exception {
 
 
-        SON.son("Huawei","2G", "Cluster", "SleepingCells","WeeklyBH","");
+        SON.son("Huawei","2G", "Cluster", "Sleeping Cells","WeeklyBH","");
     }
 
 }

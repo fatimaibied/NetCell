@@ -39,49 +39,49 @@ public class Cell extends MainClass {
     public void CellSleepingCellsDaily() throws Exception {
 
 
-        SON.son("Huawei","2G", "Cell", "SleepingCells","Daily","");
+        SON.son("Huawei","2G", "Cell", "Sleeping Cells","Daily","");
     }
 //---------------------------------------------------
     @Test
     public void CellSleepingCellsDailyBH() throws Exception {
 
 
-        SON.son("Huawei","2G", "Cell", "SleepingCells","DailyBH","");
+        SON.son("Huawei","2G", "Cell", "Sleeping Cells","DailyBH","");
     }
     //---------------------------------------------------
     @Test
     public void CellSleepingCellsHourly() throws Exception {
 
 
-        SON.son("Huawei","2G", "Cell", "SleepingCells","Hourly","");
+        SON.son("Huawei","2G", "Cell", "Sleeping Cells","Hourly","");
     }
     //---------------------------------------------------
     @Test
     public void CellSleepingCellsMonthly() throws Exception {
 
 
-        SON.son("Huawei","2G", "Cell", "SleepingCells","Monthly","");
+        SON.son("Huawei","2G", "Cell", "Sleeping Cells","Monthly","");
     }
     //---------------------------------------------------
     @Test
     public void CellSleepingCellsMonthlyBH() throws Exception {
 
 
-        SON.son("Huawei","2G", "Cell", "SleepingCells","MonthlyBH","");
+        SON.son("Huawei","2G", "Cell", "Sleeping Cells","MonthlyBH","");
     }
     //---------------------------------------------------
     @Test
     public void CellSleepingCellsWeekly() throws Exception {
 
 
-        SON.son("Huawei","2G", "Cell", "SleepingCells","Weekly","");
+        SON.son("Huawei","2G", "Cell", "Sleeping Cells","Weekly","");
     }
     //---------------------------------------------------
     @Test
     public void CellSleepingCellsWeeklyBH() throws Exception {
 
 
-        SON.son("Huawei","2G", "Cell", "SleepingCells","WeeklyBH","");
+        SON.son("Huawei","2G", "Cell", "Sleeping Cells","WeeklyBH","");
     }
 
 }

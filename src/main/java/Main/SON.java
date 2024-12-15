@@ -168,9 +168,15 @@ public class SON {
               for (int i = 0; i < relatedElementsRegionArrow.size(); i++) {
                   Thread.sleep(1000);
                   driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(i)))).click();
+                  Thread.sleep(3000);
                   driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsCells.get(i)))).click();
-                  driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsCellOne.get(i)))).click();
+                  Thread.sleep(3000);
+                  element = driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsCellOne.get(i))));
+                  ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+                  element.click();
+                  Thread.sleep(2000);
                   driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionClose.get(i)))).click();
+                  Thread.sleep(2000);
               }
 
                 break;
@@ -230,7 +236,11 @@ public class SON {
                 for (int i = 0; i < relatedElementsRegionArrow.size(); i++) {
                     Thread.sleep(1000);
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(i)))).click();
-                    driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsCluster.get(i)))).click();
+
+                    element = driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsCluster.get(i))));
+                    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+                    element.click();
+
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionClose.get(i)))).click();
                 }
 
@@ -273,10 +283,12 @@ public class SON {
                 driver.findElement(By.xpath(readLocator(SONSelectors,"Governorate"))).click();
                 element = driver.findElement(By.xpath(readLocator(SONSelectors,"ObjectBorder")));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+                Thread.sleep(1000);
 
                 for (int i = 0; i < relatedElementsGovernorate.size(); i++) {
 
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsGovernorate.get(i)))).click();
+                    Thread.sleep(1000);
 
                 }
 
