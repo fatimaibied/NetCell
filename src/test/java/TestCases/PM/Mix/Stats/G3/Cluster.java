@@ -11,87 +11,87 @@ public class Cluster extends MainClass {
     @Test
     public void ClusterStats3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Cluster", false,"Hourly");
+        State.Stats("Mix", "3G", "Cluster", false,"Hourly", "All");
     }
 
     @Test
     public void ClusterStatsAggregation3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Cluster", true,"Hourly");
+        State.Stats("Mix", "3G", "Cluster", true,"Hourly", "All");
     }
     @Test
     public void ClusterStatsDaily3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Cluster", false,"Daily");
+        State.Stats("Mix", "3G", "Cluster", false,"Daily", "All");
     }
     @Test
     public void ClusterStatsDailyAggregation3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Cluster", true,"Daily");
+        State.Stats("Mix", "3G", "Cluster", true,"Daily", "All");
     }
     @Test
     public void ClusterStatsWeekly3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Cluster", false,"Weekly");
+        State.Stats("Mix", "3G", "Cluster", false,"Weekly", "All");
     }
     @Test
     public void ClusterStatsWeeklyAggregation3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Cluster", true,"Weekly");
+        State.Stats("Mix", "3G", "Cluster", true,"Weekly", "All");
     }
 
     @Test
     public void ClusterStatsMonthly3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Cluster", false,"Monthly");
+        State.Stats("Mix", "3G", "Cluster", false,"Monthly", "All");
     }
     @Test
     public void ClusterStatsMonthlyAggregation3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Cluster", true,"Monthly");
+        State.Stats("Mix", "3G", "Cluster", true,"Monthly", "All");
     }
     @Test
     public void ClusterStatsDailyBH3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Cluster", false,"DailyBH");
+        State.Stats("Mix", "3G", "Cluster", false,"DailyBH", "All");
     }
     @Test
     public void ClusterStatsDailyBHAggregation3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Cluster", true,"DailyBH");
+        State.Stats("Mix", "3G", "Cluster", true,"DailyBH", "All");
     }
 
     @Test
     public void ClusterStatsWeeklyBH3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Cluster", false,"WeeklyBH");
+        State.Stats("Mix", "3G", "Cluster", false,"WeeklyBH", "All");
     }
     @Test
     public void ClusterStatsWeeklyBHAggregation3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Cluster", true,"WeeklyBH");
+        State.Stats("Mix", "3G", "Cluster", true,"WeeklyBH", "All");
     }
 
     @Test
     public void ClusterStatsMonthlyBH3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Cluster", false,"MonthlyBH");
+        State.Stats("Mix", "3G", "Cluster", false,"MonthlyBH", "All");
     }
 
     @Test
     public void ClusterStatsMonthlyBHAggregation3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Cluster", true,"MonthlyBH");
+        State.Stats("Mix", "3G", "Cluster", true,"MonthlyBH", "All");
     }
 
     @Test
     public void ClusterStatsRowAggregation3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Cluster", true,"Raw");
+        State.Stats("Mix", "3G", "Cluster", true,"Raw", "All");
     }
     @Test
     public void ClusterStatsRow3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Cluster", false,"Raw");
+        State.Stats("Mix", "3G", "Cluster", false,"Raw", "All");
     }
 }

@@ -35,6 +35,7 @@
 
 //----- calendar------------
     <Month>//button[@aria-label='Choose Month']</Month>
+    <Year>//button[@aria-label='Choose Year']</Year>
     <MonthFeb>//span[normalize-space()='Feb']</MonthFeb>
     <Feb-1>/html[1]/body[1]/ngb-popover-window[1]/div[2]/p-calendar[1]/span[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[6]/span[1]</Feb-1>
 //------Object Type------
@@ -177,9 +178,9 @@
     <RegionCloseOthers>//p-treenode[7]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCloseOthers>
 //------KPIs---------------
     <CS>//app-carriar_balance_3g[1]/div[1]/div[4]/div[1]/input[1]</CS>
-    <HSDBA>//div[2]/div[1]/input[1]</HSDBA>
+    <HSDPA>//div[2]/div[1]/input[1]</HSDPA>
     <RRC>//app-carriar_balance_3g[1]/div[1]/div[3]/div[1]/input[1]</RRC>
-    <TotalAmr>//div[1]/div[1]/input[1]</TotalAmr>
+    <TotalAMR>//div[1]/div[1]/input[1]</TotalAMR>
 
 //--------------------------------------------------------
     <ObjectBorder>/html/body/app-root/div/app-app-container/div/div/app-main/p-splitter/div/div[1]/app-left-side-menu/div/div[2]/app-target-tree/app-target-type/div[1]/div[3]/app-common-tree/p-tree/div</ObjectBorder>

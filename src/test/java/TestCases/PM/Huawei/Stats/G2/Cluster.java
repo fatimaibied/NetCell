@@ -11,77 +11,84 @@ public class Cluster extends MainClass {
     @Test
     public void ClusterStats2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Cluster", false,"Hourly");
+        State.Stats("Huawei", "2G", "Cluster", false,"Hourly", "All");
     }
 
     @Test
     public void ClusterStatsAggregation2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Cluster", true,"Hourly");
+        State.Stats("Huawei", "2G", "Cluster", true,"Hourly", "All");
     }
 
     @Test
     public void ClusterStatsDaily2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Cluster", false,"Daily");
+        State.Stats("Huawei", "2G", "Cluster", false,"Daily", "All");
     }
     @Test
     public void ClusterStatsDailyAggregation2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Cluster", true,"Daily");
+        State.Stats("Huawei", "2G", "Cluster", true,"Daily", "All");
     }
     @Test
     public void ClusterStatsWeekly2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Cluster", false,"Weekly");
+        State.Stats("Huawei", "2G", "Cluster", false,"Weekly", "All");
     }
     @Test
     public void ClusterStatsWeeklyAggregation2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Cluster", true,"Weekly");
+        State.Stats("Huawei", "2G", "Cluster", true,"Weekly", "All");
     }
 
     @Test
     public void ClusterStatsMonthly2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Cluster", false,"Monthly");
+        State.Stats("Huawei", "2G", "Cluster", false,"Monthly", "All");
     }
     @Test
     public void ClusterStatsMonthlyAggregation2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Cluster", true,"Monthly");
+        State.Stats("Huawei", "2G", "Cluster", true,"Monthly", "All");
     }
     @Test
     public void ClusterStatsDailyBH2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Cluster", false,"DailyBH");
+        State.Stats("Huawei", "2G", "Cluster", false,"DailyBH", "All");
     }
     @Test
     public void ClusterStatsDailyBHAggregation2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Cluster", true,"DailyBH");
+        State.Stats("Huawei", "2G", "Cluster", true,"DailyBH", "All");
     }
 
     @Test
     public void ClusterStatsWeeklyBH2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Cluster", false,"WeeklyBH");
+        State.Stats("Huawei", "2G", "Cluster", false,"WeeklyBH", "All");
     }
     @Test
     public void ClusterStatsWeeklyBHAggregation2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Cluster", true,"WeeklyBH");
+        State.Stats("Huawei", "2G", "Cluster", true,"WeeklyBH", "All");
     }
 
     @Test
     public void ClusterStatsMonthlyBH2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Cluster", false,"MonthlyBH");
+        State.Stats("Huawei", "2G", "Cluster", false,"MonthlyBH", "All");
     }
 
     @Test
     public void ClusterStatsMonthlyBHAggregation2G() throws Exception {
 
-        State.Stats("Huawei", "2G", "Cluster", true,"MonthlyBH");
+        State.Stats("Huawei", "2G", "Cluster", true,"MonthlyBH", "All");
+    }
+
+    //------------------- Search for KPI -----------------------------------------------------------------
+    @Test
+    public void ClusterSearchForKPI2G() throws Exception {
+
+        State.Stats("Huawei", "2G", "Cluster", false,"Hourly", "Total_TCH_Traffic");
     }
 }

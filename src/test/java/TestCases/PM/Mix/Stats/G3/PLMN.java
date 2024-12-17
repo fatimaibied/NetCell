@@ -11,47 +11,47 @@ public class PLMN extends MainClass {
     @Test
     public void PLMNStats3G() throws Exception {
 
-        State.Stats("Mix", "3G", "PLMN", false,"Hourly");
+        State.Stats("Mix", "3G", "PLMN", false,"Hourly", "All");
     }
     @Test
     public void PLMNStatsDaily3G() throws Exception {
 
-        State.Stats("Mix", "3G", "PLMN", false,"Daily");
+        State.Stats("Mix", "3G", "PLMN", false,"Daily", "All");
     }
 
     @Test
     public void PLMNStatsWeekly3G() throws Exception {
 
-        State.Stats("Mix", "3G", "PLMN", false,"Weekly");
+        State.Stats("Mix", "3G", "PLMN", false,"Weekly", "All");
     }
 
     @Test
     public void PLMNStatsMonthly3G() throws Exception {
 
-        State.Stats("Mix", "3G", "PLMN", false,"Monthly");
+        State.Stats("Mix", "3G", "PLMN", false,"Monthly", "All");
     }
     @Test
     public void PLMNStatsDailyBH3G() throws Exception {
 
-        State.Stats("Mix", "3G", "PLMN", false,"DailyBH");
+        State.Stats("Mix", "3G", "PLMN", false,"DailyBH", "All");
     }
 
     @Test
     public void PLMNStatsWeeklyBH3G() throws Exception {
 
-        State.Stats("Mix", "3G", "PLMN", false,"WeeklyBH");
+        State.Stats("Mix", "3G", "PLMN", false,"WeeklyBH", "All");
     }
 
     @Test
     public void PLMNStatsMonthlyBH3G() throws Exception {
 
-        State.Stats("Mix", "3G", "PLMN", false,"MonthlyBH");
+        State.Stats("Mix", "3G", "PLMN", false,"MonthlyBH", "All");
     }
 
     @Test
     public void PLMNStatsRawBH3G() throws Exception {
 
-        State.Stats("Mix", "3G", "PLMN", false,"Raw");
+        State.Stats("Mix", "3G", "PLMN", false,"Raw", "All");
     }
 
 }

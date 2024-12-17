@@ -11,76 +11,83 @@ public class RegionBand extends MainClass {
     @Test
     public void RegionBandStats4G() throws Exception {
 
-        State.Stats("Huawei","4G", "Region Band", false,"Hourly");
+        State.Stats("Huawei","4G", "Region Band", false,"Hourly", "All");
     }
 
     @Test
     public void RegionBandStatsAggregation4G() throws Exception {
 
-        State.Stats("Huawei","4G", "Region Band", true,"Hourly");
+        State.Stats("Huawei","4G", "Region Band", true,"Hourly", "All");
     }
     @Test
     public void RegionBandStatsDaily4G() throws Exception {
 
-        State.Stats("Huawei","4G", "Region Band", false,"Daily");
+        State.Stats("Huawei","4G", "Region Band", false,"Daily", "All");
     }
     @Test
     public void RegionBandStatsDailyAggregation4G() throws Exception {
 
-        State.Stats("Huawei","4G", "Region Band", true,"Daily");
+        State.Stats("Huawei","4G", "Region Band", true,"Daily", "All");
     }
     @Test
     public void RegionBandStatsWeekly4G() throws Exception {
 
-        State.Stats("Huawei","4G", "Region Band", false,"Weekly");
+        State.Stats("Huawei","4G", "Region Band", false,"Weekly", "All");
     }
     @Test
     public void RegionBandStatsWeeklyAggregation4G() throws Exception {
 
-        State.Stats("Huawei","4G", "Region Band", true,"Weekly");
+        State.Stats("Huawei","4G", "Region Band", true,"Weekly", "All");
     }
 
     @Test
     public void RegionBandStatsMonthly4G() throws Exception {
 
-        State.Stats("Huawei","4G", "Region Band", false,"Monthly");
+        State.Stats("Huawei","4G", "Region Band", false,"Monthly", "All");
     }
     @Test
     public void RegionBandStatsMonthlyAggregation4G() throws Exception {
 
-        State.Stats("Huawei","4G", "Region Band", true,"Monthly");
+        State.Stats("Huawei","4G", "Region Band", true,"Monthly", "All");
     }
     @Test
     public void RegionBandStatsDailyBH4G() throws Exception {
 
-        State.Stats("Huawei","4G", "Region Band", false,"DailyBH");
+        State.Stats("Huawei","4G", "Region Band", false,"DailyBH", "All");
     }
     @Test
     public void RegionBandStatsDailyBHAggregation4G() throws Exception {
 
-        State.Stats("Huawei","4G", "Region Band", true,"DailyBH");
+        State.Stats("Huawei","4G", "Region Band", true,"DailyBH", "All");
     }
 
     @Test
     public void RegionBandStatsWeeklyBH4G() throws Exception {
 
-        State.Stats("Huawei","4G", "Region Band", false,"WeeklyBH");
+        State.Stats("Huawei","4G", "Region Band", false,"WeeklyBH", "All");
     }
     @Test
     public void RegionBandStatsWeeklyBHAggregation4G() throws Exception {
 
-        State.Stats("Huawei","4G", "Region Band", true,"WeeklyBH");
+        State.Stats("Huawei","4G", "Region Band", true,"WeeklyBH", "All");
     }
 
     @Test
     public void RegionBandStatsMonthlyBH4G() throws Exception {
 
-        State.Stats("Huawei","4G", "Region Band", false,"MonthlyBH");
+        State.Stats("Huawei","4G", "Region Band", false,"MonthlyBH", "All");
     }
 
     @Test
     public void RegionBandStatsMonthlyBHAggregation4G() throws Exception {
 
-        State.Stats("Huawei","4G", "Region Band", true,"MonthlyBH");
+        State.Stats("Huawei","4G", "Region Band", true,"MonthlyBH", "All");
+    }
+
+    //------------------- Search for KPI -----------------------------------------------------------------
+    @Test
+    public void RegionBandSearchForKPI4G() throws Exception {
+
+        State.Stats("Huawei", "4G", "Region Band", false,"Hourly", "RRC_ConnReq_Fail_MoData");
     }
 }

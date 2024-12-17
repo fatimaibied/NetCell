@@ -11,78 +11,78 @@ public class Region extends MainClass {
     @Test
     public void RegionStats4G() throws Exception {
 
-        State.Stats("Mix", "4G", "Region", false,"Hourly");
+        State.Stats("Mix", "4G", "Region", false,"Hourly", "All");
     }
 
     @Test
     public void RegionStatsAggregation4G() throws Exception {
 
-        State.Stats("Mix", "4G", "Region", true,"Hourly");
+        State.Stats("Mix", "4G", "Region", true,"Hourly", "All");
     }
 
     @Test
     public void RegionStatsDaily4G() throws Exception {
 
-        State.Stats("Mix", "4G", "Region", false,"Daily");
+        State.Stats("Mix", "4G", "Region", false,"Daily", "All");
     }
     @Test
     public void RegionStatsDailyAggregation4G() throws Exception {
 
-        State.Stats("Mix", "4G", "Region", true,"Daily");
+        State.Stats("Mix", "4G", "Region", true,"Daily", "All");
     }
     @Test
     public void RegionStatsWeekly4G() throws Exception {
 
-        State.Stats("Mix", "4G", "Region", false,"Weekly");
+        State.Stats("Mix", "4G", "Region", false,"Weekly", "All");
     }
     @Test
     public void RegionStatsWeeklyAggregation4G() throws Exception {
 
-        State.Stats("Mix", "4G", "Region", true,"Weekly");
+        State.Stats("Mix", "4G", "Region", true,"Weekly", "All");
     }
 
     @Test
     public void RegionStatsMonthly4G() throws Exception {
 
-        State.Stats("Mix", "4G", "Region", false,"Monthly");
+        State.Stats("Mix", "4G", "Region", false,"Monthly", "All");
     }
     @Test
     public void RegionStatsMonthlyAggregation4G() throws Exception {
 
-        State.Stats("Mix", "4G", "Region", true,"Monthly");
+        State.Stats("Mix", "4G", "Region", true,"Monthly", "All");
     }
     @Test
     public void RegionStatsDailyBH4G() throws Exception {
 
-        State.Stats("Mix", "4G", "Region", false,"DailyBH");
+        State.Stats("Mix", "4G", "Region", false,"DailyBH", "All");
     }
     @Test
     public void RegionStatsDailyBHAggregation4G() throws Exception {
 
-        State.Stats("Mix", "4G", "Region", true,"DailyBH");
+        State.Stats("Mix", "4G", "Region", true,"DailyBH", "All");
     }
 
     @Test
     public void RegionStatsWeeklyBH4G() throws Exception {
 
-        State.Stats("Mix", "4G", "Region", false,"WeeklyBH");
+        State.Stats("Mix", "4G", "Region", false,"WeeklyBH", "All");
     }
     @Test
     public void RegionStatsWeeklyBHAggregation4G() throws Exception {
 
-        State.Stats("Mix","4G", "Region", true,"WeeklyBH");
+        State.Stats("Mix","4G", "Region", true,"WeeklyBH", "All");
     }
 
     @Test
     public void RegionStatsMonthlyBH4G() throws Exception {
 
-        State.Stats("Mix","4G", "Region", false,"MonthlyBH");
+        State.Stats("Mix","4G", "Region", false,"MonthlyBH", "All");
     }
 
     @Test
     public void RegionStatsMonthlyBHAggregation4G() throws Exception {
 
-        State.Stats("Mix","4G", "Region", true,"MonthlyBH");
+        State.Stats("Mix","4G", "Region", true,"MonthlyBH", "All");
     }
 
 }

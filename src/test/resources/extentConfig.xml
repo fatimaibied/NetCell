@@ -1,6 +1,0 @@
-<configuration>
-    <reportName>Custom Test Cases Title</reportName>
-    <reportHeadline>List of Customized Test Cases</reportHeadline>
-    <theme>standard</theme>
-
-</configuration>

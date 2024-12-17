@@ -11,45 +11,45 @@ public class Sector extends MainClass {
     @Test
     public void SectorStats4G() throws Exception {
 
-        State.Stats("Nokia", "4G", "Sector", false,"Hourly");
+        State.Stats("Nokia", "4G", "Sector", false,"Hourly", "All");
     }
     @Test
     public void SectorStatsDaily4G() throws Exception {
 
-        State.Stats("Nokia", "4G", "Sector", false,"Daily");
+        State.Stats("Nokia", "4G", "Sector", false,"Daily", "All");
     }
 
     @Test
     public void SectorStatsWeekly4G() throws Exception {
 
-        State.Stats("Nokia", "4G", "Sector", false,"Weekly");
+        State.Stats("Nokia", "4G", "Sector", false,"Weekly", "All");
     }
 
     @Test
     public void SectorStatsMonthly4G() throws Exception {
 
-        State.Stats("Nokia", "4G", "Sector", false,"Monthly");
+        State.Stats("Nokia", "4G", "Sector", false,"Monthly", "All");
     }
     @Test
     public void SectorStatsDailyBH4G() throws Exception {
 
-        State.Stats("Nokia", "4G", "Sector", false,"DailyBH");
+        State.Stats("Nokia", "4G", "Sector", false,"DailyBH", "All");
     }
 
     @Test
     public void SectorStatsWeeklyBH4G() throws Exception {
 
-        State.Stats("Nokia", "4G", "Sector", false,"WeeklyBH");
+        State.Stats("Nokia", "4G", "Sector", false,"WeeklyBH", "All");
     }
 
     @Test
     public void SectorStatsMonthlyBH4G() throws Exception {
 
-        State.Stats("Nokia", "4G", "Sector", false,"MonthlyBH");
+        State.Stats("Nokia", "4G", "Sector", false,"MonthlyBH", "All");
     }
     @Test
     public void SectorStatsRaw4G() throws Exception {
 
-        State.Stats("Nokia", "4G", "Sector", false,"Raw");
+        State.Stats("Nokia", "4G", "Sector", false,"Raw", "All");
     }
 }

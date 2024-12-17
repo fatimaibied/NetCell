@@ -11,82 +11,82 @@ public class RegionBand extends MainClass {
     @Test
     public void RegionBandStats5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Region Band", false,"Hourly");
+        State.Stats("Nokia", "5G", "Region Band", false,"Hourly", "All");
     }
 
     @Test
     public void RegionBandStatsAggregation5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Region Band", true,"Hourly");
+        State.Stats("Nokia", "5G", "Region Band", true,"Hourly", "All");
     }
 
     @Test
     public void RegionBandStatsDaily5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Region Band", false,"Daily");
+        State.Stats("Nokia", "5G", "Region Band", false,"Daily", "All");
     }
     @Test
     public void RegionBandStatsDailyAggregation5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Region Band", true,"Daily");
+        State.Stats("Nokia", "5G", "Region Band", true,"Daily", "All");
     }
     @Test
     public void RegionBandStatsWeekly5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Region Band", false,"Weekly");
+        State.Stats("Nokia", "5G", "Region Band", false,"Weekly", "All");
     }
     @Test
     public void RegionBandStatsWeeklyAggregation5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Region Band", true,"Weekly");
+        State.Stats("Nokia", "5G", "Region Band", true,"Weekly", "All");
     }
 
     @Test
     public void RegionBandStatsMonthly5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Region Band", false,"Monthly");
+        State.Stats("Nokia", "5G", "Region Band", false,"Monthly", "All");
     }
     @Test
     public void RegionBandStatsMonthlyAggregation5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Region Band", true,"Monthly");
+        State.Stats("Nokia", "5G", "Region Band", true,"Monthly", "All");
     }
     @Test
     public void RegionBandStatsDailyBH5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Region Band", false,"DailyBH");
+        State.Stats("Nokia", "5G", "Region Band", false,"DailyBH", "All");
     }
     @Test
     public void RegionBandStatsDailyBHAggregation5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Region Band", true,"DailyBH");
+        State.Stats("Nokia", "5G", "Region Band", true,"DailyBH", "All");
     }
 
     @Test
     public void RegionBandStatsWeeklyBH5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Region Band", false,"WeeklyBH");
+        State.Stats("Nokia", "5G", "Region Band", false,"WeeklyBH", "All");
     }
     @Test
     public void RegionBandStatsWeeklyBHAggregation5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Region Band", true,"WeeklyBH");
+        State.Stats("Nokia", "5G", "Region Band", true,"WeeklyBH", "All");
     }
 
     @Test
     public void RegionBandStatsMonthlyBH5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Region Band", false,"MonthlyBH");
+        State.Stats("Nokia", "5G", "Region Band", false,"MonthlyBH", "All");
     }
 
     @Test
     public void RegionBandStatsMonthlyBHAggregation5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Region Band", true,"MonthlyBH");
+        State.Stats("Nokia", "5G", "Region Band", true,"MonthlyBH", "All");
     }
     @Test
     public void RegionBandStatsRowAggregation5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Region Band", true,"Row");
+        State.Stats("Nokia", "5G", "Region Band", true,"Row", "All");
     }
 }

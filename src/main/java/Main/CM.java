@@ -12,6 +12,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
+import static Main.DataController.*;
+import static Main.DataController.endDay;
 import static Main.MainClass.driver;
 import static Main.SetupFunctions.*;
 import static Main.SetupFunctions.readLocator;
@@ -547,43 +549,44 @@ public class CM {
 //----------------------------------------------------------------
 
 
-    void PredefinedTime (String PredefinedTime)  {
+    void PredefinedTime (String PredefinedTime) throws InterruptedException {
         WebElement element = driver.findElement(By.xpath("//div[contains(text(),'Data and time')]"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         driver.findElement(By.xpath(readLocator(CMSelectors, "LastWeek"))).click();
         driver.findElement(By.xpath(readLocator(CMSelectors, PredefinedTime))).click();
+
+        if (PredefinedTime=="Custom"){
+            String startDate;
+            startDate = support.date("Last week");
+            driver.findElement(By.xpath("//button[contains(text(),'" + startDate + "')]")).click();
+            driver.findElement(By.xpath(readLocator(SONSelectors, "Year"))).click();
+            driver.findElement(By.xpath("//span[normalize-space(text())='"+startYear+"']")).click();
+            Thread.sleep(1000);
+
+            driver.findElement(By.xpath("//span[normalize-space()='"+startMonth+"']")).click();
+            driver.findElement(By.xpath("(//span[text()='"+ startDay +"'])[1]")).click();
+
+
+            startDate = support.date("Today");
+            System.out.println(startDate);
+            driver.findElement(By.xpath("//button[contains(text(),'" + startDate + "')]")).click();
+
+            driver.findElement(By.xpath(readLocator(SONSelectors, "Year"))).click();
+            driver.findElement(By.xpath("//span[normalize-space(text())='"+endYear+"']")).click();
+            Thread.sleep(1000);
+            driver.findElement(By.xpath("//span[normalize-space()='"+endMonth+"']")).click();
+            try {
+                // Attempt to click the first matching element
+                driver.findElement(By.xpath("(//span[text()='" + endDay + "'])[1]")).click();
+            } catch (Exception e) {
+                // If the first element is not clickable, attempt the second one
+                System.out.println("First element not clickable, trying the second one.");
+                driver.findElement(By.xpath("(//span[text()='" + endDay + "'])[2]")).click();
+            }
+
+        }
     }
     //-----------------------------------------------------------------------------------------
-    String date(String day ) {
-
-        String date="";
-        Calendar calendar = Calendar.getInstance();
-        Date today = calendar.getTime();
-
-        SimpleDateFormat dateFormat = new SimpleDateFormat("MMM dd, yyyy");
-
-        if (day=="Last week") {
-
-            //date = dateFormat.format(today)
-            calendar.add(Calendar.DAY_OF_YEAR, -7);
-            Date LastWeek = calendar.getTime();
-            date = dateFormat.format(LastWeek);
-            System.out.println(date);
-
-        }
-        else if (day=="Yesterday") {
-            calendar.add(Calendar.DAY_OF_YEAR, -1);
-            Date Yesterday = calendar.getTime();
-            date = dateFormat.format(Yesterday);
-        }
-
-        else if (day=="Last Month") {calendar.add(Calendar.DAY_OF_YEAR, -30);
-            Date LastMonth = calendar.getTime();
-            date = dateFormat.format(LastMonth);
-        }
-
-        return date;
-    }
 
 
 }

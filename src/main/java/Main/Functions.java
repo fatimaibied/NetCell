@@ -5,7 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import java.sql.SQLOutput;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 import static Main.SetupFunctions.*;
 import static Main.DataController.*;
@@ -53,4 +56,41 @@ public class Functions {
     }
 
 
+    String date(String day) {
+
+        String date = "";
+        Calendar calendar = Calendar.getInstance();
+
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MMM dd, yyyy");
+
+        switch (day) {
+            case "Last week" -> {
+
+                //date = dateFormat.format(today)
+                calendar.add(Calendar.DAY_OF_YEAR, -7);
+                Date LastWeek = calendar.getTime();
+                date = dateFormat.format(LastWeek);
+                System.out.println(date);
+            }
+            case "Yesterday" -> {
+                calendar.add(Calendar.DAY_OF_YEAR, -1);
+                Date Yesterday = calendar.getTime();
+                date = dateFormat.format(Yesterday);
+            }
+            case "Last Month" -> {
+                calendar.add(Calendar.DAY_OF_YEAR, -30);
+                Date LastMonth = calendar.getTime();
+                date = dateFormat.format(LastMonth);
+            }
+
+            case "Today" -> {
+                calendar.add(Calendar.DAY_OF_YEAR, 0);
+                Date LastMonth = calendar.getTime();
+                date = dateFormat.format(LastMonth);
+            }
+        }
+
+        return date;
+    }
 }

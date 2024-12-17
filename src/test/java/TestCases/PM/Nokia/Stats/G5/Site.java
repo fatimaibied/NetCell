@@ -11,82 +11,82 @@ public class Site extends MainClass {
     @Test
     public void SiteStats5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Site", false,"Hourly");
+        State.Stats("Nokia", "5G", "Site", false,"Hourly", "All");
     }
 
     @Test
     public void SiteStatsAggregation5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Site", true,"Hourly");
+        State.Stats("Nokia", "5G", "Site", true,"Hourly", "All");
     }
 
     @Test
     public void SiteStatsDaily5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Site", false,"Daily");
+        State.Stats("Nokia", "5G", "Site", false,"Daily", "All");
     }
     @Test
     public void SiteStatsDailyAggregation5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Site", true,"Daily");
+        State.Stats("Nokia", "5G", "Site", true,"Daily", "All");
     }
     @Test
     public void SiteStatsWeekly5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Site", false,"Weekly");
+        State.Stats("Nokia", "5G", "Site", false,"Weekly", "All");
     }
     @Test
     public void SiteStatsWeeklyAggregation5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Site", true,"Weekly");
+        State.Stats("Nokia", "5G", "Site", true,"Weekly", "All");
     }
 
     @Test
     public void SiteStatsMonthly5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Site", false,"Monthly");
+        State.Stats("Nokia", "5G", "Site", false,"Monthly", "All");
     }
     @Test
     public void SiteStatsMonthlyAggregation5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Site", true,"Monthly");
+        State.Stats("Nokia", "5G", "Site", true,"Monthly", "All");
     }
     @Test
     public void SiteStatsDailyBH5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Site", false,"DailyBH");
+        State.Stats("Nokia", "5G", "Site", false,"DailyBH", "All");
     }
     @Test
     public void SiteStatsDailyBHAggregation5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Site", true,"DailyBH");
+        State.Stats("Nokia", "5G", "Site", true,"DailyBH", "All");
     }
 
     @Test
     public void SiteStatsWeeklyBH5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Site", false,"WeeklyBH");
+        State.Stats("Nokia", "5G", "Site", false,"WeeklyBH", "All");
     }
     @Test
     public void SiteStatsWeeklyBHAggregation5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Site", true,"WeeklyBH");
+        State.Stats("Nokia", "5G", "Site", true,"WeeklyBH", "All");
     }
 
     @Test
     public void SiteStatsMonthlyBH5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Site", false,"MonthlyBH");
+        State.Stats("Nokia", "5G", "Site", false,"MonthlyBH", "All");
     }
 
     @Test
     public void SiteStatsMonthlyBHAggregation5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Site", true,"MonthlyBH");
+        State.Stats("Nokia", "5G", "Site", true,"MonthlyBH", "All");
     }
     @Test
     public void SiteStatsRowAggregation5G() throws Exception {
 
-        State.Stats("Nokia", "5G", "Site", true,"Row");
+        State.Stats("Nokia", "5G", "Site", true,"Row", "All");
     }
 }

@@ -38,7 +38,7 @@ public void Site3GCarriarBalanceDailyHSDPA() throws Exception {
     @Test
     public void Site3GCarriarBalanceDailyTotalAMR() throws Exception {
 
-        SON.son("Huawei","3G", "Site", "3G Carriar Balance","Daily","Total AMR");
+        SON.son("Huawei","3G", "Site", "3G Carriar Balance","Daily","TotalAMR");
     }
     //**************************************DailyBH Carriar Balance*******************************************************---
     //------------------------------------------------------
@@ -69,7 +69,7 @@ public void Site3GCarriarBalanceDailyHSDPA() throws Exception {
     @Test
     public void Site3GCarriarBalanceDailyBHTotalAMR() throws Exception {
 
-        SON.son("Huawei","3G", "Site", "3G Carriar Balance","DailyBH","Total AMR");
+        SON.son("Huawei","3G", "Site", "3G Carriar Balance","DailyBH","TotalAMR");
     }
 
     //**************************************Hourly Carriar Balance*******************************************************
@@ -101,7 +101,7 @@ public void Site3GCarriarBalanceHourlyCS() throws Exception {
     @Test
     public void Site3GCarriarBalanceHourlyTotalAMR() throws Exception {
 
-        SON.son("Huawei", "3G", "Site", "3G Carriar Balance", "Hourly", "Total AMR");
+        SON.son("Huawei", "3G", "Site", "3G Carriar Balance", "Hourly", "TotalAMR");
 
     }
 
@@ -135,7 +135,7 @@ public void Site3GCarriarBalanceHourlyCS() throws Exception {
     @Test
     public void Site3GCarriarBalanceHourlyBHTotalAMR() throws Exception {
 
-        SON.son("Huawei", "3G", "Site", "3G Carriar Balance", "HourlyBH", "Total AMR");
+        SON.son("Huawei", "3G", "Site", "3G Carriar Balance", "HourlyBH", "TotalAMR");
 
     }
 
@@ -168,7 +168,7 @@ public void Site3GCarriarBalanceHourlyCS() throws Exception {
     @Test
     public void Site3GCarriarBalanceMonthlyTotalAMR() throws Exception {
 
-        SON.son("Huawei", "3G", "Site", "3G Carriar Balance", "Monthly", "Total AMR");
+        SON.son("Huawei", "3G", "Site", "3G Carriar Balance", "Monthly", "TotalAMR");
 
     }
 
@@ -201,7 +201,7 @@ public void Site3GCarriarBalanceHourlyCS() throws Exception {
     @Test
     public void Site3GCarriarBalanceMonthlyBHTotalAMR() throws Exception {
 
-        SON.son("Huawei", "3G", "Site", "3G Carriar Balance", "MonthlyBH", "Total AMR");
+        SON.son("Huawei", "3G", "Site", "3G Carriar Balance", "MonthlyBH", "TotalAMR");
 
     }
     //**************************************Raw Carriar Balance*******************************************************
@@ -233,7 +233,7 @@ public void Site3GCarriarBalanceHourlyCS() throws Exception {
     @Test
     public void Site3GCarriarBalanceRawTotalAMR() throws Exception {
 
-        SON.son("Huawei", "3G", "Site", "3G Carriar Balance", "Raw", "Total AMR");
+        SON.son("Huawei", "3G", "Site", "3G Carriar Balance", "Raw", "TotalAMR");
 
     }
 
@@ -266,7 +266,7 @@ public void Site3GCarriarBalanceHourlyCS() throws Exception {
     @Test
     public void Site3GCarriarBalanceWeeklyTotalAMR() throws Exception {
 
-        SON.son("Huawei", "3G", "Site", "3G Carriar Balance", "Weekly", "Total AMR");
+        SON.son("Huawei", "3G", "Site", "3G Carriar Balance", "Weekly", "TotalAMR");
 
     }
 

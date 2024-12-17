@@ -11,87 +11,87 @@ public class Site extends MainClass {
     @Test
     public void SiteStats3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Site", false,"Hourly");
+        State.Stats("Mix", "3G", "Site", false,"Hourly", "All");
     }
 
     @Test
     public void SiteStatsAggregation3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Site", true,"Hourly");
+        State.Stats("Mix", "3G", "Site", true,"Hourly", "All");
     }
     @Test
     public void SiteStatsDaily3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Site", false,"Daily");
+        State.Stats("Mix", "3G", "Site", false,"Daily", "All");
     }
     @Test
     public void SiteStatsDailyAggregation3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Site", true,"Daily");
+        State.Stats("Mix", "3G", "Site", true,"Daily", "All");
     }
     @Test
     public void SiteStatsWeekly3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Site", false,"Weekly");
+        State.Stats("Mix", "3G", "Site", false,"Weekly", "All");
     }
     @Test
     public void SiteStatsWeeklyAggregation3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Site", true,"Weekly");
+        State.Stats("Mix", "3G", "Site", true,"Weekly", "All");
     }
 
     @Test
     public void SiteStatsMonthly3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Site", false,"Monthly");
+        State.Stats("Mix", "3G", "Site", false,"Monthly", "All");
     }
     @Test
     public void SiteStatsMonthlyAggregation3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Site", true,"Monthly");
+        State.Stats("Mix", "3G", "Site", true,"Monthly", "All");
     }
     @Test
     public void SiteStatsDailyBH3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Site", false,"DailyBH");
+        State.Stats("Mix", "3G", "Site", false,"DailyBH", "All");
     }
     @Test
     public void SiteStatsDailyBHAggregation3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Site", true,"DailyBH");
+        State.Stats("Mix", "3G", "Site", true,"DailyBH", "All");
     }
 
     @Test
     public void SiteStatsWeeklyBH3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Site", false,"WeeklyBH");
+        State.Stats("Mix", "3G", "Site", false,"WeeklyBH", "All");
     }
     @Test
     public void SiteStatsWeeklyBHAggregation3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Site", true,"WeeklyBH");
+        State.Stats("Mix", "3G", "Site", true,"WeeklyBH", "All");
     }
 
     @Test
     public void SiteStatsMonthlyBH3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Site", false,"MonthlyBH");
+        State.Stats("Mix", "3G", "Site", false,"MonthlyBH", "All");
     }
 
     @Test
     public void SiteStatsMonthlyBHAggregation3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Site", true,"MonthlyBH");
+        State.Stats("Mix", "3G", "Site", true,"MonthlyBH", "All");
     }
 
     @Test
     public void SiteStatsRawAggregation3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Site", true,"Raw");
+        State.Stats("Mix", "3G", "Site", true,"Raw", "All");
     }
     @Test
     public void SiteStatsRaw3G() throws Exception {
 
-        State.Stats("Mix", "3G", "Site", true,"Raw");
+        State.Stats("Mix", "3G", "Site", true,"Raw", "All");
     }
 }

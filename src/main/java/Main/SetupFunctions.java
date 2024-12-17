@@ -1,7 +1,10 @@
 package Main;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.configuration.ViewName;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 import org.testng.ITestResult;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -33,7 +37,6 @@ import org.apache.commons.io.FileUtils;
 
 import static Main.DataController.*;
 
-
 public class SetupFunctions extends MainClass {
     public static String login = System.getProperty("user.dir") + "\\src\\test\\resources\\Login.xml";
     public static String home = System.getProperty("user.dir") + "\\src\\test\\resources\\Home.xml";
@@ -45,6 +48,7 @@ public class SetupFunctions extends MainClass {
     public static String reportPath = System.getProperty("user.dir") + "\\Reports\\";
     public static String extentReportPath;
     public static ExtentReports extent;
+    public static ExtentTest logger;
     public static String elementName;
     public static DateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy HH-mm-ss");
      public static ExtentSparkReporter report;
@@ -230,5 +234,16 @@ public class SetupFunctions extends MainClass {
        // report.loadXMLConfig(extentConfig);
 
     }
+    public static void assertion(String actual, String expected) {
 
+        Assert.assertEquals(expected, actual);
+        logger.log(Status.PASS, "Assert" + "(Actual: " + actual + " ,Expected:" + expected + ")");
+
+        try {
+
+            Assert.assertEquals(expected, actual);
+            logger.log(Status.PASS, "Assert" + "(Actual: " + actual + " ,Expected:" + expected + ")");
+        } catch (Exception e) {
+            logger.log(Status.FAIL, "Assert" + "(Actual: " + actual + " ,Expected:" + expected + ")");        }
+    }
 }

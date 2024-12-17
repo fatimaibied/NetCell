@@ -11,76 +11,76 @@ public class Governorate extends MainClass {
     @Test
     public void GovernorateStats4G() throws Exception {
 
-        State.Stats("Mix", "4G", "Governorate", false,"Hourly");
+        State.Stats("Mix", "4G", "Governorate", false,"Hourly", "All");
     }
 
     @Test
     public void GovernorateStatsAggregation4G() throws Exception {
 
-        State.Stats("Mix", "4G", "Governorate", true,"Hourly");
+        State.Stats("Mix", "4G", "Governorate", true,"Hourly", "All");
     }
     @Test
     public void GovernorateStatsDaily4G() throws Exception {
 
-        State.Stats("Mix", "4G", "Governorate", false,"Daily");
+        State.Stats("Mix", "4G", "Governorate", false,"Daily", "All");
     }
     @Test
     public void GovernorateStatsDailyAggregation4G() throws Exception {
 
-        State.Stats("Mix", "4G", "Governorate", true,"Daily");
+        State.Stats("Mix", "4G", "Governorate", true,"Daily", "All");
     }
     @Test
     public void GovernorateStatsWeekly4G() throws Exception {
 
-        State.Stats("Mix", "4G", "Governorate", false,"Weekly");
+        State.Stats("Mix", "4G", "Governorate", false,"Weekly", "All");
     }
     @Test
     public void GovernorateStatsWeeklyAggregation4G() throws Exception {
 
-        State.Stats("Mix", "4G", "Governorate", true,"Weekly");
+        State.Stats("Mix", "4G", "Governorate", true,"Weekly", "All");
     }
 
     @Test
     public void GovernorateStatsMonthly4G() throws Exception {
 
-        State.Stats("Mix", "4G", "Governorate", false,"Monthly");
+        State.Stats("Mix", "4G", "Governorate", false,"Monthly", "All");
     }
     @Test
     public void GovernorateStatsMonthlyAggregation4G() throws Exception {
 
-        State.Stats("Mix", "4G", "Governorate", true,"Monthly");
+        State.Stats("Mix", "4G", "Governorate", true,"Monthly", "All");
     }
     @Test
     public void GovernorateStatsDailyBH4G() throws Exception {
 
-        State.Stats("Mix", "4G", "Governorate", false,"DailyBH");
+        State.Stats("Mix", "4G", "Governorate", false,"DailyBH", "All");
     }
     @Test
     public void GovernorateStatsDailyBHAggregation4G() throws Exception {
 
-        State.Stats("Mix", "4G", "Governorate", true,"DailyBH");
+        State.Stats("Mix", "4G", "Governorate", true,"DailyBH", "All");
     }
 
     @Test
     public void GovernorateStatsWeeklyBH4G() throws Exception {
 
-        State.Stats("Mix", "4G", "Governorate", false,"WeeklyBH");
+        State.Stats("Mix", "4G", "Governorate", false,"WeeklyBH", "All");
     }
     @Test
     public void GovernorateStatsWeeklyBHAggregation4G() throws Exception {
 
-        State.Stats("Mix", "4G", "Governorate", true,"WeeklyBH");
+        State.Stats("Mix", "4G", "Governorate", true,"WeeklyBH", "All");
     }
 
     @Test
     public void GovernorateStatsMonthlyBH4G() throws Exception {
 
-        State.Stats("Mix", "4G", "Governorate", false,"MonthlyBH");
+        State.Stats("Mix", "4G", "Governorate", false,"MonthlyBH", "All");
     }
 
     @Test
     public void GovernorateStatsMonthlyBHAggregation4G() throws Exception {
 
-        State.Stats("Mix", "4G", "Governorate", true,"MonthlyBH");
+        State.Stats("Mix", "4G", "Governorate", true,"MonthlyBH", "All");
     }
 }

@@ -53,9 +53,9 @@ public class MainClass implements ITestListener {
             testResult.fail(Result.getThrowable().getMessage(),MediaEntityBuilder.createScreenCaptureFromPath(screenShotOnFailure(Result)).build());
         }
 
-        driver.close();
+     driver.close();
         wid = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(wid.get(0));
+      driver.switchTo().window(wid.get(0));
     }
 
 

@@ -20,4 +20,6 @@ public class BSC extends MainClass {
 
         compare.compare("2G", "BSC", "Site");
     }
+
+
 }
