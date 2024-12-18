@@ -57,7 +57,7 @@
   <RegionCCloseEastJordan>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[6]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCCloseEastJordan>
   <RegionCCloseOthers>//p-treenode[1]/li[1]/ul[1]/p-treenode[1]/li[1]/ul[1]/p-treenode[7]/li[1]/div[1]/button[1]/chevrondownicon[1]/*[1]</RegionCCloseOthers>
   //-----------------------TopXDate------------------------------
-  <BeforDate>//div[@class='start-time-div']//button[@class='body-medium-s'][normalize-space()='Select Date']</BeforDate>
+  <BeforeDate>//div[@class='start-time-div']//button[@class='body-medium-s'][normalize-space()='Select Date']</BeforeDate>
   <ChooseMonth>//button[@aria-label='Choose Month']</ChooseMonth>
 <Feb>//span[normalize-space()='Feb']</Feb>
   <DayOne>//span[@data-date="2024-1-1"]</DayOne>

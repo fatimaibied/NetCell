@@ -2,15 +2,14 @@ package Main;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.configuration.ViewName;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
@@ -24,9 +23,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-import java.util.ArrayList;
+import java.util.*;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
@@ -43,7 +40,6 @@ public class SetupFunctions extends MainClass {
     public static String SONSelectors = System.getProperty("user.dir") + "\\src\\test\\resources\\SON.xml";
     public static String CMSelectors = System.getProperty("user.dir") + "\\src\\test\\resources\\CM.xml";
     public static String PMSelectors = System.getProperty("user.dir") + "\\src\\test\\resources\\PM.xml";
-    public static String customStyle= System.getProperty("user.dir") + "\\src\\test\\resources\\custom-style.css";
 
     public static String reportPath = System.getProperty("user.dir") + "\\Reports\\";
     public static String extentReportPath;
@@ -51,9 +47,10 @@ public class SetupFunctions extends MainClass {
     public static ExtentTest logger;
     public static String elementName;
     public static DateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy HH-mm-ss");
-     public static ExtentSparkReporter report;
+    public static ExtentSparkReporter report;
     public static Node node = null;
-    public static String screenShotLocationXMLPath = System.getProperty("user.dir")+"\\ScreenShots\\";
+    public static String screenShotLocationXMLPath = System.getProperty("user.dir") + "\\ScreenShots\\";
+
     public static List readTags(String elementTag, String elementsPath) throws Exception {
 
 
@@ -85,6 +82,7 @@ public class SetupFunctions extends MainClass {
         return list2;
 
     }
+
     public static String readLocator(String XMLFile, String element) {
 
         String elementValue = "";
@@ -112,10 +110,10 @@ public class SetupFunctions extends MainClass {
             //Formatting File data to start processing
             document.getDocumentElement().normalize();
 
-            // Read provided tag from XML and return it's node list object
+            // Read provided tag from XML and return its node list object
             NodeList nodeList = document.getElementsByTagName(element);
             // Check if the tag element exist or not
-            org.junit.Assert.assertFalse("The tag element isn't exist --> " + element + " in " + XMLFile, nodeList.getLength() == 0);
+            org.junit.Assert.assertNotEquals("The tag element isn't exist --> " + element + " in " + XMLFile, 0, nodeList.getLength());
 
             // Get element value and save in element value variable
             elementValue = nodeList.item(0).getTextContent();
@@ -129,34 +127,59 @@ public class SetupFunctions extends MainClass {
         org.junit.Assert.assertFalse("The element hasn't value --> " + element + " in " + XMLFile, elementValue.isEmpty());
         return elementValue;
     }
+
     public static WebDriver driverSettings(String url) {
         if (driver == null) {
             System.setProperty("webdriver.http.factory", "jdk-http-client");
 
-            if (browserType == "Chrome") {
-                //For chrome driver call
-                WebDriverManager.chromedriver().setup();
-                ChromeOptions options = new ChromeOptions();
-               // options.addArguments("--remote-allow-origins=*");
+            if (browserType.equals("Chrome")) {
+                    // Setup ChromeDriver using WebDriverManager
+                    WebDriverManager.chromedriver().setup();
 
-                driver = new ChromeDriver(options);
+                    // Create Chrome options
+                    ChromeOptions options = new ChromeOptions();
 
+                    // Comprehensive download preferences
+                    Map<String, Object> prefs = new HashMap<>();
 
+                    // Specify download directory
+                    String downloadPath = System.getProperty("user.dir") + "\\ExportedReport\\";
+                    // Download configuration
+                    prefs.put("download.default_directory", downloadPath);
+                    prefs.put("profile.default_content_setting_values.automatic_downloads", 1);
+                    // Chrome options for handling security and downloads
+               //     options.addArguments("--allow-running-insecure-content");
+              //  options.addArguments("--disable-web-security");
 
+                options.addArguments("--disable-features=InsecureDownloadWarnings");
+
+                    // Set Chrome preferences
+                    options.setExperimentalOption("prefs", prefs);
+
+                    // Initialize WebDriver
+                    driver = new ChromeDriver(options);
             }
 
-            if (browserType == "FireFox") {
+            if (browserType.equals("FireFox")) {
                 //For firefox driver call
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
             }
 
-            if (browserType == "Edge") {
+            if (browserType.equals("Edge")) {
                 //For Edge driver call
                 WebDriverManager.edgedriver().setup();
-                driver = new EdgeDriver();
-            }
+                Map<String, Object> prefs = new HashMap<>();
 
+                // Specify download directory
+                String downloadPath = System.getProperty("user.dir") + "\\ExportedReport\\";
+                // Download configuration
+                prefs.put("download.default_directory", downloadPath);
+                EdgeOptions options=new EdgeOptions();
+                options.setExperimentalOption("prefs", prefs);
+
+                driver = new EdgeDriver(options);
+            }
 
             driver.navigate().to(url); //Navigate to the entered url in the top
             driver.manage().window().maximize(); //Enlarge the browser page
@@ -181,7 +204,7 @@ public class SetupFunctions extends MainClass {
             String pathSNP = screenShotLocationXMLPath;
             File dir = new File(pathSNP);
             dir.getParentFile().mkdirs();
-            String path = pathSNP +Result.getName()+" " +dateFormat.format(date) + ".png";
+            String path = pathSNP + Result.getName() + " " + dateFormat.format(date) + ".png";
 
             FileUtils.copyFile(file, new File(path));
 
@@ -197,7 +220,8 @@ public class SetupFunctions extends MainClass {
         return null;
 
     }
-    public static void initializeReport() throws IOException {
+
+    public static void initializeReport() {
 
         DateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy HH-mm-ss");
 
@@ -231,9 +255,10 @@ public class SetupFunctions extends MainClass {
         report.config().setTheme(Theme.STANDARD);
         report.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm ");
 
-       // report.loadXMLConfig(extentConfig);
+        // report.loadXMLConfig(extentConfig);
 
     }
+
     public static void assertion(String actual, String expected) {
 
         Assert.assertEquals(expected, actual);
@@ -244,6 +269,7 @@ public class SetupFunctions extends MainClass {
             Assert.assertEquals(expected, actual);
             logger.log(Status.PASS, "Assert" + "(Actual: " + actual + " ,Expected:" + expected + ")");
         } catch (Exception e) {
-            logger.log(Status.FAIL, "Assert" + "(Actual: " + actual + " ,Expected:" + expected + ")");        }
+            logger.log(Status.FAIL, "Assert" + "(Actual: " + actual + " ,Expected:" + expected + ")");
+        }
     }
 }

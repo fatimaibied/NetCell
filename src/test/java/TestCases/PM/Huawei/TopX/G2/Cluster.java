@@ -10,83 +10,83 @@ public class Cluster extends MainClass {
     @Test
     public void ClusterDailyTopX2G() throws Exception {
 
-        TopX.TopX("Huawei", "2G", "Cluster", "Daily", "Cell", false);
+        TopX.TopX("Huawei", "2G", "Cluster", "Daily", false);
     }
 
     @Test
     public void ClusterDailyBHTopX2G() throws Exception {
 
-        TopX.TopX("Huawei", "2G", "Cluster", "DailyBH", "Cell", false);
+        TopX.TopX("Huawei", "2G", "Cluster", "DailyBH", false);
     }
 
     @Test
     public void ClusterWeeklyTopX2G() throws Exception {
 
-        TopX.TopX("Huawei", "2G", "Cluster", "Weekly", "Cell", false);
+        TopX.TopX("Huawei", "2G", "Cluster", "Weekly", false);
     }
 
     @Test
     public void ClusterWeeklyBHTopX2G() throws Exception {
 
-        TopX.TopX("Huawei", "2G", "Cluster", "WeeklyBH", "Cell", false);
+        TopX.TopX("Huawei", "2G", "Cluster", "WeeklyBH", false);
     }
 
     @Test
     public void ClusterMonthlyTopX2G() throws Exception {
 
-        TopX.TopX("Huawei", "2G", "Cluster", "Monthly", "Cell", false);
+        TopX.TopX("Huawei", "2G", "Cluster", "Monthly", false);
     }
     @Test
     public void ClusterMonthlyBHTopX2G() throws Exception {
 
-        TopX.TopX("Huawei", "2G", "Cluster", "MonthlyBH", "Cell", false);
+        TopX.TopX("Huawei", "2G", "Cluster", "MonthlyBH", false);
     }
 
     @Test
     public void ClusterHourlyTopX2G() throws Exception {
 
-        TopX.TopX("Huawei", "2G", "Cluster", "Hourly", "Cell", false);
+        TopX.TopX("Huawei", "2G", "Cluster", "Hourly", false);
     }
 
     //------------------------LowX------------------------------------------------------
     @Test
     public void ClusterDailyLowXTopX2G() throws Exception {
 
-        TopX.TopX("Huawei", "2G", "Cluster", "Daily", "Cell", true);
+        TopX.TopX("Huawei", "2G", "Cluster", "Daily", true);
     }
     @Test
     public void ClusterDailyBHLowXTopX2G() throws Exception {
 
-        TopX.TopX("Huawei", "2G", "Cluster", "DailyBH", "Cell", true);
+        TopX.TopX("Huawei", "2G", "Cluster", "DailyBH", true);
     }
 
     @Test
     public void ClusterWeeklyLowXTopX2G() throws Exception {
 
-        TopX.TopX("Huawei", "2G", "Cluster", "Weekly", "Cell", true);
+        TopX.TopX("Huawei", "2G", "Cluster", "Weekly", true);
     }
 
     @Test
     public void ClusterWeeklyBHLowXTopX2G() throws Exception {
 
-        TopX.TopX("Huawei", "2G", "Cluster", "WeeklyBH", "Cell", true);
+        TopX.TopX("Huawei", "2G", "Cluster", "WeeklyBH", true);
     }
 
     @Test
     public void ClusterMonthlyLowXTopX2G() throws Exception {
 
-        TopX.TopX("Huawei", "2G", "Cluster", "Monthly", "Cell", true);
+        TopX.TopX("Huawei", "2G", "Cluster", "Monthly", true);
     }
     @Test
     public void ClusterMonthlyBHLowXTopX2G() throws Exception {
 
-        TopX.TopX("Huawei", "2G", "Cluster", "MonthlyBH", "Cell", true);
+        TopX.TopX("Huawei", "2G", "Cluster", "MonthlyBH", true);
     }
 
     @Test
     public void ClusterHourlyLowXTopX2G() throws Exception {
 
-        TopX.TopX("Huawei", "2G", "Cluster", "Hourly", "Cell", true);
+        TopX.TopX("Huawei", "2G", "Cluster", "Hourly", true);
     }
 
 }

@@ -11,53 +11,53 @@ public class PLMNCarrier extends MainClass {
     @Test
     public void PLMNCarrierStats4G() throws Exception {
 
-        State.Stats("Huawei", "3G", "PLMN Carrier", false,"Hourly", "All");
+        State.Stats("Huawei", "3G", "PLMN Carrier", false,"Hourly", "All", false);
     }
     @Test
     public void PLMNCarrierStatsDaily3G() throws Exception {
 
-        State.Stats("Huawei", "3G", "PLMN Carrier", false,"Daily", "All");
+        State.Stats("Huawei", "3G", "PLMN Carrier", false,"Daily", "All", false);
     }
 
     @Test
     public void PLMNCarrierStatsWeekly3G() throws Exception {
 
-        State.Stats("Huawei", "3G", "PLMN Carrier", false,"Weekly", "All");
+        State.Stats("Huawei", "3G", "PLMN Carrier", false,"Weekly", "All", false);
     }
 
     @Test
     public void PLMNCarrierStatsMonthly3G() throws Exception {
 
-        State.Stats("Huawei", "3G", "PLMN Carrier", false,"Monthly", "All");
+        State.Stats("Huawei", "3G", "PLMN Carrier", false,"Monthly", "All", false);
     }
     @Test
     public void PLMNCarrierStatsDailyBH3G() throws Exception {
 
-        State.Stats("Huawei", "3G", "PLMN Carrier", false,"DailyBH", "All");
+        State.Stats("Huawei", "3G", "PLMN Carrier", false,"DailyBH", "All", false);
     }
 
     @Test
     public void PLMNCarrierStatsWeeklyBH3G() throws Exception {
 
-        State.Stats("Huawei", "3G", "PLMN Carrier", false,"WeeklyBH", "All");
+        State.Stats("Huawei", "3G", "PLMN Carrier", false,"WeeklyBH", "All", false);
     }
 
     @Test
     public void PLMNCarrierStatsMonthlyBH3G() throws Exception {
 
-        State.Stats("Huawei", "3G", "PLMN Carrier", false,"MonthlyBH", "All");
+        State.Stats("Huawei", "3G", "PLMN Carrier", false,"MonthlyBH", "All", false);
     }
 
     @Test
     public void PLMNCarrierStatsRawBH3G() throws Exception {
 
-        State.Stats("Huawei", "3G", "PLMN Carrier", false,"Raw", "All");
+        State.Stats("Huawei", "3G", "PLMN Carrier", false,"Raw", "All", false);
     }
     //------------------- Search for KPI -----------------------------------------------------------------
     @Test
     public void PLMNCarrierSearchForKPI3G() throws Exception {
 
-        State.Stats("Huawei", "3G", "PLMN Carrier", false,"Hourly", "CSPS_SHO_Success_Ratio");
+        State.Stats("Huawei", "3G", "PLMN Carrier", false,"Hourly", "CSPS_SHO_Success_Ratio", false);
     }
 
 }

@@ -11,82 +11,82 @@ public class GovernorateBand extends MainClass {
     @Test
     public void GovernorateBandStats4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Governorate Band", false,"Hourly", "All");
+        State.Stats("Huawei", "4G", "Governorate Band", false,"Hourly", "All", false);
     }
 
     @Test
     public void GovernorateBandStatsAggregation4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Governorate Band", true,"Hourly", "All");
+        State.Stats("Huawei", "4G", "Governorate Band", true,"Hourly", "All", false);
     }
     @Test
     public void GovernorateBandStatsDaily4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Governorate Band", false,"Daily", "All");
+        State.Stats("Huawei", "4G", "Governorate Band", false,"Daily", "All", false);
     }
     @Test
     public void GovernorateBandStatsDailyAggregation4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Governorate Band", true,"Daily", "All");
+        State.Stats("Huawei", "4G", "Governorate Band", true,"Daily", "All", false);
     }
     @Test
     public void GovernorateBandStatsWeekly4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Governorate Band", false,"Weekly", "All");
+        State.Stats("Huawei", "4G", "Governorate Band", false,"Weekly", "All", false);
     }
     @Test
     public void GovernorateBandStatsWeeklyAggregation4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Governorate Band", true,"Weekly", "All");
+        State.Stats("Huawei", "4G", "Governorate Band", true,"Weekly", "All", false);
     }
 
     @Test
     public void GovernorateBandStatsMonthly4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Governorate Band", false,"Monthly", "All");
+        State.Stats("Huawei", "4G", "Governorate Band", false,"Monthly", "All", false);
     }
     @Test
     public void GovernorateBandStatsMonthlyAggregation4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Governorate Band", true,"Monthly", "All");
+        State.Stats("Huawei", "4G", "Governorate Band", true,"Monthly", "All", false);
     }
     @Test
     public void GovernorateBandStatsDailyBH4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Governorate Band", false,"DailyBH", "All");
+        State.Stats("Huawei", "4G", "Governorate Band", false,"DailyBH", "All", false);
     }
     @Test
     public void GovernorateBandStatsDailyBHAggregation4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Governorate Band", true,"DailyBH", "All");
+        State.Stats("Huawei", "4G", "Governorate Band", true,"DailyBH", "All", false);
     }
 
     @Test
     public void GovernorateBandStatsWeeklyBH4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Governorate Band", false,"WeeklyBH", "All");
+        State.Stats("Huawei", "4G", "Governorate Band", false,"WeeklyBH", "All", false);
     }
     @Test
     public void GovernorateBandStatsWeeklyBHAggregation4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Governorate Band", true,"WeeklyBH", "All");
+        State.Stats("Huawei", "4G", "Governorate Band", true,"WeeklyBH", "All", false);
     }
 
     @Test
     public void GovernorateBandStatsMonthlyBH4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Governorate Band", false,"MonthlyBH", "All");
+        State.Stats("Huawei", "4G", "Governorate Band", false,"MonthlyBH", "All", false);
     }
 
     @Test
     public void GovernorateBandStatsMonthlyBHAggregation4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Governorate Band", true,"MonthlyBH", "All");
+        State.Stats("Huawei", "4G", "Governorate Band", true,"MonthlyBH", "All", false);
     }
     //------------------- Search for KPI -----------------------------------------------------------------
     @Test
     public void GovernorateBandSearchForKPI4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Governorate Band", false,"Hourly", "ERAB_Drop_QCI1");
+        State.Stats("Huawei", "4G", "Governorate Band", false,"Hourly", "ERAB_Drop_QCI1", false);
     }
 }

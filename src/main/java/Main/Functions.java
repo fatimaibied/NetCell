@@ -1,10 +1,13 @@
 package Main;
 
+import com.aventstack.extentreports.Status;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-import java.sql.SQLOutput;
+import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -23,7 +26,7 @@ public class Functions {
             driver.findElement(By.xpath(readLocator(login, "LoginBtn"))).click();
             Thread.sleep(2000);
             WebElement welcome = driver.findElement(By.xpath(readLocator(home, "WelcomeMsg")));
-            Assert.assertEquals(welcome.isDisplayed(), true);
+            Assert.assertTrue(welcome.isDisplayed());
 
 
             driver.findElement(By.xpath(readLocator(home, type))).click();
@@ -33,9 +36,7 @@ public class Functions {
 
 
             loginVar = 1;
-        }
-
-        else { /*if (wid.size()>1){
+        } else { /*if (wid.size()>1){
             driver.switchTo().window(wid.get(0));
             System.out.println( driver.getWindowHandles());
             System.out.println( driver.getWindowHandle());
@@ -49,12 +50,12 @@ public class Functions {
 
         }
     }
-    public void logout(){
+
+    public void logout() {
 
         driver.findElement(By.xpath(readLocator(login, "UserSection"))).click();
         driver.findElement(By.xpath(readLocator(login, "Logout"))).click();
     }
-
 
     String date(String day) {
 
@@ -93,4 +94,5 @@ public class Functions {
 
         return date;
     }
+
 }

@@ -1,6 +1,6 @@
 package Main;
 
-
+import java.time.Duration;
 import java.util.List;
 import java.util.Objects;
 
@@ -8,6 +8,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import static Main.DataController.*;
@@ -18,8 +20,8 @@ import static Main.SetupFunctions.readLocator;
 
 public class SON {
 
-    public String CM;
-    public String CarrierType="";
+    public String CM="";
+    public String CarrierType = "";
     List<String> relatedElements;
     List<String> relatedElementsXDD;
     List<String> relatedElementsRegionArrow;
@@ -31,14 +33,16 @@ public class SON {
     List<String> relatedElementsBSC;
     List<String> relatedElementsCluster;
     List<String> relatedElementsSector;
-    List <String>  relatedElementsRegionCClose;
-    List <String>  relatedElementsClusterOne;
+    List<String> relatedElementsRegionCClose;
+    List<String> relatedElementsClusterOne;
 
     WebElement element;
-    public  String NeighborType="";
+    public String NeighborType = "";
     Functions support = new Functions();
     boolean bt;
-    public void son(String Vendor, String Technology , String ObjectType , String SonType, String Resolution, String KPI) throws Exception {
+
+    public void son(String Vendor, String Technology, String ObjectType, String SonType, String Resolution, String KPI) throws Exception {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(70)); // Wait up to 50 seconds
 
         support.login("SON");
         Thread.sleep(500);
@@ -48,75 +52,81 @@ public class SON {
         }
 
         Thread.sleep(500);
-       driver.findElement(By.xpath(readLocator(SONSelectors, "TechnologyArrow"))).click();
-         driver.findElement(By.xpath("//span[normalize-space(text())='" + Technology + "']")).click();
+        driver.findElement(By.xpath(readLocator(SONSelectors, "TechnologyArrow"))).click();
+        driver.findElement(By.xpath("//span[normalize-space(text())='" + Technology + "']")).click();
 
         //---Select the Object Type
-        selectObjectType( ObjectType ,Technology );
+        selectObjectType(ObjectType, Technology);
 
         //-----Select SonType
         Thread.sleep(1000);
-        element =   driver.findElement(By.xpath(readLocator(SONSelectors, "SonType")));
+        element = driver.findElement(By.xpath(readLocator(SONSelectors, "SonType")));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-         driver.findElement(By.xpath(readLocator(SONSelectors, "SonType"))).click();
-         driver.findElement(By.xpath("//span[contains(text(),'" + SonType + "')]")).click();
+        driver.findElement(By.xpath(readLocator(SONSelectors, "SonType"))).click();
+        driver.findElement(By.xpath("//span[contains(text(),'" + SonType + "')]")).click();
 
-         //Set Resolution
-        selectResolution(driver,Resolution,SonType);
+        //Set Resolution
+        selectResolution(driver, Resolution, SonType);
 
         if (!KPI.equals("")) {
             driver.findElement(By.xpath(readLocator(SONSelectors, KPI))).click();
         }
         // CM data for 4G
 
-        if (CM.equals("Include"))
-        {
+        if (CM.equals("Include")) {
             driver.findElement(By.xpath(readLocator(SONSelectors, "CM"))).click();
         }
 
         //CarrierType for 4G
-        if (!CarrierType.equals(""))
-        {
-            driver.findElement(By.xpath("//button[contains(text(),'"+CarrierType+"')]")).click();
+        if (!CarrierType.equals("")) {
+            driver.findElement(By.xpath("//button[contains(text(),'" + CarrierType + "')]")).click();
         }
 
-        if (!NeighborType.equals(""))
-        {
-            driver.findElement(By.xpath("//button[contains(text(),'"+NeighborType+"')]")).click();
+        if (!NeighborType.equals("")) {
+            driver.findElement(By.xpath("//button[contains(text(),'" + NeighborType + "')]")).click();
         }
 
         //Apply and Verify
-         driver.findElement(By.xpath(readLocator(SONSelectors, "ApplyButton"))).click();
-      Thread.sleep(40000);
+        driver.findElement(By.xpath(readLocator(SONSelectors, "ApplyButton"))).click();
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(readLocator(SONSelectors, "HomeLogo"))));
         try {
 
-             bt = driver.findElement(By.xpath(readLocator(SONSelectors, "HomeLogo"))).isDisplayed();
+            bt = driver.findElement(By.xpath(readLocator(SONSelectors, "HomeLogo"))).isDisplayed();
 
             Assert.assertFalse(bt);
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             Assert.assertFalse(bt);
         }
 
+        try {
+            Thread.sleep(2000);
+            boolean noData = driver.findElement(By.xpath("//div[contains(text(),'No data found')]")).isDisplayed();
+            Assert.assertTrue(noData);
 
+            System.out.println("No Data");
+            }
+         catch (Exception e) {
+
+            System.out.println("Data Found");
+        }
     }
 
-    void selectObjectType(String ObjectType , String Technology) throws Exception {
+    void selectObjectType(String ObjectType, String Technology) throws Exception {
 
         driver.findElement(By.xpath(readLocator(SONSelectors, "ObjectSelection"))).click();
         relatedElements = readTags("Regions", SONSelectors);
         relatedElementsXDD = readTags("XDD", SONSelectors);
         relatedElementsRegionArrow = readTags("RegionArrow", SONSelectors);
         relatedElementsRegionClose = readTags("RegionClose", SONSelectors);
-        relatedElementsGovernorate=readTags("Governorates", SONSelectors);
-        relatedElementsSites=readTags("Sites", SONSelectors);
-        relatedElementsCells=readTags("Cells", SONSelectors);
-        relatedElementsCellOne= readTags("CellOne", SONSelectors);
-        relatedElementsBSC= readTags("BSCS", SONSelectors);
-        relatedElementsCluster= readTags("Clusters", SONSelectors);
-        relatedElementsSector= readTags("Sectors", SONSelectors);
+        relatedElementsGovernorate = readTags("Governorates", SONSelectors);
+        relatedElementsSites = readTags("Sites", SONSelectors);
+        relatedElementsCells = readTags("Cells", SONSelectors);
+        relatedElementsCellOne = readTags("CellOne", SONSelectors);
+        relatedElementsBSC = readTags("BSCS", SONSelectors);
+        relatedElementsCluster = readTags("Clusters", SONSelectors);
+        relatedElementsSector = readTags("Sectors", SONSelectors);
         relatedElementsRegionCClose = readTags("RegionCClose", PMSelectors);
-        relatedElementsClusterOne= readTags("ClusterO", PMSelectors);
+        relatedElementsClusterOne = readTags("ClusterO", PMSelectors);
 
         switch (ObjectType) {
             case "PLMN" -> {
@@ -429,22 +439,19 @@ public class SON {
         }
     }
 
-     void selectResolution(WebDriver driver, String ResolutionTemp, String SonType) throws InterruptedException {
+    void selectResolution(WebDriver driver, String ResolutionTemp, String SonType) throws InterruptedException {
         String scroll;
         if (SonType.equals("Azimuth Discrepancy")) {
-            scroll="//button[contains(text(),'"+NeighborType+"')]";
-        }
-        else if(!SonType.equals("4g congested cells") & !SonType.equals("4G Balance")){
-            scroll=readLocator(SONSelectors, "ExcludeOptions");
-        }
-        else if (SonType.equals("4G Balance")){
-            scroll=readLocator(SONSelectors, "Carrier");
-        }
-        else {
-            scroll=readLocator(SONSelectors, "DailyBH");
+            scroll = "//button[contains(text(),'" + NeighborType + "')]";
+        } else if (!SonType.equals("4g congested cells") & !SonType.equals("4G Balance")) {
+            scroll = readLocator(SONSelectors, "ExcludeOptions");
+        } else if (SonType.equals("4G Balance")) {
+            scroll = readLocator(SONSelectors, "Carrier");
+        } else {
+            scroll = readLocator(SONSelectors, "DailyBH");
         }
 
-         Thread.sleep(1000);
+        Thread.sleep(1000);
         if (!ResolutionTemp.equals("")) {
             String startDate;
             WebElement element = driver.findElement(By.xpath(scroll));
@@ -528,32 +535,32 @@ public class SON {
                 }
             }
 
-                    driver.findElement(By.xpath(readLocator(SONSelectors, "Year"))).click();
-                    driver.findElement(By.xpath("//span[normalize-space(text())='"+startYear+"']")).click();
-                    Thread.sleep(1000);
-                    // driver.findElement(By.xpath(readLocator(SONSelectors, "Month"))).click();
-                    driver.findElement(By.xpath("//span[normalize-space()='"+startMonth+"']")).click();
-                    driver.findElement(By.xpath("(//span[text()='"+ startDay +"'])[1]")).click();
+            driver.findElement(By.xpath(readLocator(SONSelectors, "Year"))).click();
+            driver.findElement(By.xpath("//span[normalize-space(text())='" + startYear + "']")).click();
+            Thread.sleep(1000);
+
+            driver.findElement(By.xpath("//span[normalize-space()='" + startMonth + "']")).click();
+            driver.findElement(By.xpath("(//span[text()='" + startDay + "'])[1]")).click();
 
 
-                    startDate = support.date("Today");
-                    System.out.println(startDate);
-                    driver.findElement(By.xpath("//button[contains(text(),'" + startDate + "')]")).click();
+            startDate = support.date("Today");
+            System.out.println(startDate);
+            driver.findElement(By.xpath("//button[contains(text(),'" + startDate + "')]")).click();
+            Thread.sleep(1000);
+            driver.findElement(By.xpath(readLocator(SONSelectors, "Year"))).click();
+            driver.findElement(By.xpath("//span[normalize-space(text())='" + endYear + "']")).click();
+            Thread.sleep(1000);
+            driver.findElement(By.xpath("//span[normalize-space()='" + endMonth + "']")).click();
 
-                    driver.findElement(By.xpath(readLocator(SONSelectors, "Year"))).click();
-                    driver.findElement(By.xpath("//span[normalize-space(text())='"+endYear+"']")).click();
-                    Thread.sleep(1000);
-                    driver.findElement(By.xpath("//span[normalize-space()='"+endMonth+"']")).click();
 
-
-                        try {
-                            // Attempt to click the first matching element
-                            driver.findElement(By.xpath("(//span[text()='" + endDay + "'])[1]")).click();
-                        } catch (Exception e) {
-                            // If the first element is not clickable, attempt the second one
-                            System.out.println("First element not clickable, trying the second one.");
-                            driver.findElement(By.xpath("(//span[text()='" + endDay + "'])[2]")).click();
-                        }
+            try {
+                // Attempt to click the first matching element
+                driver.findElement(By.xpath("(//span[text()='" + endDay + "'])[1]")).click();
+            } catch (Exception e) {
+                // If the first element is not clickable, attempt the second one
+                System.out.println("First element not clickable, trying the second one.");
+                driver.findElement(By.xpath("(//span[text()='" + endDay + "'])[2]")).click();
+            }
 
         }
     }

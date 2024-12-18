@@ -10,83 +10,83 @@ public class PLMN extends MainClass {
     @Test
     public void PLMNDailyTopX4G() throws Exception {
 
-        TopX.TopX("Nokia", "4G", "PLMN", "Daily", "Cell", false);
+        TopX.TopX("Nokia", "4G", "PLMN", "Daily", false);
     }
 
     @Test
     public void PLMNDailyBHTopX4G() throws Exception {
 
-        TopX.TopX("Nokia", "4G", "PLMN", "DailyBH", "Cell", false);
+        TopX.TopX("Nokia", "4G", "PLMN", "DailyBH", false);
     }
 
     @Test
     public void PLMNWeeklyTopX4G() throws Exception {
 
-        TopX.TopX("Nokia", "4G", "PLMN", "Weekly", "Cell", false);
+        TopX.TopX("Nokia", "4G", "PLMN", "Weekly", false);
     }
 
     @Test
     public void PLMNWeeklyBHTopX4G() throws Exception {
 
-        TopX.TopX("Nokia", "4G", "PLMN", "WeeklyBH", "Cell", false);
+        TopX.TopX("Nokia", "4G", "PLMN", "WeeklyBH", false);
     }
 
     @Test
     public void PLMNMonthlyTopX4G() throws Exception {
 
-        TopX.TopX("Nokia", "4G", "PLMN", "Monthly", "Cell", false);
+        TopX.TopX("Nokia", "4G", "PLMN", "Monthly", false);
     }
     @Test
     public void PLMNMonthlyBHTopX4G() throws Exception {
 
-        TopX.TopX("Nokia", "4G", "PLMN", "MonthlyBH", "Cell", false);
+        TopX.TopX("Nokia", "4G", "PLMN", "MonthlyBH", false);
     }
 
     @Test
     public void PLMNHourlyTopX4G() throws Exception {
 
-        TopX.TopX("Nokia", "4G", "PLMN", "Hourly", "Cell", false);
+        TopX.TopX("Nokia", "4G", "PLMN", "Hourly", false);
     }
 
     //------------------------LowX------------------------------------------------------
     @Test
     public void PLMNDailyLowXTopX4G() throws Exception {
 
-        TopX.TopX("Nokia", "4G", "PLMN", "Daily", "Cell", true);
+        TopX.TopX("Nokia", "4G", "PLMN", "Daily", true);
     }
     @Test
     public void PLMNDailyBHLowXTopX4G() throws Exception {
 
-        TopX.TopX("Nokia", "4G", "PLMN", "DailyBH", "Cell", true);
+        TopX.TopX("Nokia", "4G", "PLMN", "DailyBH", true);
     }
 
     @Test
     public void PLMNWeeklyLowXTopX4G() throws Exception {
 
-        TopX.TopX("Nokia", "4G", "PLMN", "Weekly", "Cell", true);
+        TopX.TopX("Nokia", "4G", "PLMN", "Weekly", true);
     }
 
     @Test
     public void PLMNWeeklyBHLowXTopX4G() throws Exception {
 
-        TopX.TopX("Nokia", "4G", "PLMN", "WeeklyBH", "Cell", true);
+        TopX.TopX("Nokia", "4G", "PLMN", "WeeklyBH", true);
     }
 
     @Test
     public void PLMNMonthlyLowXTopX4G() throws Exception {
 
-        TopX.TopX("Nokia", "4G", "PLMN", "Monthly", "Cell", true);
+        TopX.TopX("Nokia", "4G", "PLMN", "Monthly", true);
     }
     @Test
     public void PLMNMonthlyBHLowXTopX4G() throws Exception {
 
-        TopX.TopX("Nokia", "4G", "PLMN", "MonthlyBH", "Cell", true);
+        TopX.TopX("Nokia", "4G", "PLMN", "MonthlyBH", true);
     }
 
     @Test
     public void PLMNHourlyLowXTopX4G() throws Exception {
 
-        TopX.TopX("Nokia", "4G", "PLMN", "Hourly", "Cell", true);
+        TopX.TopX("Nokia", "4G", "PLMN", "Hourly", true);
     }
 
 }

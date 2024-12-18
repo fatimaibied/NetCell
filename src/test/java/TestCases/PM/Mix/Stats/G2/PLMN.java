@@ -11,40 +11,40 @@ public class PLMN extends MainClass {
     @Test
     public void PLMNStats2G() throws Exception {
 
-        State.Stats("Mix", "2G", "PLMN", false,"Hourly", "All");
+        State.Stats("Mix", "2G", "PLMN", false,"Hourly", "All", false);
     }
     @Test
     public void PLMNStatsDaily2G() throws Exception {
 
-        State.Stats("Mix", "2G", "PLMN", false,"Daily", "All");
+        State.Stats("Mix", "2G", "PLMN", false,"Daily", "All", false);
     }
 
     @Test
     public void PLMNStatsWeekly2G() throws Exception {
 
-        State.Stats("Mix", "2G", "PLMN", false,"Weekly", "All");
+        State.Stats("Mix", "2G", "PLMN", false,"Weekly", "All", false);
     }
 
     @Test
     public void PLMNStatsMonthly2G() throws Exception {
 
-        State.Stats("Mix", "2G", "PLMN", false,"Monthly", "All");
+        State.Stats("Mix", "2G", "PLMN", false,"Monthly", "All", false);
     }
     @Test
     public void PLMNStatsDailyBH2G() throws Exception {
 
-        State.Stats("Mix", "2G", "PLMN", false,"DailyBH", "All");
+        State.Stats("Mix", "2G", "PLMN", false,"DailyBH", "All", false);
     }
 
     @Test
     public void PLMNStatsWeeklyBH2G() throws Exception {
 
-        State.Stats("Mix", "2G", "PLMN", false,"WeeklyBH", "All");
+        State.Stats("Mix", "2G", "PLMN", false,"WeeklyBH", "All", false);
     }
 
     @Test
     public void PLMNStatsMonthlyBH2G() throws Exception {
 
-        State.Stats("Mix", "2G", "PLMN", false,"MonthlyBH", "All");
+        State.Stats("Mix", "2G", "PLMN", false,"MonthlyBH", "All", false);
     }
 }

@@ -10,82 +10,82 @@ public class RegionXDD extends MainClass {
     @Test
     public void RegionXDDDailyTopX4G() throws Exception {
 
-        TopX.TopX("Huawei", "4G", "Region XDD", "Daily", "Cell", false);
+        TopX.TopX("Huawei", "4G", "Region XDD", "Daily", false);
     }
 
     @Test
     public void RegionXDDDailyBHTopX4G() throws Exception {
 
-        TopX.TopX("Huawei", "4G", "Region XDD", "DailyBH", "Cell", false);
+        TopX.TopX("Huawei", "4G", "Region XDD", "DailyBH", false);
     }
 
     @Test
     public void RegionXDDWeeklyTopX4G() throws Exception {
 
-        TopX.TopX("Huawei", "4G", "Region XDD", "Weekly", "Cell", false);
+        TopX.TopX("Huawei", "4G", "Region XDD", "Weekly", false);
     }
 
     @Test
     public void RegionXDDWeeklyBHTopX4G() throws Exception {
 
-        TopX.TopX("Huawei", "4G", "Region XDD", "WeeklyBH", "Cell", false);
+        TopX.TopX("Huawei", "4G", "Region XDD", "WeeklyBH", false);
     }
 
     @Test
     public void RegionXDDMonthlyTopX4G() throws Exception {
 
-        TopX.TopX("Huawei", "4G", "Region XDD", "Monthly", "Cell", false);
+        TopX.TopX("Huawei", "4G", "Region XDD", "Monthly", false);
     }
     @Test
     public void RegionXDDMonthlyBHTopX4G() throws Exception {
 
-        TopX.TopX("Huawei", "4G", "Region XDD", "MonthlyBH", "Cell", false);
+        TopX.TopX("Huawei", "4G", "Region XDD", "MonthlyBH", false);
     }
 
     @Test
     public void RegionXDDHourlyTopX4G() throws Exception {
 
-        TopX.TopX("Huawei", "4G", "Region XDD", "Hourly", "Cell", false);
+        TopX.TopX("Huawei", "4G", "Region XDD", "Hourly", false);
     }
 
     //------------------------LowX------------------------------------------------------
     @Test
     public void RegionXDDDailyLowXTopX4G() throws Exception {
 
-        TopX.TopX("Huawei", "4G", "Region XDD", "Daily", "Cell", true);
+        TopX.TopX("Huawei", "4G", "Region XDD", "Daily", true);
     }
     @Test
     public void RegionXDDDailyBHLowXTopX4G() throws Exception {
 
-        TopX.TopX("Huawei", "4G", "Region XDD", "DailyBH", "Cell", true);
+        TopX.TopX("Huawei", "4G", "Region XDD", "DailyBH", true);
     }
 
     @Test
     public void RegionXDDWeeklyLowXTopX4G() throws Exception {
 
-        TopX.TopX("Huawei", "4G", "Region XDD", "Weekly", "Cell", true);
+        TopX.TopX("Huawei", "4G", "Region XDD", "Weekly", true);
     }
 
     @Test
     public void RegionXDDWeeklyBHLowXTopX4G() throws Exception {
 
-        TopX.TopX("Huawei", "4G", "Region XDD", "WeeklyBH", "Cell", true);
+        TopX.TopX("Huawei", "4G", "Region XDD", "WeeklyBH", true);
     }
 
     @Test
     public void RegionXDDMonthlyLowXTopX4G() throws Exception {
 
-        TopX.TopX("Huawei", "4G", "Region XDD", "Monthly", "Cell", true);
+        TopX.TopX("Huawei", "4G", "Region XDD", "Monthly", true);
     }
     @Test
     public void RegionXDDMonthlyBHLowXTopX4G() throws Exception {
 
-        TopX.TopX("Huawei", "4G", "Region XDD", "MonthlyBH", "Cell", true);
+        TopX.TopX("Huawei", "4G", "Region XDD", "MonthlyBH", true);
     }
 
     @Test
     public void RegionXDDHourlyLowXTopX4G() throws Exception {
 
-        TopX.TopX("Huawei", "4G", "Region XDD", "Hourly", "Cell", true);
+        TopX.TopX("Huawei", "4G", "Region XDD", "Hourly", true);
     }
 }

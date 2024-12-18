@@ -11,84 +11,84 @@ public class Cell extends MainClass {
     @Test
     public void CellStats4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Cell", false,"Hourly", "All");
+        State.Stats("Huawei", "4G", "Cell", false,"Hourly", "All", false);
     }
 
     @Test
     public void CellStatsAggregation4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Cell", true,"Hourly", "All");
+        State.Stats("Huawei", "4G", "Cell", true,"Hourly", "All", false);
     }
 
     @Test
     public void CellStatsDaily4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Cell", false,"Daily", "All");
+        State.Stats("Huawei", "4G", "Cell", false,"Daily", "All", false);
     }
     @Test
     public void CellStatsDailyAggregation4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Cell", true,"Daily", "All");
+        State.Stats("Huawei", "4G", "Cell", true,"Daily", "All", false);
     }
     @Test
     public void CellStatsWeekly4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Cell", false,"Weekly", "All");
+        State.Stats("Huawei", "4G", "Cell", false,"Weekly", "All", false);
     }
     @Test
     public void CellStatsWeeklyAggregation4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Cell", true,"Weekly", "All");
+        State.Stats("Huawei", "4G", "Cell", true,"Weekly", "All", false);
     }
 
     @Test
     public void CellStatsMonthly4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Cell", false,"Monthly", "All");
+        State.Stats("Huawei", "4G", "Cell", false,"Monthly", "All", false);
     }
     @Test
     public void CellStatsMonthlyAggregation4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Cell", true,"Monthly", "All");
+        State.Stats("Huawei", "4G", "Cell", true,"Monthly", "All", false);
     }
     @Test
     public void CellStatsDailyBH4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Cell", false,"DailyBH", "All");
+        State.Stats("Huawei", "4G", "Cell", false,"DailyBH", "All", false);
     }
     @Test
     public void CellStatsDailyBHAggregation4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Cell", true,"DailyBH", "All");
+        State.Stats("Huawei", "4G", "Cell", true,"DailyBH", "All", false);
     }
 
     @Test
     public void CellStatsWeeklyBH4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Cell", false,"WeeklyBH", "All");
+        State.Stats("Huawei", "4G", "Cell", false,"WeeklyBH", "All", false);
     }
     @Test
     public void CellStatsWeeklyBHAggregation4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Cell", true,"WeeklyBH", "All");
+        State.Stats("Huawei", "4G", "Cell", true,"WeeklyBH", "All", false);
     }
 
     @Test
     public void CellStatsMonthlyBH4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Cell", false,"MonthlyBH", "All");
+        State.Stats("Huawei", "4G", "Cell", false,"MonthlyBH", "All", false);
     }
 
     @Test
     public void CellStatsMonthlyBHAggregation4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Cell", true,"MonthlyBH", "All");
+        State.Stats("Huawei", "4G", "Cell", true,"MonthlyBH", "All", false);
     }
 
     //------------------- Search for KPI -----------------------------------------------------------------
     @Test
     public void CellSearchForKPI4G() throws Exception {
 
-        State.Stats("Huawei", "4G", "Cell", false,"Hourly", "Paging_UU_Att");
+        State.Stats("Huawei", "4G", "Cell", false,"Hourly", "Paging_UU_Att", false);
     }
 }
