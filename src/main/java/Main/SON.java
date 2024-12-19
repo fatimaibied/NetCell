@@ -54,6 +54,7 @@ public class SON {
 
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors, "TechnologyArrow"))));
         driver.findElement(By.xpath(readLocator(SONSelectors, "TechnologyArrow"))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space(text())='" + Technology + "']")));
         driver.findElement(By.xpath("//span[normalize-space(text())='" + Technology + "']")).click();
 
         //---Select the Object Type
@@ -71,7 +72,11 @@ public class SON {
         selectResolution(driver, Resolution, SonType);
 
         if (!KPI.equals("")) {
-            driver.findElement(By.xpath(readLocator(SONSelectors, KPI))).click();
+            element =driver.findElement(By.xpath(readLocator(SONSelectors, KPI)));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors, KPI))));
+
+           element.click();
         }
         // CM data for 4G
 
@@ -297,10 +302,13 @@ public class SON {
 
             case "Cluster Band" -> {
                 //Object Selection (Cluster Band)
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors, "ClusterBand"))));
+
                 driver.findElement(By.xpath(readLocator(SONSelectors, "ClusterBand"))).click();
                 element = driver.findElement(By.xpath(readLocator(SONSelectors, "ObjectBorder")));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
                 if (!Technology.equals("4G")) {
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(PMSelectors, "ClusterFDDArrow"))));
                     driver.findElement(By.xpath(readLocator(PMSelectors, "ClusterFDDArrow"))).click();
                     for (int i = 0; i < relatedElementsRegionArrow.size(); i++) {
                         wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors,relatedElementsRegionArrow.get(i)))));
@@ -310,6 +318,7 @@ public class SON {
                         driver.findElement(By.xpath(readLocator(PMSelectors, relatedElementsRegionClose.get(i)))).click();
                     }
                 } else {
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(PMSelectors, "ClusterFDDArrow"))));
                     driver.findElement(By.xpath(readLocator(PMSelectors, "ClusterFDDArrow"))).click();
 
                     for (int i = 0; i < relatedElementsRegionArrow.size(); i++) {
@@ -338,6 +347,7 @@ public class SON {
 
             case "Sector" -> {
                 //Object Selection (Sector)
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors,"Sector"))));
 
                 driver.findElement(By.xpath(readLocator(SONSelectors, "Sector"))).click();
                 element = driver.findElement(By.xpath(readLocator(SONSelectors, "ObjectBorder")));
@@ -345,6 +355,12 @@ public class SON {
                 for (int i = 0; i < relatedElementsRegionArrow.size(); i++) {
                     wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors,relatedElementsRegionArrow.get(i)))));
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(i)))).click();
+
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors,relatedElementsSector.get(i)))));
+
+                    element = driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsSector.get(i))));
+                    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsSector.get(i)))).click();
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionClose.get(i)))).click();
                 }
@@ -369,20 +385,23 @@ public class SON {
 
             case "Governorate XDD" -> {
                 //Object Selection (Governorate XDD)
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors, "GovernorateXDD"))));
 
                 driver.findElement(By.xpath(readLocator(SONSelectors, "GovernorateXDD"))).click();
                 element = driver.findElement(By.xpath(readLocator(SONSelectors, "ObjectBorder")));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors, "GovernorateFDDArrow"))));
+
                 driver.findElement(By.xpath(readLocator(SONSelectors, "GovernorateFDDArrow"))).click();
                 for (String s : relatedElementsGovernorate) {
-
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors, s))));
                     driver.findElement(By.xpath(readLocator(SONSelectors, s))).click();
 
                 }
                 driver.findElement(By.xpath(readLocator(SONSelectors, "GovernorateFDDClose"))).click();
                 driver.findElement(By.xpath(readLocator(SONSelectors, "GovernorateTDDArrow"))).click();
                 for (String s : relatedElementsGovernorate) {
-
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors, s))));
                     driver.findElement(By.xpath(readLocator(SONSelectors, s))).click();
 
                 }
@@ -397,32 +416,41 @@ public class SON {
                 driver.findElement(By.xpath(readLocator(SONSelectors, "GovernorateBand"))).click();
                 element = driver.findElement(By.xpath(readLocator(SONSelectors, "ObjectBorder")));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors, "PLMNCheckbox"))));
+
                 driver.findElement(By.xpath(readLocator(SONSelectors, "PLMNCheckbox"))).click();
             }
             //----------------------------------------------------
             case "BSC" -> {
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors, "BSC"))));
                 driver.findElement(By.xpath(readLocator(SONSelectors, "BSC"))).click();
                 element = driver.findElement(By.xpath(readLocator(SONSelectors, "ObjectBorder")));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-                for (String s : relatedElementsBSC) {
 
+                for (String s : relatedElementsBSC) {
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors, s))));
                     driver.findElement(By.xpath(readLocator(SONSelectors, s))).click();
 
                 }
             }
             case "RNC" -> {
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors, "RNC"))));
+
                 driver.findElement(By.xpath(readLocator(SONSelectors, "RNC"))).click();
                 element = driver.findElement(By.xpath(readLocator(SONSelectors, "ObjectBorder")));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
                 for (int i = 1; i < 5; i++) {
-
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p-treenode[1]/li[1]/ul[1]/p-treenode[" + i + "]/li[1]")));
                     driver.findElement(By.xpath("//p-treenode[1]/li[1]/ul[1]/p-treenode[" + i + "]/li[1]")).click();
                 }
             }
             case "Region Carrier" -> {
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors, "RegionCarrier"))));
+
                 driver.findElement(By.xpath(readLocator(SONSelectors, "RegionCarrier"))).click();
                 element = driver.findElement(By.xpath(readLocator(SONSelectors, "ObjectBorder")));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors, "RegionsEastAmman"))));
                 driver.findElement(By.xpath(readLocator(SONSelectors, "RegionsEastAmman"))).click();
                 driver.findElement(By.xpath(readLocator(SONSelectors, "RegionsWestAmman"))).click();
                 driver.findElement(By.xpath(readLocator(SONSelectors, "RegionsSouthJordan"))).click();
@@ -433,7 +461,7 @@ public class SON {
                 element = driver.findElement(By.xpath(readLocator(SONSelectors, "ObjectBorder")));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
                 for (int i = 1; i < 3; i++) {
-
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'F" + i + "')]")));
                     driver.findElement(By.xpath("//span[contains(text(),'F" + i + "')]")).click();
                 }
             }
