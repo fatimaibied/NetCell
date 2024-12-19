@@ -45,13 +45,14 @@ public class SON {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(70)); // Wait up to 50 seconds
 
         support.login("SON");
-        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors, "Huawei"))));
+
         if (Objects.equals(Vendor, "Nokia")) {
             driver.findElement(By.xpath(readLocator(SONSelectors, "Huawei"))).click();
             driver.findElement(By.xpath(readLocator(SONSelectors, "Nokia"))).click();
         }
 
-        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors, "TechnologyArrow"))));
         driver.findElement(By.xpath(readLocator(SONSelectors, "TechnologyArrow"))).click();
         driver.findElement(By.xpath("//span[normalize-space(text())='" + Technology + "']")).click();
 
@@ -59,7 +60,8 @@ public class SON {
         selectObjectType(ObjectType, Technology);
 
         //-----Select SonType
-        Thread.sleep(1000);
+
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors, "SonType"))));
         element = driver.findElement(By.xpath(readLocator(SONSelectors, "SonType")));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         driver.findElement(By.xpath(readLocator(SONSelectors, "SonType"))).click();
@@ -99,7 +101,7 @@ public class SON {
         }
 
         try {
-            Thread.sleep(2000);
+
             boolean noData = driver.findElement(By.xpath("//div[contains(text(),'No data found')]")).isDisplayed();
             Assert.assertTrue(noData);
 
@@ -112,6 +114,7 @@ public class SON {
     }
 
     void selectObjectType(String ObjectType, String Technology) throws Exception {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(70)); // Wait up to 70 seconds
 
         driver.findElement(By.xpath(readLocator(SONSelectors, "ObjectSelection"))).click();
         relatedElements = readTags("Regions", SONSelectors);
@@ -132,7 +135,7 @@ public class SON {
             case "PLMN" -> {
                 //Object Selection (PLMN)
                 driver.findElement(By.xpath(readLocator(SONSelectors, "PLMN"))).click();
-                Thread.sleep(1000);
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors, "PLMNCheckbox"))));
                 driver.findElement(By.xpath(readLocator(SONSelectors, "PLMNCheckbox"))).click();
             }
 
@@ -144,10 +147,11 @@ public class SON {
                 element = driver.findElement(By.xpath(readLocator(SONSelectors, "ObjectBorder")));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
                 for (String relatedElement : relatedElements) {
-                    Thread.sleep(1000);
+                    ;
 
                     element = driver.findElement(By.xpath(readLocator(SONSelectors, relatedElement)));
                     ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+                    wait.until(ExpectedConditions.elementToBeClickable(element));
                     element.click();
 
 
@@ -161,11 +165,11 @@ public class SON {
                 element = driver.findElement(By.xpath(readLocator(SONSelectors, "ObjectBorder")));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
                 for (int i = 0; i < relatedElementsRegionArrow.size(); i++) {
-                    Thread.sleep(1000);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(i)))));
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(i)))).click();
-                    Thread.sleep(1000);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors, relatedElementsSites.get(i)))));
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsSites.get(i)))).click();
-                    Thread.sleep(1000);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors,relatedElementsRegionClose.get(i)))));
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionClose.get(i)))).click();
                 }
             }
@@ -179,17 +183,16 @@ public class SON {
                 element = driver.findElement(By.xpath(readLocator(SONSelectors, "ObjectBorder")));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
                 for (int i = 0; i < relatedElementsRegionArrow.size(); i++) {
-                    Thread.sleep(1000);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors,relatedElementsRegionArrow.get(i)))));
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(i)))).click();
-                    Thread.sleep(3000);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors,relatedElementsCells.get(i)))));
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsCells.get(i)))).click();
-                    Thread.sleep(3000);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors,relatedElementsCellOne.get(i)))));
                     element = driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsCellOne.get(i))));
                     ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
                     element.click();
-                    Thread.sleep(2000);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors,relatedElementsRegionClose.get(i)))));
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionClose.get(i)))).click();
-                    Thread.sleep(2000);
                 }
             }
 
@@ -222,7 +225,7 @@ public class SON {
                 element = driver.findElement(By.xpath(readLocator(SONSelectors, "ObjectBorder")));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
                 for (int i = 0; i < relatedElementsRegionArrow.size(); i++) {
-                    Thread.sleep(1000);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors,relatedElementsRegionArrow.get(i)))));
 
                     element = driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(i))));
                     ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
@@ -244,7 +247,7 @@ public class SON {
                 element = driver.findElement(By.xpath(readLocator(SONSelectors, "ObjectBorder")));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
                 for (int i = 0; i < relatedElementsRegionArrow.size(); i++) {
-                    Thread.sleep(1000);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors,relatedElementsRegionArrow.get(i)))));
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(i)))).click();
                     for (String s : relatedElementsXDD) {
                         element = driver.findElement(By.xpath(readLocator(SONSelectors, s)));
@@ -266,10 +269,10 @@ public class SON {
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
                 if (Technology.equals("4G")) {
                     driver.findElement(By.xpath(readLocator(PMSelectors, "ClusterFDDArrow"))).click();
-                    Thread.sleep(2000);
 
                     for (int i = 0; i < relatedElementsRegionArrow.size(); i++) {
-                        Thread.sleep(1000);
+                        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors,relatedElementsRegionArrow.get(i)))));
+
                         driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(i)))).click();
                         driver.findElement(By.xpath(readLocator(PMSelectors, relatedElementsClusterOne.get(i)))).click();
 
@@ -277,7 +280,8 @@ public class SON {
                     }
                 } else {
                     for (int i = 0; i < relatedElementsRegionArrow.size(); i++) {
-                        Thread.sleep(1000);
+                        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors,relatedElementsRegionArrow.get(i)))));
+
                         driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(i)))).click();
 
                         element = driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsCluster.get(i))));
@@ -296,22 +300,21 @@ public class SON {
                 driver.findElement(By.xpath(readLocator(SONSelectors, "ClusterBand"))).click();
                 element = driver.findElement(By.xpath(readLocator(SONSelectors, "ObjectBorder")));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-                Thread.sleep(2000);
                 if (!Technology.equals("4G")) {
                     driver.findElement(By.xpath(readLocator(PMSelectors, "ClusterFDDArrow"))).click();
-                    Thread.sleep(2000);
                     for (int i = 0; i < relatedElementsRegionArrow.size(); i++) {
-                        Thread.sleep(1000);
+                        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors,relatedElementsRegionArrow.get(i)))));
+
                         driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(i)))).click();
                         driver.findElement(By.xpath(readLocator(PMSelectors, relatedElementsCluster.get(i)))).click();
                         driver.findElement(By.xpath(readLocator(PMSelectors, relatedElementsRegionClose.get(i)))).click();
                     }
                 } else {
                     driver.findElement(By.xpath(readLocator(PMSelectors, "ClusterFDDArrow"))).click();
-                    Thread.sleep(2000);
 
                     for (int i = 0; i < relatedElementsRegionArrow.size(); i++) {
-                        Thread.sleep(1000);
+                        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors,relatedElementsRegionArrow.get(i)))));
+
                         driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(i)))).click();
                         driver.findElement(By.xpath(readLocator(PMSelectors, relatedElementsClusterOne.get(i)))).click();
 
@@ -327,7 +330,7 @@ public class SON {
                 driver.findElement(By.xpath(readLocator(SONSelectors, "PLMNXDD"))).click();
                 element = driver.findElement(By.xpath(readLocator(SONSelectors, "ObjectBorder")));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-                Thread.sleep(1000);
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors,"PLMNCheckbox"))));
                 driver.findElement(By.xpath(readLocator(SONSelectors, "PLMNCheckbox"))).click();
             }
 
@@ -340,7 +343,7 @@ public class SON {
                 element = driver.findElement(By.xpath(readLocator(SONSelectors, "ObjectBorder")));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
                 for (int i = 0; i < relatedElementsRegionArrow.size(); i++) {
-                    Thread.sleep(1000);
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors,relatedElementsRegionArrow.get(i)))));
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionArrow.get(i)))).click();
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsSector.get(i)))).click();
                     driver.findElement(By.xpath(readLocator(SONSelectors, relatedElementsRegionClose.get(i)))).click();
@@ -355,11 +358,9 @@ public class SON {
                 driver.findElement(By.xpath(readLocator(SONSelectors, "Governorate"))).click();
                 element = driver.findElement(By.xpath(readLocator(SONSelectors, "ObjectBorder")));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-                Thread.sleep(1000);
                 for (String s : relatedElementsGovernorate) {
-
+                    wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors, s))));
                     driver.findElement(By.xpath(readLocator(SONSelectors, s))).click();
-                    Thread.sleep(1000);
 
                 }
             }
@@ -441,6 +442,8 @@ public class SON {
 
     void selectResolution(WebDriver driver, String ResolutionTemp, String SonType) throws InterruptedException {
         String scroll;
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(70)); // Wait up to 70 seconds
+
         if (SonType.equals("Azimuth Discrepancy")) {
             scroll = "//button[contains(text(),'" + NeighborType + "')]";
         } else if (!SonType.equals("4g congested cells") & !SonType.equals("4G Balance")) {
@@ -451,7 +454,6 @@ public class SON {
             scroll = readLocator(SONSelectors, "DailyBH");
         }
 
-        Thread.sleep(1000);
         if (!ResolutionTemp.equals("")) {
             String startDate;
             WebElement element = driver.findElement(By.xpath(scroll));
@@ -538,6 +540,7 @@ public class SON {
             driver.findElement(By.xpath(readLocator(SONSelectors, "Year"))).click();
             driver.findElement(By.xpath("//span[normalize-space(text())='" + startYear + "']")).click();
             Thread.sleep(1000);
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='" + startMonth + "']")));
 
             driver.findElement(By.xpath("//span[normalize-space()='" + startMonth + "']")).click();
             driver.findElement(By.xpath("(//span[text()='" + startDay + "'])[1]")).click();
@@ -546,10 +549,13 @@ public class SON {
             startDate = support.date("Today");
             System.out.println(startDate);
             driver.findElement(By.xpath("//button[contains(text(),'" + startDate + "')]")).click();
-            Thread.sleep(1000);
+
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors, "Year"))));
             driver.findElement(By.xpath(readLocator(SONSelectors, "Year"))).click();
             driver.findElement(By.xpath("//span[normalize-space(text())='" + endYear + "']")).click();
-            Thread.sleep(1000);
+
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='" + endMonth + "']")));
+
             driver.findElement(By.xpath("//span[normalize-space()='" + endMonth + "']")).click();
 
 

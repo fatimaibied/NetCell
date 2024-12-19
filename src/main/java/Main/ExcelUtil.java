@@ -1,6 +1,5 @@
 package Main;
 import org.apache.poi.ss.usermodel.*;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
@@ -9,7 +8,7 @@ public class ExcelUtil {
 
 
     public ExcelUtil(String filePath) throws IOException {
-        FileInputStream fis = new FileInputStream(new File(filePath));
+        FileInputStream fis = new FileInputStream(filePath);
         this.workbook = WorkbookFactory.create(fis);
     }
 
