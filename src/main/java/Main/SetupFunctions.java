@@ -23,6 +23,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.*;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -49,6 +50,8 @@ public class SetupFunctions extends MainClass {
     public static DateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy HH-mm-ss");
     public static ExtentSparkReporter report;
     public static Node node = null;
+    private static final ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
+
     public static String screenShotLocationXMLPath = System.getProperty("user.dir") + "\\ScreenShots\\";
 
     public static List readTags(String elementTag, String elementsPath) throws Exception {
@@ -147,9 +150,6 @@ public class SetupFunctions extends MainClass {
                     // Download configuration
                     prefs.put("download.default_directory", downloadPath);
                     prefs.put("profile.default_content_setting_values.automatic_downloads", 1);
-                    // Chrome options for handling security and downloads
-               //     options.addArguments("--allow-running-insecure-content");
-              //  options.addArguments("--disable-web-security");
 
                 options.addArguments("--disable-features=InsecureDownloadWarnings");
 
@@ -179,16 +179,20 @@ public class SetupFunctions extends MainClass {
                 options.setExperimentalOption("prefs", prefs);
 
                 driver = new EdgeDriver(options);
-            }
 
+            }
+            driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(100));
+            driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(100));
             driver.navigate().to(url); //Navigate to the entered url in the top
             driver.manage().window().maximize(); //Enlarge the browser page
+
 
         } else {
 
             driver.navigate().to(url); //Navigate to the entered url in the top
 
         }
+
         return driver;
     }
 

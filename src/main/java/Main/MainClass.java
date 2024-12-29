@@ -32,25 +32,63 @@ public class MainClass implements ITestListener {
 
     }
 
-    @AfterMethod
-    public void getResult(ITestResult Result) {
-        testResult = extent.createTest(Result.getName());
-        if (Result.getStatus() == ITestResult.SUCCESS) {
-            testResult.log(Status.PASS, "Package Name" + Result.getTestClass());
-            testResult.log(Status.PASS, Result.getName());
+    @BeforeMethod
+    public void setUp(ITestResult result) {
+        // Set the report name using the class name
+        report.config().setReportName(result.getTestClass().getName());
 
-        }
-        if (Result.getStatus() == ITestResult.FAILURE) {
-            testResult.log(Status.FAIL, "Package Name" + Result.getTestClass());
-            testResult.log(Status.FAIL, Result.getName());
-            testResult.log(Status.FAIL, "Element Name" + " " + elementName);
-            testResult.fail(Result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(screenShotOnFailure(Result)).build());
-        }
-
-        driver.close();
-        wid = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(wid.get(0));
+        // Create a logger for the current test
+        logger = extent.createTest(result.getMethod().getMethodName(), result.getTestClass().getName());
+        logger.log(Status.INFO, "Starting the test: " + result.getMethod().getMethodName());
     }
+
+    @AfterMethod
+    public void getResult(ITestResult result) {
+        // Log test results to the existing logger
+        logTestResult(result);
+
+        // Close driver and switch to the main window
+        cleanUpDriver();
+    }
+
+    private void logTestResult(ITestResult result) {
+        String packageName = "Package Name: " + result.getTestClass();
+        String methodName = result.getName();
+
+        switch (result.getStatus()) {
+            case ITestResult.SUCCESS:
+                logger.log(Status.PASS, packageName);
+                logger.log(Status.PASS, methodName);
+                break;
+
+            case ITestResult.FAILURE:
+                logger.log(Status.FAIL, packageName);
+                logger.log(Status.FAIL, methodName);
+                logger.log(Status.FAIL, "Element Name: " + elementName);
+                try {
+                    logger.fail(result.getThrowable().getMessage(),
+                            MediaEntityBuilder.createScreenCaptureFromPath(screenShotOnFailure(result)).build());
+                } catch (Exception e) {
+                    logger.log(Status.FAIL, "Screenshot capture failed: " + e.getMessage());
+                }
+                break;
+
+            default:
+                logger.log(Status.SKIP, "Test skipped: " + methodName);
+                break;
+        }
+    }
+
+    private void cleanUpDriver() {
+        if (driver != null) {
+            driver.close();
+            wid = new ArrayList<>(driver.getWindowHandles());
+            if (!wid.isEmpty()) {
+                driver.switchTo().window(wid.get(0));
+            }
+        }
+    }
+
 
     @AfterSuite
     public void closeTest() throws IOException {

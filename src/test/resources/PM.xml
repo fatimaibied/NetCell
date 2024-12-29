@@ -31,6 +31,7 @@
 
 
 
+<!--
   <ClustersEastAmman>//div/div/ul/p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/div/div</ClustersEastAmman>
   <ClustersWestAmman>//div/div/ul/p-treenode/li/ul/p-treenode[2]/li/ul/p-treenode[1]/li/div/div/div</ClustersWestAmman>
   <ClustersSouthAmman>//div/div/ul/p-treenode/li/ul/p-treenode[3]/li/ul/p-treenode[1]/li/div/div/div</ClustersSouthAmman>
@@ -38,7 +39,16 @@
   <ClustersNorthJordan>//div/div/ul/p-treenode/li/ul/p-treenode[5]/li/ul/p-treenode[1]/li/div/div/div</ClustersNorthJordan>
   <ClustersEastJordan>//div/div/ul/p-treenode/li/ul/p-treenode[6]/li/ul/p-treenode[1]/li/div/div/div</ClustersEastJordan>
   <ClustersOthers>//div/div/ul/p-treenode/li/ul/p-treenode[7]/li/ul/p-treenode[1]/li/div/div/div</ClustersOthers>
+-->
 
+
+  <ClustersEastAmman>//p-treenode/li/ul/p-treenode[1]/li/ul/p-treenode[1]/li/div/span/span/div/span</ClustersEastAmman>
+  <ClustersWestAmman>//p-treenode/li/ul/p-treenode[2]/li/ul/p-treenode[1]/li/div/span/span/div/span</ClustersWestAmman>
+  <ClustersSouthAmman>//p-treenode/li/ul/p-treenode[3]/li/ul/p-treenode[1]/li/div/span/span/div/span</ClustersSouthAmman>
+  <ClustersSouthJordan>//p-treenode/li/ul/p-treenode[4]/li/ul/p-treenode[1]/li/div/span/span/div/span</ClustersSouthJordan>
+  <ClustersNorthJordan>//p-treenode/li/ul/p-treenode[5]/li/ul/p-treenode[1]/li/div/span/span/div/span</ClustersNorthJordan>
+  <ClustersEastJordan>//p-treenode/li/ul/p-treenode[6]/li/ul/p-treenode[1]/li/div/span/span/div/span</ClustersEastJordan>
+  <ClustersOthers>//p-treenode/li/ul/p-treenode[7]/li/ul/p-treenode[1]/li/div/span/span/div/span</ClustersOthers>
 
   <RegionCloseEastAmman>//p-tree/div/div/ul/p-treenode/li/ul/p-treenode[1]/li/div/button/chevrondownicon</RegionCloseEastAmman>
   <RegionCloseWestAmman>//p-tree/div/div/ul/p-treenode/li/ul/p-treenode[2]/li/div/button/chevrondownicon</RegionCloseWestAmman>

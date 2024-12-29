@@ -5,9 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 import static Main.SetupFunctions.*;
 import static Main.DataController.*;
@@ -40,7 +43,7 @@ public class Functions {
         }*/
             Thread.sleep(1000);
             driver.findElement(By.xpath(readLocator(home, type))).click();
-            Thread.sleep(1000);
+            Thread.sleep(3000);
             wid = new ArrayList<>(driver.getWindowHandles());
             driver.switchTo().window(wid.get(1));
 
@@ -53,7 +56,7 @@ public class Functions {
         driver.findElement(By.xpath(readLocator(login, "Logout"))).click();
     }
 
-    String date(String day) {
+   public String date(String day) {
 
         String date = "";
         Calendar calendar = Calendar.getInstance();
@@ -91,4 +94,10 @@ public class Functions {
         return date;
     }
 
-}
+
+
+
+    }
+
+
+

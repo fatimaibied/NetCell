@@ -54,6 +54,7 @@ public class SON {
 
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath(readLocator(SONSelectors, "TechnologyArrow"))));
         driver.findElement(By.xpath(readLocator(SONSelectors, "TechnologyArrow"))).click();
+        Thread.sleep(500);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space(text())='" + Technology + "']")));
         driver.findElement(By.xpath("//span[normalize-space(text())='" + Technology + "']")).click();
 

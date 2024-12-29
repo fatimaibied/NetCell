@@ -76,9 +76,9 @@
     <RegionsEastAmman>//span[contains(text(),'East Amman')]</RegionsEastAmman>
     <RegionsWestAmman>//span[contains(text(),'West Amman')]</RegionsWestAmman>
     <RegionsSouthAmman>//span[contains(text(),'South Amman')]</RegionsSouthAmman>
-    <RegionsSouthJordan>//span[contains(text(),'South Jordan')]</RegionsSouthJordan>
-    <RegionsNorthJordan>//span[contains(text(),'North Jordan')]</RegionsNorthJordan>
     <RegionsEastJordan>//span[contains(text(),'East Jordan')]</RegionsEastJordan>
+    <RegionsNorthJordan>//span[contains(text(),'North Jordan')]</RegionsNorthJordan>
+    <RegionsSouthJordan>//span[contains(text(),'South Jordan')]</RegionsSouthJordan>
     <RegionsOthers>//span[contains(text(),'Others')]</RegionsOthers>
 
 //--------Site--------------
