@@ -35,6 +35,8 @@ public class CM {
     List<String> relatedElementsDestinationCell;
     Functions support = new Functions();
     boolean bt;
+    ExportCM exporting=new ExportCM();
+
 
     public void Parameter(String Technology, String ObjectType, String PredefinedTime) throws Exception {
         Thread.sleep(1000);
@@ -63,7 +65,7 @@ public class CM {
     }
 
     //------------------------------------------------------------------------------------------------------
-    public void view(String Technology, String ObjectType, String TargetType) throws Exception {
+    public void view(String Technology, String ObjectType, String TargetType, boolean export) throws Exception {
 
         support.login("CM");
         Thread.sleep(500);
@@ -81,8 +83,14 @@ public class CM {
         Thread.sleep(1000);
         element = driver.findElement(By.xpath(readLocator(CMSelectors, "TargetCell")));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        System.out.println(element.getText());
+        // Split the string by the underscore
+        String[] parts = element.getText().split("_");
+        // Get the last part
+        String lastValue = parts[parts.length - 1];
         driver.findElement(By.xpath(readLocator(CMSelectors, "TargetCell"))).click();
         //Apply and Verify
+        if (!export){
         driver.findElement(By.xpath(readLocator(SONSelectors, "ApplyButton"))).click();
         Thread.sleep(20000);
         try {
@@ -92,6 +100,9 @@ public class CM {
             Assert.assertFalse(bt);
         } catch (Exception e) {
             Assert.assertFalse(bt);
+        }}
+        else {
+            exporting.export("",Technology,"",TargetType,lastValue);
         }
 
     }

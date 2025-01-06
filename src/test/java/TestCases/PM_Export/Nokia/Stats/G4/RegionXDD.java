@@ -11,82 +11,36 @@ public class RegionXDD extends MainClass {
     @Test
     public void RegionXDDStats4G() throws Exception {
 
-        State.Stats("Nokia", "4G", "Region XDD", false,"Hourly", "All", false);
+        State.Stats("Nokia", "4G", "Region XDD", false,"Hourly", "All", true);
     }
 
     @Test
     public void RegionXDDStatsAggregation4G() throws Exception {
 
-        State.Stats("Nokia", "4G", "Region XDD", true,"Hourly", "All", false);
+        State.Stats("Nokia", "4G", "Region XDD", true,"Hourly", "All", true);
     }
 
     @Test
     public void RegionXDDStatsDaily4G() throws Exception {
 
-        State.Stats("Nokia", "4G", "Region XDD", false,"Daily", "All", false);
+        State.Stats("Nokia", "4G", "Region XDD", false,"Daily", "All", true);
     }
     @Test
     public void RegionXDDStatsDailyAggregation4G() throws Exception {
 
-        State.Stats("Nokia", "4G", "Region XDD", true,"Daily", "All", false);
-    }
-    @Test
-    public void RegionXDDStatsWeekly4G() throws Exception {
-
-        State.Stats("Nokia", "4G", "Region XDD", false,"Weekly", "All", false);
-    }
-    @Test
-    public void RegionXDDStatsWeeklyAggregation4G() throws Exception {
-
-        State.Stats("Nokia", "4G", "Region XDD", true,"Weekly", "All", false);
+        State.Stats("Nokia", "4G", "Region XDD", true,"Daily", "All", true);
     }
 
-    @Test
-    public void RegionXDDStatsMonthly4G() throws Exception {
-
-        State.Stats("Nokia", "4G", "Region XDD", false,"Monthly", "All", false);
-    }
-    @Test
-    public void RegionXDDStatsMonthlyAggregation4G() throws Exception {
-
-        State.Stats("Nokia", "4G", "Region XDD", true,"Monthly", "All", false);
-    }
     @Test
     public void RegionXDDStatsDailyBH4G() throws Exception {
 
-        State.Stats("Nokia", "4G", "Region XDD", false,"DailyBH", "All", false);
+        State.Stats("Nokia", "4G", "Region XDD", false,"DailyBH", "All", true);
     }
     @Test
     public void RegionXDDStatsDailyBHAggregation4G() throws Exception {
 
-        State.Stats("Nokia", "4G", "Region XDD", true,"DailyBH", "All", false);
+        State.Stats("Nokia", "4G", "Region XDD", true,"DailyBH", "All", true);
     }
 
-    @Test
-    public void RegionXDDStatsWeeklyBH4G() throws Exception {
 
-        State.Stats("Nokia", "4G", "Region XDD", false,"WeeklyBH", "All", false);
-    }
-    @Test
-    public void RegionXDDStatsWeeklyBHAggregation4G() throws Exception {
-
-        State.Stats("Nokia", "4G", "Region XDD", true,"WeeklyBH", "All", false);
-    }
-
-    @Test
-    public void RegionXDDStatsMonthlyBH4G() throws Exception {
-
-        State.Stats("Nokia", "4G", "Region XDD", false,"MonthlyBH", "All", false);
-    }
-
-    @Test
-    public void RegionXDDStatsMonthlyBHAggregation4G() throws Exception {
-
-        State.Stats("Nokia", "4G", "Region XDD", true,"MonthlyBH", "All", false);
-    }
-    @Test
-    public void RegionXDDStatsRowAggregation4G() throws Exception {
-
-        State.Stats("Nokia", "4G", "Region XDD", true,"Row", "All", false);
-    }
 }

@@ -181,7 +181,7 @@ public class SetupFunctions extends MainClass {
                 driver = new EdgeDriver(options);
 
             }
-            driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(100));
+            driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(300));
             driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(100));
             driver.navigate().to(url); //Navigate to the entered url in the top
             driver.manage().window().maximize(); //Enlarge the browser page

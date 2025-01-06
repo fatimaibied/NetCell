@@ -11,45 +11,20 @@ public class PLMN extends MainClass {
     @Test
     public void PLMNStats4G() throws Exception {
 
-        State.Stats("Nokia", "4G", "PLMN", false,"Hourly", "All", false);
+        State.Stats("Nokia", "4G", "PLMN", false,"Hourly", "All", true);
     }
     @Test
     public void PLMNStatsDaily4G() throws Exception {
 
-        State.Stats("Nokia", "4G", "PLMN", false,"Daily", "All", false);
+        State.Stats("Nokia", "4G", "PLMN", false,"Daily", "All", true);
     }
 
-    @Test
-    public void PLMNStatsWeekly4G() throws Exception {
 
-        State.Stats("Nokia", "4G", "PLMN", false,"Weekly", "All", false);
-    }
-
-    @Test
-    public void PLMNStatsMonthly4G() throws Exception {
-
-        State.Stats("Nokia", "4G", "PLMN", false,"Monthly", "All", false);
-    }
     @Test
     public void PLMNStatsDailyBH4G() throws Exception {
 
-        State.Stats("Nokia", "4G", "PLMN", false,"DailyBH", "All", false);
+        State.Stats("Nokia", "4G", "PLMN", false,"DailyBH", "All", true);
     }
 
-    @Test
-    public void PLMNStatsWeeklyBH4G() throws Exception {
 
-        State.Stats("Nokia", "4G", "PLMN", false,"WeeklyBH", "All", false);
-    }
-
-    @Test
-    public void PLMNStatsMonthlyBH4G() throws Exception {
-
-        State.Stats("Nokia", "4G", "PLMN", false,"MonthlyBH", "All", false);
-    }
-    @Test
-    public void PLMNStatsRaw4G() throws Exception {
-
-        State.Stats("Nokia", "4G", "PLMN", false,"Raw", "All", false);
-    }
 }

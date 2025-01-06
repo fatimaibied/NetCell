@@ -11,82 +11,35 @@ public class Region extends MainClass {
     @Test
     public void RegionStats3G() throws Exception {
 
-        State.Stats("Nokia", "3G", "Region", false,"Hourly", "All", false);
+        State.Stats("Nokia", "3G", "Region", false,"Hourly", "All", true);
     }
 
     @Test
     public void RegionStatsAggregation3G() throws Exception {
 
-        State.Stats("Nokia", "3G", "Region", true,"Hourly", "All", false);
+        State.Stats("Nokia", "3G", "Region", true,"Hourly", "All", true);
     }
 
     @Test
     public void RegionStatsDaily3G() throws Exception {
 
-        State.Stats("Nokia", "3G", "Region", false,"Daily", "All", false);
+        State.Stats("Nokia", "3G", "Region", false,"Daily", "All", true);
     }
     @Test
     public void RegionStatsDailyAggregation3G() throws Exception {
 
-        State.Stats("Nokia", "3G", "Region", true,"Daily", "All", false);
-    }
-    @Test
-    public void RegionStatsWeekly3G() throws Exception {
-
-        State.Stats("Nokia", "3G", "Region", false,"Weekly", "All", false);
-    }
-    @Test
-    public void RegionStatsWeeklyAggregation3G() throws Exception {
-
-        State.Stats("Nokia", "3G", "Region", true,"Weekly", "All", false);
+        State.Stats("Nokia", "3G", "Region", true,"Daily", "All", true);
     }
 
-    @Test
-    public void RegionStatsMonthly3G() throws Exception {
-
-        State.Stats("Nokia", "3G", "Region", false,"Monthly", "All", false);
-    }
-    @Test
-    public void RegionStatsMonthlyAggregation3G() throws Exception {
-
-        State.Stats("Nokia", "3G", "Region", true,"Monthly", "All", false);
-    }
     @Test
     public void RegionStatsDailyBH3G() throws Exception {
 
-        State.Stats("Nokia", "3G", "Region", false,"DailyBH", "All", false);
+        State.Stats("Nokia", "3G", "Region", false,"DailyBH", "All", true);
     }
     @Test
     public void RegionStatsDailyBHAggregation3G() throws Exception {
 
-        State.Stats("Nokia", "3G", "Region", true,"DailyBH", "All", false);
+        State.Stats("Nokia", "3G", "Region", true,"DailyBH", "All", true);
     }
 
-    @Test
-    public void RegionStatsWeeklyBH3G() throws Exception {
-
-        State.Stats("Nokia", "3G", "Region", false,"WeeklyBH", "All", false);
-    }
-    @Test
-    public void RegionStatsWeeklyBHAggregation3G() throws Exception {
-
-        State.Stats("Nokia", "3G", "Region", true,"WeeklyBH", "All", false);
-    }
-
-    @Test
-    public void RegionStatsMonthlyBH3G() throws Exception {
-
-        State.Stats("Nokia", "3G", "Region", false,"MonthlyBH", "All", false);
-    }
-
-    @Test
-    public void RegionStatsMonthlyBHAggregation3G() throws Exception {
-
-        State.Stats("Nokia", "3G", "Region", true,"MonthlyBH", "All", false);
-    }
-    @Test
-    public void RegionStatsRawAggregation3G() throws Exception {
-
-        State.Stats("Nokia", "3G", "Region", true,"Raw", "All", false);
-    }
 }

@@ -11,11 +11,11 @@ public class Cell extends MainClass {
     @Test
     public void CellViewCell2G() throws Exception {
 
-        parameters.view("2G", "Cell", "Cell");
+        parameters.view("2G", "Cell", "Cell", false);
     }
     @Test
     public void CellViewSite2G() throws Exception {
 
-        parameters.view("2G", "Cell", "Site");
+        parameters.view("2G", "Cell", "Site", false);
     }
 }

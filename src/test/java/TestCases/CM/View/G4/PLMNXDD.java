@@ -11,11 +11,11 @@ public class PLMNXDD extends MainClass {
     @Test
     public void PLMNXDDViewCell4G() throws Exception {
 
-        parameters.view("4G", "PLMN XDD", "Cell");
+        parameters.view("4G", "PLMN XDD", "Cell", false);
     }
     @Test
     public void PLMNXDDViewSite4G() throws Exception {
 
-        parameters.view("4G", "PLMN XDD", "Site");
+        parameters.view("4G", "PLMN XDD", "Site", false);
     }
 }

@@ -11,12 +11,12 @@ public class Region extends MainClass {
     @Test
     public void RegionViewCell4G() throws Exception {
 
-        parameters.view("3G", "Region", "Cell");
+        parameters.view("3G", "Region", "Cell", false);
     }
 
     @Test
     public void RegionViewSite4G() throws Exception {
 
-        parameters.view("3G", "Region", "Site");
+        parameters.view("3G", "Region", "Site", false);
     }
 }

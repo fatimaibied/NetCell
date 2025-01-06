@@ -33,7 +33,7 @@ public class PM {
 
     List<String> selectedObjects = new ArrayList<>();
     Functions support = new Functions();
-    Export exporting=new Export();
+    ExportPM exporting=new ExportPM();
 
 
     //-------------------------Stats-----------------------------------
@@ -549,6 +549,8 @@ public class PM {
 
                     driver.findElement(By.xpath("//span[contains(text(),'F" + i + "')]")).click();
                     String Test = driver.findElement(By.xpath("//span[contains(text(),'F" + i + "')]")).getText();
+                    PLMNCarrier.add(Test.replaceAll(".*\\((\\d+)\\).*", "$1"));
+
 
                     selectedObjects.add("(" + Test + ")");
                     System.out.println(selectedObjects);

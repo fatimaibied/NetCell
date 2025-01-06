@@ -11,13 +11,13 @@ public class Site extends MainClass {
     @Test
     public void SiteViewCell4G() throws Exception {
 
-        parameters.view("4G", "Site", "Cell");
+        parameters.view("4G", "Site", "Cell", false);
     }
 
     @Test
     public void SiteViewSite4G() throws Exception {
 
-        parameters.view("4G", "Site", "Site");
+        parameters.view("4G", "Site", "Site", false);
     }
 
 
